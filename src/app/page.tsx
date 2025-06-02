@@ -6,17 +6,6 @@ import GalleryCarousel from './components/GalleryCarousel';
 import { useState, useRef } from 'react';
 
 export default function HomePage() {
-  const galleryRef = useRef<HTMLDivElement>(null);
-  const [scrollX, setScrollX] = useState(0);
-
-  const scroll = (direction: 'left' | 'right') => {
-    if (!galleryRef.current) return;
-    const scrollAmount = galleryRef.current.offsetWidth;
-    galleryRef.current.scrollBy({
-      left: direction === 'left' ? -scrollAmount : scrollAmount,
-      behavior: 'smooth',
-    });
-  };
 
   return (
     <>
