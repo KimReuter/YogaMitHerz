@@ -132,8 +132,7 @@ export default function AboutPage() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                  <p><strong>Asana erleben – ohne Druck:</strong> "Asana" – die angenehme, ruhige Körperstellung …</p>
-                </motion.div>
+<p><strong>Asana erleben – ohne Druck:</strong> &ldquo;Asana&rdquo; – die angenehme, ruhige Körperstellung …</p>                </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
