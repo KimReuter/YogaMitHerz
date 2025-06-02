@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import FeedbackSection from './components/FeedbackSection';
 import GalleryCarousel from './components/GalleryCarousel';
-import { useState, useRef } from 'react';
 
 export default function HomePage() {
 
