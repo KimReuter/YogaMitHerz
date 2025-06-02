@@ -15,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Link href="/about">Über mich</Link>
           <Link href="/yoga">Yoga-Arten</Link>
           <Link href="/timetable">Timetable</Link>
+          <Link href="/energy">Energiearbeit</Link>
           <Link href="/contact">Kontakt</Link>
         </nav>
         <main>{children}</main>

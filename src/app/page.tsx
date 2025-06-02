@@ -2,8 +2,22 @@
 
 import { motion } from 'framer-motion';
 import FeedbackSection from './components/FeedbackSection';
+import GalleryCarousel from './components/GalleryCarousel';
+import { useState, useRef } from 'react';
 
 export default function HomePage() {
+  const galleryRef = useRef<HTMLDivElement>(null);
+  const [scrollX, setScrollX] = useState(0);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (!galleryRef.current) return;
+    const scrollAmount = galleryRef.current.offsetWidth;
+    galleryRef.current.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <>
       {/* Hero mit Parallax-Bild */}
@@ -81,7 +95,7 @@ export default function HomePage() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg">
+            <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105">
               <div className="text-4xl mb-4">💗</div>
               <h3 className="text-xl font-semibold mb-2">Yoga mit Herz</h3>
               <p className="text-gray-700 dark:text-gray-300">
@@ -89,7 +103,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg">
+            <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105">
               <div className="text-4xl mb-4">🌙</div>
               <h3 className="text-xl font-semibold mb-2">Raum für Ruhe</h3>
               <p className="text-gray-700 dark:text-gray-300">
@@ -97,7 +111,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg">
+            <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105">
               <div className="text-4xl mb-4">🌀</div>
               <h3 className="text-xl font-semibold mb-2">Fließen statt Funktionieren</h3>
               <p className="text-gray-700 dark:text-gray-300">
@@ -105,6 +119,29 @@ export default function HomePage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Energiearbeit & Frequenzheilung */}
+      <section
+        className="min-h-[70vh] bg-fixed bg-center bg-cover flex items-center justify-center text-center px-6"
+        style={{
+          backgroundImage: `url('/reiki-placeholder.jpg')`,
+        }}
+      >
+        <div className="bg-white/80 dark:bg-black/60 backdrop-blur-md p-8 rounded-xl max-w-3xl shadow-xl">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-pink-600 dark:text-pink-400">
+            Energiearbeit & Frequenzheilung
+          </h2>
+          <p className="text-lg text-gray-700 dark:text-gray-200 mb-6">
+            Neben Yoga biete ich auch sanfte, tiefgehende Heilarbeit auf energetischer Ebene: Reiki-Sitzungen zur Entspannung & Aktivierung der Selbstheilung, sowie Frequenzbehandlungen mit dem Healy.
+          </p>
+          <a
+            href="/energy"
+            className="inline-block bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full text-lg font-medium transition"
+          >
+            Mehr über Energiearbeit
+          </a>
         </div>
       </section>
 
@@ -122,6 +159,9 @@ export default function HomePage() {
           Zum Stundenplan
         </a>
       </section>
+
+      {/* Galerie mit Pfeilen */}
+      <GalleryCarousel />
     </>
   );
 }
