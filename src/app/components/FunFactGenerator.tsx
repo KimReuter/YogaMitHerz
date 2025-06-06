@@ -4,14 +4,19 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const funFacts = [
-  'Ich kann im Kopfstand schlafen – theoretisch.',
-  'Meine Playlist reicht von Mantra bis 90s Trashpop.',
-  'Ich liebe scharfe Soße mehr als Sonnengrüße.',
-  'Meine Yogamatte ist älter als mein Auto.',
-  'Ich habe mal versucht, Shavasana mit einem Espresso zu machen. War keine gute Idee.',
-  'Lieblingsasana? Shavasana. Immer.',
-  'Ich gebe meine besten Yoga-Impulse beim Spazierengehen – oder Zähneputzen.',
-  'Ich glaube fest an die heilende Kraft von Lachen im herabschauenden Hund.',
+  'Espresso – süß und stark. Tee am Abend. Kakao für die Seele. 😌',
+  'Erster Move am Morgen? Heißes Wasser mit Salz und ein schönes Buch.📖',
+  '„I’m so excited!“ – Und schon tanzt alles in mir. 💃',
+  'Soulfood? Ganz klar: Schokolade. Und zwar mit vollem Einsatz. 🍫',
+  'Ein guter Witz bringt mich immer zum Lachen – auch beim herabschauenden Hund. 😄',
+  'Wenn ich ein Tier wäre? Ganz klar: Mieze. 🐱',
+  'Mein schönstes Kindheitsabenteuer: barfuß Bäume erklimmen und ins frische Gras hüpfen. 🌳',
+  'Ich kann richtig gut vorlesen, zuhören und meine Liebsten verwöhnen. 💗',
+  'Zuhause heißt: Wohlfühlen, sein dürfen, wie ich bin. 🏡',
+  'Mein Lebensmotto? Miteinander. Füreinander. 💫',
+  'Ein Buch, das mich tief berührt hat: „Anouk – Dein nächstes Abenteuer wartet“. 📚',
+  'Was mich im Alltag glücklich macht? Sonne, Marienkäfer, Katzen und Zeit zum Genießen. ☀️🐞🐈',
+  'Lieblings-Erinnerung: Zwei Wochen mit Familie & Dachzelt durch die Alpen – und am Gardasee ankommen. 🏕️🚐',
 ];
 
 export default function FunFactGenerator() {
@@ -22,22 +27,35 @@ export default function FunFactGenerator() {
     const nextIndex = Math.floor(Math.random() * funFacts.length);
     setIndex(nextIndex);
     setShow(false);
-    setTimeout(() => setShow(true), 100); // für sauberen Re-Enter Effekt
+    setTimeout(() => setShow(true), 100);
   };
 
   return (
-    <section className="pt-6 pb-0  text-center text-gray-800 dark:text-gray-100">
+    <section className="pt-6 pb-0 text-center text-iris-charcoal">
       <div className="max-w-xl mx-auto px-6">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6">🌀 Wusstest du schon?</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-iris-terracotta">
+          🌀 Wusstest du schon?
+        </h2>
 
         <button
           onClick={generateFact}
-          className="bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded mb-8 transition-all"
+          className="
+            bg-iris-forest 
+            hover:bg-iris-moss 
+            text-white 
+            font-semibold 
+            py-3 px-6 
+            rounded-full 
+            shadow-md 
+            hover:shadow-lg 
+            transition-all 
+            duration-300
+          "
         >
           Zeig mir einen Fun Fact über Iris
         </button>
 
-        <div className="min-h-[100px]">
+        <div className="min-h-[100px] mt-8">
           <AnimatePresence mode="wait">
             {show && (
               <motion.p
@@ -46,7 +64,7 @@ export default function FunFactGenerator() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.5 }}
-                className="text-lg md:text-xl text-pink-700 dark:text-pink-300"
+                className="text-lg md:text-xl text-iris-terracotta"
               >
                 {funFacts[index]}
               </motion.p>

@@ -28,33 +28,33 @@ export default function FeedbackSection() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % feedbacks.length);
-    }, 6000); // alle 6 Sekunden
+    }, 6000);
     return () => clearInterval(timer);
   }, []);
 
   const currentFeedback = feedbacks[index];
 
   return (
-    <section className="bg-white dark:bg-gray-900 py-16 px-6 text-center">
-      <h2 className="text-3xl md:text-4xl font-bold mb-10 text-pink-600 dark:text-pink-400">
+    <div className="flex flex-col justify-start h-full space-y-6">
+      <h2 className="text-3xl md:text-4xl font-bold text-iris-forest">
         Feedback von Teilnehmerinnen
       </h2>
 
-      <div className="max-w-2xl mx-auto">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.6 }}
-            className="bg-pink-50 dark:bg-gray-800 p-6 rounded-xl shadow-lg"
-          >
-            <p className="text-lg italic mb-4">„{currentFeedback.text}“</p>
-            <p className="text-pink-600 dark:text-pink-400 font-semibold">– {currentFeedback.name}</p>
-          </motion.div>
-        </AnimatePresence>
-      </div>
-    </section>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.6 }}
+          className="bg-iris-sand p-6 rounded-xl shadow-lg max-w-xl"
+        >
+          <p className="text-lg italic mb-4 text-iris-charcoal">
+            „{currentFeedback.text}“
+          </p>
+          <p className="text-iris-terracotta font-semibold">– {currentFeedback.name}</p>
+        </motion.div>
+      </AnimatePresence>
+    </div>
   );
 }

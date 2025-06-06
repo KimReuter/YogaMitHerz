@@ -19,138 +19,142 @@ export default function AboutPage() {
             transform: "translateZ(0)",
           }}
         />
-        <div className="relative z-10 flex items-center justify-center h-full bg-black/30">
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="relative z-10 flex items-center justify-center h-full">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-white text-4xl md:text-5xl font-bold text-center drop-shadow-lg"
+            className="text-iris-golden text-4xl md:text-5xl font-bold text-center drop-shadow-lg"
           >
-            Wer ich bin – und wie Yoga mich gefunden hat
+            Mein Weg zum Yoga
           </motion.h1>
         </div>
       </section>
 
-      {/* Abschnitt mit rosa Hintergrund */}
-      <section className="bg-pink-50 dark:bg-gray-900">
-        <main className="px-6 py-16 max-w-4xl mx-auto text-gray-800 dark:text-gray-100">
-          <section className="space-y-16">
-            {/* Mein Weg zum Yoga */}
-            <div>
-              <motion.h2
-                className="text-2xl font-semibold mb-6"
+      {/* Abschnitt: Mein Weg zum Yoga */}
+      <section className="bg-iris-golden text-iris-charcoal">
+        <main className="px-6 py-16 max-w-4xl mx-auto space-y-16">
+          <motion.h2
+            className="text-2xl font-semibold mb-6 text-iris-terracotta"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            🧘‍♀️ Mein Weg zum Yoga – eine kleine Reise
+          </motion.h2>
+
+          <div className="space-y-6">
+            {[
+              {
+                delay: 0,
+                text: (
+                  <>
+                    <strong>✨ Der erste Kontakt:</strong> Begonnen habe ich mit dem Ashtanga-Stil – kraftvoll, dynamisch, fordernd. Ich war sofort fasziniert von der Verbindung aus Atem und Bewegung.
+                  </>
+                ),
+              },
+              {
+                delay: 0.1,
+                text: (
+                  <>
+                    <strong>🌀 Vom Praktizieren zum Weitergeben:</strong> Mit der Zeit fand ich meinen Weg in den Vinyasa-Stil, wo ich viele Jahre lang selbst praktiziert habe – bis sich irgendwann die Frage stellte: Wie kann ich das, was mich so tief berührt, mit anderen teilen?
+                  </>
+                ),
+              },
+              {
+                delay: 0.2,
+                text: (
+                  <>
+                    <strong>🌸 Die Ausbildung:</strong> Ich ließ mich zur Yoga- und Kinderyogalehrerin im Hatha-Stil ausbilden. Doch was ich lehre, ist nicht ein fester Stil – sondern eine Einladung, deinen ganz eigenen Zugang zu Yoga zu finden.
+                  </>
+                ),
+              },
+              {
+                delay: 0.3,
+                text: (
+                  <>
+                    <strong>💗 Heute:</strong> Heute leite ich meine Kurse aus dem Herzen heraus. Jeder Mensch bringt andere Erfahrungen mit – deshalb arbeite ich mit Variationen, unterschiedlichen Schwierigkeitsstufen und ganz viel Achtsamkeit. Was zählt, bist du – mit deinem Atem, deinem Körper, deinem Tempo.
+                  </>
+                ),
+              },
+            ].map(({ delay, text }, idx) => (
+              <motion.p
+                key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.6, delay }}
               >
-                🧘‍♀️ Mein Weg zum Yoga – eine kleine Reise
-              </motion.h2>
-
-              <div className="space-y-6">
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <strong>✨ Der erste Kontakt:</strong> Begonnen habe ich mit dem Ashtanga-Stil – kraftvoll, dynamisch, fordernd. Ich war sofort fasziniert von der Verbindung aus Atem und Bewegung.
-                </motion.p>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                >
-                  <strong>🌀 Vom Praktizieren zum Weitergeben:</strong> Mit der Zeit fand ich meinen Weg in den Vinyasa-Stil, wo ich viele Jahre lang selbst praktiziert habe – bis sich irgendwann die Frage stellte: Wie kann ich das, was mich so tief berührt, mit anderen teilen?
-                </motion.p>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                >
-                  <strong>🌸 Die Ausbildung:</strong> Ich ließ mich zur Yoga- und Kinderyogalehrerin im Hatha-Stil ausbilden. Doch was ich lehre, ist nicht ein fester Stil – sondern eine Einladung, deinen ganz eigenen Zugang zu Yoga zu finden.
-                </motion.p>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                >
-                  <strong>💗 Heute:</strong> Heute leite ich meine Kurse aus dem Herzen heraus. Jeder Mensch bringt andere Erfahrungen mit – deshalb arbeite ich mit Variationen, unterschiedlichen Schwierigkeitsstufen und ganz viel Achtsamkeit. Was zählt, bist du – mit deinem Atem, deinem Körper, deinem Tempo.
-                </motion.p>
-              </div>
-            </div>
-          </section>
+                {text}
+              </motion.p>
+            ))}
+          </div>
         </main>
       </section>
 
-      {/* FunFactGenerator – Vollbreit mit Hintergrund */}
-      <section className="w-full bg-purple-100 dark:bg-purple-900 text-gray-800 dark:text-gray-100 py-12">
+      {/* Fun Fact Generator */}
+      <section className="w-full bg-iris-sand text-iris-charcoal py-12">
         <div className="max-w-4xl mx-auto px-6">
           <FunFactGenerator />
         </div>
       </section>
 
-      {/* Weiter im rosa Abschnitt: Philosophie */}
-      <section className="bg-pink-50 dark:bg-gray-900">
-        <main className="px-6 py-16 max-w-4xl mx-auto text-gray-800 dark:text-gray-100">
-          <section className="space-y-16">
-            {/* Meine Philosophie */}
-            <div>
-              <motion.h2
-                className="text-2xl font-semibold mb-6"
+      {/* Philosophie */}
+      <section className="bg-iris-golden text-iris-charcoal">
+        <main className="px-6 py-16 max-w-4xl mx-auto space-y-16">
+          <motion.h2
+            className="text-2xl font-semibold mb-6 text-iris-terracotta"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            💬 Meine Philosophie
+          </motion.h2>
+
+          <div className="grid gap-8 md:grid-cols-2">
+            {[
+              {
+                title: 'Von Herz zu Herz',
+                content:
+                  'Meine Yogastunden entstehen aus dem Moment heraus. Ich unterrichte nicht nach starren Plänen, sondern spüre, was gerade gebraucht wird – im Raum, im Körper, im Herzen. Jeder Mensch bringt etwas Einzigartiges mit, und genau das darf in meinen Stunden seinen Platz finden.',
+              },
+              {
+                title: 'Vielfalt statt Schubladen',
+                content:
+                  'Ich folge keinem bestimmten Stil dogmatisch. Stattdessen kombiniere ich Elemente aus Hatha, Vinyasa und Ashtanga – je nachdem, was sich stimmig anfühlt. So können wir gemeinsam einen Zugang zu Yoga finden, der wirklich zu dir passt.',
+              },
+              {
+                title: 'Asana erleben – ohne Druck',
+                content:
+                  'Yoga ist für mich keine akrobatische Show. Es geht nicht um die perfekte Haltung, sondern um das Spüren, Atmen und Dasein im Jetzt. Meine Anleitungen laden dich ein, deinen Körper liebevoll zu erkunden – ohne Leistungsdruck, dafür mit viel Achtsamkeit.',
+              },
+              {
+                title: 'Raum für Rückverbindung',
+                content:
+                  'Im Alltag verlieren wir oft den Kontakt zu uns selbst. Meine Stunden sind eine Einladung, wieder zurück in die eigene Mitte zu finden. Mit sanften Impulsen, bewussten Atemzügen und Momenten der Stille schaffen wir Raum für Rückverbindung – zu dir selbst und zur Welt um dich herum.',
+              },
+            ].map(({ title, content }, idx) => (
+              <motion.div
+                key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
               >
-                💬 Meine Philosophie
-              </motion.h2>
-
-              <div className="grid gap-8 md:grid-cols-2">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <p><strong>Von Herz zu Herz:</strong> Meine Yogastunden sind keine Einbahnstraße …</p>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                >
-                  <p><strong>Vielfalt statt Schubladen:</strong> Ich ordne meine Kurse keinem festen Stil zu …</p>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                >
-<p><strong>Asana erleben – ohne Druck:</strong> &ldquo;Asana&rdquo; – die angenehme, ruhige Körperstellung …</p>                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                >
-                  <p><strong>Raum für Rückverbindung:</strong> Wir vergessen im Alltag oft, auf unsere eigene Stimme zu hören …</p>
-                </motion.div>
-              </div>
-            </div>
-          </section>
+                <p>
+                  <strong>{title}:</strong> {content}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </main>
       </section>
 
-      {/* YogaPoetry */}
+      {/* Zusätzliche Abschnitte */}
       <YogaPoetry />
-
-      {/* Timeline */}
       <TimelineSection />
     </>
   );
