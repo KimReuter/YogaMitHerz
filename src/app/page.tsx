@@ -33,7 +33,8 @@ export default function HomePage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl"
           >
-            Entdecke herzgeleiteten Yoga – achtsam, frei und verbunden. Für Frauen, Mamas, Menschen mit Seele.
+            Entdecke herzgeleitetes Yoga: achtsam, frei und verbunden. <br />
+            Für Frauen, Männer, jung und alt - Menschen mit Seele.
           </motion.p>
 
           <motion.a
@@ -41,7 +42,7 @@ export default function HomePage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             href="/timetable"
-            className="inline-block px-6 py-3 bg-iris-terracotta hover:bg-iris-clay text-white rounded-full text-lg font-medium transition shadow-md"
+            className="inline-block px-6 py-3 bg-iris-terracotta hover:bg-iris-clay hover:text-white text-white rounded-full text-lg font-medium transition shadow-md"
           >
             Zum Stundenplan
           </motion.a>
@@ -61,7 +62,8 @@ export default function HomePage() {
               Herzlich willkommen
             </h2>
             <p className="text-lg md:text-xl mb-4">
-              Ich bin Iris – und Yoga ist für mich kein Workout, sondern ein Weg nach innen. Ein Zuhause für Körper, Herz & Seele. Mit Humor, Tiefe und echter Verbindung.
+              Ich bin Iris – und Yoga ist für mich kein Workout, sondern ein Weg nach innen. Ein Zuhause für Körper, Herz & Seele. <br />
+              Mit Humor, Tiefe und echter Verbindung.
             </p>
             <p className="italic text-iris-terracotta font-medium">
               „Sei du selbst. Alles andere ist Nebensache.“
@@ -93,7 +95,9 @@ export default function HomePage() {
             <div className="bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-105 transition-transform">
               <div className="text-4xl mb-4">🌀</div>
               <h3 className="text-xl font-semibold mb-2">Fließen statt Funktionieren</h3>
-              <p>Du musst nichts beweisen. Du darfst einfach sein – und dich bewegen, wie es dir guttut.</p>
+              <p>Du musst nichts beweisen. <br />
+              Du darfst einfach sein – und dich bewegen, <br />
+              wie es dir guttut.</p>
             </div>
           </div>
         </div>
@@ -113,7 +117,7 @@ export default function HomePage() {
           </p>
           <a
             href="/energy"
-            className="inline-block bg-iris-terracotta hover:bg-iris-clay text-white px-6 py-3 rounded-full text-lg font-medium transition"
+            className="inline-block bg-iris-terracotta hover:bg-iris-clay hover:text-white text-white px-6 py-3 rounded-full text-lg font-medium transition"
           >
             Mehr über Energiearbeit
           </a>
@@ -134,7 +138,7 @@ export default function HomePage() {
               Bereit für deine erste Stunde?
             </h2>
             <p className="text-lg">
-              Ob Anfängerin oder erfahrene Yogini – bei mir bist du willkommen, genau so wie du bist.
+              Ob Anfänger oder erfahrene Yogini – bei mir bist du willkommen, genau so wie du bist.
             </p>
             <a
               href="/timetable"
@@ -173,12 +177,12 @@ export default function HomePage() {
             <div className="flex gap-4 flex-wrap">
               <a
                 href="/contact"
-                className="px-6 py-3 bg-iris-terracotta hover:bg-iris-clay text-white rounded-full font-medium transition"
+                className="px-6 py-3 bg-iris-terracotta hover:bg-iris-clay hover:text-white text-white rounded-full font-medium transition"
               >
                 Zum Kontaktformular
               </a>
               <a
-                href="https://www.instagram.com/deinprofil" // ersetzt durch echten Link
+                href="https://www.instagram.com/iriswallenaar/" // ersetzt durch echten Link
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 border-2 border-iris-terracotta text-iris-terracotta hover:bg-iris-terracotta hover:text-white rounded-full font-medium transition"

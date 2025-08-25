@@ -6,7 +6,7 @@ import ExpandableBox from '../components/ExpandableBox';
 
 export default function EnergyPage() {
   return (
-    <main className="text-gray-800 dark:text-gray-200 bg-pink-50 dark:bg-gray-800">
+    <main className="text-iris-charcoal bg-iris-golden">
       {/* Hero-Bild */}
       <section
         className="min-h-[60vh] bg-fixed bg-center bg-cover flex items-center justify-center text-center px-6"
@@ -20,7 +20,7 @@ export default function EnergyPage() {
           transition={{ duration: 0.8 }}
           className="bg-white/20 backdrop-blur-lg p-8 rounded-xl shadow-xl max-w-3xl"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-pink-600 dark:text-pink-400">Energiearbeit</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-iris-forest">Energiearbeit</h1>
           <p className="text-lg">
             Spüre dich selbst – mit Reiki, Frequenzen & intuitiver Begleitung.
           </p>
@@ -37,7 +37,7 @@ export default function EnergyPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           {/* Reiki Text */}
           <ExpandableBox
-            title="✨ Reiki-Heilsitzungen"
+            title="Reiki-Heilsitzungen ✨"
             summary={
               <>
                 Sanfte Berührung, tiefe Entspannung und ein liebevoller Raum zum Loslassen: Bei einer Reiki-Sitzung darfst du einfach nur sein.
@@ -88,7 +88,7 @@ export default function EnergyPage() {
 
           {/* Healy Text */}
           <ExpandableBox
-            title="🎧 Healy Frequenzbehandlung"
+            title="Healy Frequenzbehandlung 🎧"
             summary={
               <>
                 Dein Körper spricht in Schwingungen – der Healy hört zu. Dieses kleine Frequenzwunder analysiert dein Energiefeld und
@@ -109,12 +109,12 @@ export default function EnergyPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-pink-100 dark:bg-pink-900 py-16 text-center px-6">
+      <section className="bg-iris-sand py-16 text-center px-6">
         <h2 className="text-3xl font-bold mb-4">Spürst du den Ruf?</h2>
-        <p className="text-lg mb-6">Vereinbare jetzt deine persönliche Energie-Sitzung mit Iris.</p>
+        <p className="text-lg mb-6">Vereinbare jetzt deine persönliche Energie-Sitzung.</p>
         <a
           href="/contact"
-          className="inline-block bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full text-lg font-medium transition"
+          className="inline-block bg-iris-terracotta hover:bg-iris-clay hover:text-white text-white px-6 py-3 rounded-full text-lg font-medium transition"
         >
           Termin vereinbaren
         </a>

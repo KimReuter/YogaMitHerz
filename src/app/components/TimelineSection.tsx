@@ -10,7 +10,7 @@ const timelineData = [
   },
   {
     year: '2013',
-    text: 'Verliebt in Ashtanga. Viel geschwitzt, viel geflucht, noch mehr gelernt.',
+    text: 'Verliebt in Ashtanga. Viel geschwitzt, noch mehr gelernt.',
   },
   {
     year: '2017',
