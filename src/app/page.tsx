@@ -3,20 +3,32 @@
 import { motion } from 'framer-motion';
 import FeedbackSection from './components/FeedbackSection';
 import GalleryCarousel from './components/GalleryCarousel';
+import WaveDivider from './components/WaveDivider';
+import FadeIn from './components/FadeIn';
+import { LeafSprig, BotanicalDivider } from './components/BotanicalOrnaments';
+
 
 export default function HomePage() {
   return (
     <main className="bg-iris-golden text-iris-charcoal">
       {/* Hero mit Parallax-Bild */}
       <section
-        className="min-h-screen bg-fixed bg-center bg-cover flex flex-col justify-center items-center text-center px-6"
+        className="relative min-h-screen bg-fixed bg-center bg-cover flex flex-col justify-center items-center text-center px-6"
         style={{ backgroundImage: "url('/Iris_Hero.jpg')" }}
       >
+        {/* Dunkler Overlay für Lesbarkeit des Headers */}
+        <div className="absolute inset-0 bg-black/40" />
+
+        {/* Wave: Hero → Golden */}
+        <div className="absolute bottom-0 left-0 right-0 z-10">
+          <WaveDivider fill="#D69A3B" />
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="bg-iris-golden/90 backdrop-blur-sm p-8 rounded-xl max-w-2xl w-full flex flex-col gap-6 shadow-xl"
+          className="relative z-10 bg-iris-golden/90 backdrop-blur-sm p-8 rounded-xl max-w-2xl w-full flex flex-col gap-6 shadow-xl"
         >
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -24,7 +36,7 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold tracking-tight text-iris-terracotta"
           >
-            Yoga mit Herz, Humor & Tiefe
+            Einlassen. Loslassen. Ankommen.
           </motion.h1>
 
           <motion.p
@@ -33,156 +45,175 @@ export default function HomePage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl"
           >
-            Entdecke herzgeleitetes Yoga: achtsam, frei und verbunden. <br />
-            Für Frauen, Männer, jung und alt - Menschen mit Seele.
+            Entdecke Yoga von Herzen – ein Raum für dich, ganz gleich mit welcher Erfahrung du kommst. <br />
+            Komm bei dir an, atme durch und nimm dir Zeit nur für dich.
           </motion.p>
 
           <motion.a
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            href="/timetable"
+            href="/yoga"
             className="inline-block px-6 py-3 bg-iris-terracotta hover:bg-iris-terracotta/80 text-white rounded-full text-lg font-medium transition shadow-md"
           >
-            Zum Stundenplan
+            Zu meinen Kursen
           </motion.a>
         </motion.div>
       </section>
 
       {/* Begrüßung & Philosophie (2-Spalten-Layout) */}
-      <section className="py-20 px-6 bg-iris-golden">
-        <div className="max-w-6xl mx-auto md:grid grid-cols-2 items-center gap-10">
-          <img
-            src="/iris-portrait.jpg"
-            alt="Iris Portrait"
-            className="rounded-full w-64 h-64 object-cover mx-auto border-4 border-iris-moss shadow-lg"
-          />
-          <div className="text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-iris-terracotta">
-              Herzlich willkommen
-            </h2>
-            <p className="text-lg md:text-xl mb-4">
-              Ich bin Iris – und Yoga ist für mich kein Workout, sondern ein Weg nach innen. Ein Zuhause für Körper, Herz & Seele. <br />
-              Mit Humor, Tiefe und echter Verbindung.
-            </p>
-            <p className="italic text-iris-terracotta font-medium">
-              „Sei du selbst. Alles andere ist Nebensache.“
-            </p>
-          </div>
+      <section className="py-28 px-6 bg-iris-golden">
+        <div className="max-w-6xl mx-auto md:grid grid-cols-2 items-center gap-16">
+          <FadeIn direction="left">
+            <img
+              src="/iris-portrait.jpg"
+              alt="Iris Portrait"
+              className="rounded-full w-64 h-64 object-cover mx-auto border-4 border-iris-moss shadow-lg"
+            />
+          </FadeIn>
+          <FadeIn direction="right" delay={0.15}>
+            <div className="text-center md:text-left">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-iris-terracotta">
+                Namasté – Das Licht in meinem Herzen grüßt das Licht in deinem Herzen
+              </h2>
+              <p className="text-lg md:text-xl mb-4">
+                Ich bin Iris und lade dich ein, gemeinsam mit mir auf der Matte deinen ganz eigenen Weg zu dir zu entdecken. Einen Weg, der dich mit deinem Körper, deinem Inneren und deinem Atem verbindet – und dir Raum für Ruhe, Frieden und Entspannung schenkt.
+              </p>
+              <div className="relative mt-6 pl-12 border-l-2 border-iris-terracotta/40">
+                <span
+                  aria-hidden
+                  className="absolute -top-4 left-3 text-6xl leading-none text-iris-terracotta/25 font-serif select-none"
+                >
+                  &ldquo;
+                </span>
+                <p className="italic text-iris-terracotta font-medium text-lg leading-relaxed">
+                  Wenn man auf sich selbst hört, kommt alles von selbst.
+                </p>
+                <p className="mt-2 text-sm text-iris-terracotta/70 tracking-widest uppercase">
+                  – Petri Räisänen
+                </p>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* Was dich erwartet */}
-      <section className="py-16 px-6 bg-iris-golden text-center">
+      <section className="py-24 px-6 bg-iris-golden text-center">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-iris-terracotta">
-            Was dich erwartet
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-105 transition-transform">
-              <div className="text-4xl mb-4">💗</div>
-              <h3 className="text-xl font-semibold mb-2">Yoga mit Herz</h3>
-              <p>Authentisch, liebevoll und ganz nah am Leben. Kein Leistungsdruck, nur du mit dir.</p>
+          <FadeIn>
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <LeafSprig className="text-iris-terracotta" size={52} />
+              <h2 className="text-3xl md:text-4xl font-bold text-center text-iris-terracotta">
+                Was ich dir anbieten möchte
+              </h2>
+              <LeafSprig className="text-iris-terracotta" size={52} flipped />
             </div>
+            <BotanicalDivider className="text-iris-terracotta mb-10" />
+          </FadeIn>
 
-            <div className="bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-105 transition-transform">
-              <div className="text-4xl mb-4">🌙</div>
-              <h3 className="text-xl font-semibold mb-2">Raum für Ruhe</h3>
-              <p>Entspannung, Meditation und Atem. Momente, in denen du auftanken darfst.</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <FadeIn delay={0}>
+              <div className="bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-500 ease-in-out h-full">
+                <div className="text-4xl mb-4">💗</div>
+                <h3 className="text-2xl font-semibold mb-2">Yoga mit Herz</h3>
+                <p>Authentisch, liebevoll und ganz nah am Leben. Kein Leistungsdruck, nur du mit dir.</p>
+              </div>
+            </FadeIn>
 
-            <div className="bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-105 transition-transform">
-              <div className="text-4xl mb-4">🌀</div>
-              <h3 className="text-xl font-semibold mb-2">Fließen statt Funktionieren</h3>
-              <p>Du musst nichts beweisen. <br />
-              Du darfst einfach sein – und dich bewegen, <br />
-              wie es dir guttut.</p>
-            </div>
+            <FadeIn delay={0.15}>
+              <div className="bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-500 ease-in-out h-full">
+                <div className="text-4xl mb-4">🌙</div>
+                <h3 className="text-2xl font-semibold mb-2">Raum für Ruhe</h3>
+                <p>Entspannung, Meditation und Atem. Momente, in denen du auftanken darfst.</p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.3}>
+              <div className="bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-500 ease-in-out h-full">
+                <div className="text-4xl mb-4">🌀</div>
+                <h3 className="text-2xl font-semibold mb-2">Bewegung in deinem Rhythmus</h3>
+                <p>Du musst nichts beweisen. <br />
+                Du darfst einfach sein – und dich bewegen, <br />
+                wie es dir guttut.</p>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* Energiearbeit & Frequenzheilung */}
-      <section
-        className="min-h-[70vh] bg-fixed bg-center bg-cover flex items-center justify-center text-center px-6"
-        style={{ backgroundImage: "url('/reiki-placeholder.jpg')" }}
-      >
-        <div className="bg-white/90 backdrop-blur-md p-8 rounded-xl max-w-4xl shadow-xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-iris-terracotta">
-            Energiearbeit & Frequenzheilung
-          </h2>
-          <p className="text-lg mb-6">
-            Neben Yoga biete ich auch sanfte, tiefgehende Heilarbeit auf energetischer Ebene: Reiki-Sitzungen zur Entspannung & Aktivierung der Selbstheilung, sowie Frequenzbehandlungen mit dem Healy.
-          </p>
-          <a
-            href="/energy"
-            className="inline-block bg-iris-terracotta hover:bg-iris-terracotta/80 text-white px-6 py-3 rounded-full text-lg font-medium transition"
-          >
-            Mehr über Energiearbeit
-          </a>
-        </div>
-      </section>
+      {/* Energiearbeit-Section: vorübergehend ausgeblendet – siehe /energy/page.tsx */}
 
       {/* Feedback + Erste Stunde nebeneinander */}
-      <section className="py-20 px-6 bg-iris-golden">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
-          {/* Feedback (umhüllt, damit gleiche Höhe) */}
-          <div className="flex flex-col justify-start h-full">
+      <section className="py-28 px-6 bg-iris-golden">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+          {/* Feedback */}
+          <FadeIn direction="left" className="flex flex-col justify-start h-full">
             <FeedbackSection />
-          </div>
+          </FadeIn>
 
           {/* Erste Stunde */}
-          <div className="flex flex-col justify-start h-full space-y-6 text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta">
-              Bereit für deine erste Stunde?
-            </h2>
+          <FadeIn direction="right" delay={0.15} className="flex flex-col justify-start h-full space-y-6 text-center md:text-left">
+            <div>
+              <div className="flex items-center gap-2 justify-center md:justify-start mb-1">
+                <LeafSprig className="text-iris-terracotta" size={44} />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta">
+                Bereit für deine erste Yogastunde?
+              </h2>
+            </div>
             <p className="text-lg">
-              Ob Anfänger oder erfahrene Yogini – bei mir bist du willkommen, genau so wie du bist.
+              Vielleicht hast du Lust, Yoga mit mir auszuprobieren. Du bist herzlich willkommen – genau so, wie du bist.
             </p>
             <a
-              href="/timetable"
+              href="/yoga"
               className="inline-flex items-center justify-center bg-iris-terracotta hover:bg-iris-charcoal text-white px-4 py-2 rounded-full text-base font-medium transition min-w-[180px]"
             >
-              Zum Stundenplan
+              Entdecke Yoga mit mir
             </a>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
       {/* Galerie */}
       <GalleryCarousel />
 
+      {/* Wave: Golden → Sand */}
+      <div className="bg-iris-golden">
+        <WaveDivider fill="#EDD59E" />
+      </div>
+
       {/* Let's Connect */}
-      <section className="py-20 px-6 bg-iris-sand text-iris-charcoal">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <section className="py-28 px-6 bg-iris-sand text-iris-charcoal">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           {/* Bild */}
-          <div>
+          <FadeIn direction="left">
             <img
               src="/iris-portrait.jpg"
               alt="Iris Portrait"
               className="w-full rounded-2xl shadow-lg object-cover"
             />
-          </div>
+          </FadeIn>
 
           {/* Textbereich */}
-          <div className="space-y-6">
+          <FadeIn direction="right" delay={0.15} className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta">
-              Lass uns verbinden 💌
+              Ein Moment für dich – und für mich
             </h2>
             <p className="text-lg leading-relaxed">
-              Du hast eine Frage zu den Kursen, möchtest dich anmelden oder einfach mal „Hallo“ sagen?
-              Ich freue mich, von dir zu hören – ganz gleich, ob du schon Yoga-Erfahrung hast oder einfach neugierig bist.
+              Schreib mir, wenn du Fragen, Lust auf eine Yogastunde oder einfach ein kleines „Hallo" hast. Ich freue mich, von dir zu lesen – du bist jederzeit willkommen!
             </p>
             <div className="flex gap-4 flex-wrap">
               <a
-                href="/contact"
+                href="https://wa.me/4917662468814"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-6 py-3 bg-iris-terracotta hover:bg-iris-terracotta/80 text-white rounded-full font-medium transition"
               >
-                Zum Kontaktformular
+                Schreib mir auf WhatsApp
               </a>
               <a
-                href="https://www.instagram.com/iriswallenaar/" // ersetzt durch echten Link
+                href="https://www.instagram.com/iriswallenaar/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 border-2 border-iris-terracotta text-iris-terracotta hover:bg-iris-terracotta rounded-full font-medium transition"
@@ -190,9 +221,14 @@ export default function HomePage() {
                 Folge mir auf Instagram
               </a>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
+
+      {/* Wave: Sand → Footer (Golden) */}
+      <div className="bg-iris-sand">
+        <WaveDivider fill="#D69A3B" />
+      </div>
     </main>
   );
 }

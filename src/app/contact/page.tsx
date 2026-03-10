@@ -169,7 +169,7 @@ export default function ContactPage() {
               href="/timetable"
               className="inline-block px-5 py-3 rounded-full bg-iris-golden text-iris-charcoal font-semibold hover:brightness-110 transition"
             >
-              Zum Stundenplan
+              Zu meinen Kursen
             </a>
           </div>
         </div>

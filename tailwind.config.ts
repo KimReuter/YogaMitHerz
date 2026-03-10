@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        script: ['var(--font-cookie)', 'cursive'],
+      },
       colors: {
           'iris-moss': '#C9A96E',
           'iris-terracotta': '#8E3821',

@@ -7,14 +7,15 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 py-12 grid gap-8 md:grid-cols-3">
         <div className="space-y-2">
           <p className="font-semibold">Yoga mit Herz</p>
-          <p className="text-sm opacity-80">Come for Yoga – Stay for Happiness!</p>
+          <p className="text-sm opacity-80">Einlassen. Loslassen. Ankommen.</p>
         </div>
 
         <nav className="md:justify-self-center">
           <ul className="space-y-2 text-sm">
+            <li><Link href="/" className="hover:underline">Start</Link></li>
             <li><Link href="/about" className="hover:underline">Über mich</Link></li>
-            <li><Link href="/timetable" className="hover:underline">Stundenplan</Link></li>
-            <li><Link href="/energy" className="hover:underline">Energiearbeit</Link></li>
+            <li><Link href="/yoga" className="hover:underline">Meine Kurse</Link></li>
+            {/* <li><Link href="/energy" className="hover:underline">Energiearbeit</Link></li> */}
             <li><Link href="/contact" className="hover:underline">Kontakt</Link></li>
           </ul>
         </nav>
