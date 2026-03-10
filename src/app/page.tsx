@@ -22,7 +22,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold tracking-tight text-iris-forest"
+            className="text-4xl md:text-5xl font-bold tracking-tight text-iris-terracotta"
           >
             Yoga mit Herz, Humor & Tiefe
           </motion.h1>
@@ -42,7 +42,7 @@ export default function HomePage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             href="/timetable"
-            className="inline-block px-6 py-3 bg-iris-terracotta hover:bg-iris-clay hover:text-white text-white rounded-full text-lg font-medium transition shadow-md"
+            className="inline-block px-6 py-3 bg-iris-terracotta hover:bg-iris-terracotta/80 text-white rounded-full text-lg font-medium transition shadow-md"
           >
             Zum Stundenplan
           </motion.a>
@@ -58,7 +58,7 @@ export default function HomePage() {
             className="rounded-full w-64 h-64 object-cover mx-auto border-4 border-iris-moss shadow-lg"
           />
           <div className="text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-iris-forest">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-iris-terracotta">
               Herzlich willkommen
             </h2>
             <p className="text-lg md:text-xl mb-4">
@@ -75,7 +75,7 @@ export default function HomePage() {
       {/* Was dich erwartet */}
       <section className="py-16 px-6 bg-iris-golden text-center">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-iris-forest">
+          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-iris-terracotta">
             Was dich erwartet
           </h2>
 
@@ -109,7 +109,7 @@ export default function HomePage() {
         style={{ backgroundImage: "url('/reiki-placeholder.jpg')" }}
       >
         <div className="bg-white/90 backdrop-blur-md p-8 rounded-xl max-w-4xl shadow-xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-iris-forest">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-iris-terracotta">
             Energiearbeit & Frequenzheilung
           </h2>
           <p className="text-lg mb-6">
@@ -117,7 +117,7 @@ export default function HomePage() {
           </p>
           <a
             href="/energy"
-            className="inline-block bg-iris-terracotta hover:bg-iris-clay hover:text-white text-white px-6 py-3 rounded-full text-lg font-medium transition"
+            className="inline-block bg-iris-terracotta hover:bg-iris-terracotta/80 text-white px-6 py-3 rounded-full text-lg font-medium transition"
           >
             Mehr über Energiearbeit
           </a>
@@ -134,7 +134,7 @@ export default function HomePage() {
 
           {/* Erste Stunde */}
           <div className="flex flex-col justify-start h-full space-y-6 text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-iris-forest">
+            <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta">
               Bereit für deine erste Stunde?
             </h2>
             <p className="text-lg">
@@ -142,7 +142,7 @@ export default function HomePage() {
             </p>
             <a
               href="/timetable"
-              className="inline-flex items-center justify-center bg-iris-forest hover:bg-iris-charcoal text-white px-4 py-2 rounded-full text-base font-medium transition min-w-[180px]"
+              className="inline-flex items-center justify-center bg-iris-terracotta hover:bg-iris-charcoal text-white px-4 py-2 rounded-full text-base font-medium transition min-w-[180px]"
             >
               Zum Stundenplan
             </a>
@@ -167,7 +167,7 @@ export default function HomePage() {
 
           {/* Textbereich */}
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-iris-forest">
+            <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta">
               Lass uns verbinden 💌
             </h2>
             <p className="text-lg leading-relaxed">
@@ -177,7 +177,7 @@ export default function HomePage() {
             <div className="flex gap-4 flex-wrap">
               <a
                 href="/contact"
-                className="px-6 py-3 bg-iris-terracotta hover:bg-iris-clay hover:text-white text-white rounded-full font-medium transition"
+                className="px-6 py-3 bg-iris-terracotta hover:bg-iris-terracotta/80 text-white rounded-full font-medium transition"
               >
                 Zum Kontaktformular
               </a>
@@ -185,7 +185,7 @@ export default function HomePage() {
                 href="https://www.instagram.com/iriswallenaar/" // ersetzt durch echten Link
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 border-2 border-iris-terracotta text-iris-terracotta hover:bg-iris-terracotta hover:text-white rounded-full font-medium transition"
+                className="px-6 py-3 border-2 border-iris-terracotta text-iris-terracotta hover:bg-iris-terracotta rounded-full font-medium transition"
               >
                 Folge mir auf Instagram
               </a>

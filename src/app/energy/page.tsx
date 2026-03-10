@@ -20,7 +20,7 @@ export default function EnergyPage() {
           transition={{ duration: 0.8 }}
           className="bg-white/20 backdrop-blur-lg p-8 rounded-xl shadow-xl max-w-3xl"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-iris-forest">Energiearbeit</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-iris-terracotta">Energiearbeit</h1>
           <p className="text-lg">
             Spüre dich selbst – mit Reiki, Frequenzen & intuitiver Begleitung.
           </p>
@@ -114,7 +114,7 @@ export default function EnergyPage() {
         <p className="text-lg mb-6">Vereinbare jetzt deine persönliche Energie-Sitzung.</p>
         <a
           href="/contact"
-          className="inline-block bg-iris-terracotta hover:bg-iris-clay hover:text-white text-white px-6 py-3 rounded-full text-lg font-medium transition"
+          className="inline-block bg-iris-terracotta hover:bg-iris-terracotta/80 text-white px-6 py-3 rounded-full text-lg font-medium transition"
         >
           Termin vereinbaren
         </a>

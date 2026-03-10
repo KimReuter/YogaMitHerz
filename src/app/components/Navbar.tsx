@@ -29,7 +29,7 @@ export default function Navbar() {
         </ul>
 
         {/* Zentrierter Titel */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 text-xl font-bold text-iris-forest">
+        <div className="absolute left-1/2 transform -translate-x-1/2 text-xl font-bold text-iris-terracotta">
           <Link href="/">Yoga mit Herz</Link>
         </div>
 

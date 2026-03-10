@@ -9,14 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-          'iris-forest': '#2E4B41',
-          'iris-moss': '#A7BBA5',
-          'iris-terracotta': '#C2765C',
-          'iris-clay': '#D68B5A',
-          'iris-golden': '#F8F1DF',
-          'iris-sand': '#D5C6B3',
-          'iris-charcoal': '#4A4A4A',
-        
+          'iris-moss': '#C9A96E',
+          'iris-terracotta': '#8E3821',
+          'iris-golden': '#D69A3B',
+          'iris-sand': '#EDD59E',
+          'iris-charcoal': '#1A1A1A',
       },
     },
   },
