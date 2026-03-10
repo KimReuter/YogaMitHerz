@@ -48,7 +48,7 @@ export default function FeedbackSection() {
 
   return (
     <div className="flex flex-col justify-start h-full space-y-6">
-      <h2 className="text-3xl md:text-4xl font-bold text-iris-forest">
+      <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta">
         Feedback von Teilnehmerinnen
       </h2>
 

@@ -45,7 +45,7 @@ export default function GalleryCarousel() {
         {/* Pfeil links */}
         <button
           onClick={() => scroll('left')}
-          className="bg-iris-terracotta hover:bg-iris-clay text-white p-2 rounded-full transition disabled:opacity-30 disabled:cursor-not-allowed shadow-md"
+          className="bg-iris-terracotta hover:bg-iris-terracotta/80 text-white p-2 rounded-full transition disabled:opacity-30 disabled:cursor-not-allowed shadow-md"
           disabled={!canScrollLeft}
           aria-label="Zurück"
         >
@@ -72,7 +72,7 @@ export default function GalleryCarousel() {
         {/* Pfeil rechts */}
         <button
           onClick={() => scroll('right')}
-          className="bg-iris-terracotta hover:bg-iris-clay text-white p-2 rounded-full transition disabled:opacity-30 disabled:cursor-not-allowed shadow-md"
+          className="bg-iris-terracotta hover:bg-iris-terracotta/80 text-white p-2 rounded-full transition disabled:opacity-30 disabled:cursor-not-allowed shadow-md"
           disabled={!canScrollRight}
           aria-label="Weiter"
         >

@@ -40,7 +40,7 @@ export default function FunFactGenerator() {
         <button
           onClick={generateFact}
           className="
-            bg-iris-forest 
+            bg-iris-terracotta 
             hover:bg-iris-moss 
             text-white 
             font-semibold 

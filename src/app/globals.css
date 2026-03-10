@@ -12,5 +12,5 @@ body {
 
 /* Optional: Grundstyling für Links */
 a {
-  @apply text-iris-terracotta hover:text-iris-clay transition-colors;
+  @apply text-iris-terracotta hover:text-iris-terracotta/80 transition-colors;
 }

@@ -94,7 +94,7 @@ export default function TimetablePage() {
 
           <button
             type="submit"
-            className="inline-block px-6 py-3 rounded-full bg-iris-terracotta text-white font-semibold hover:bg-iris-clay transition-colors"
+            className="inline-block px-6 py-3 rounded-full bg-iris-terracotta text-white font-semibold hover:bg-iris-terracotta/80 transition-colors"
           >
             Feedback absenden
           </button>
