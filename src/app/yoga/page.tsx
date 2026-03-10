@@ -194,7 +194,7 @@ export default function YogaArtenPage() {
             href="/timetable"
             className="inline-block mt-4 px-6 py-3 rounded-full bg-white text-iris-terracotta font-semibold hover:bg-iris-terracotta hover:text-white transition-colors"
           >
-            Zum Stundenplan
+            Zu meinen Kursen
           </a>
         </motion.div>
       </section>

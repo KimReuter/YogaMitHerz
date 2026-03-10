@@ -29,7 +29,7 @@ export default function TimetablePage() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-bold text-iris-terracotta mb-4"
         >
-          Stundenplan
+          Meine Kurse
         </motion.h1>
         <p className="text-lg opacity-80">
           Hier findest du meine aktuellen Yoga-Stunden.<br />

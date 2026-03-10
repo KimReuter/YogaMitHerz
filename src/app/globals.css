@@ -10,7 +10,29 @@ body {
   overflow-x: hidden;
 }
 
+h1, h2, h3 {
+  font-family: var(--font-cookie), cursive;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.8;
+}
+
 /* Optional: Grundstyling für Links */
 a {
   @apply text-iris-terracotta hover:text-iris-terracotta/80 transition-colors;
+}
+
+/* Subtiler Grain/Paper-Texture-Overlay über alle Hintergründe */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px;
 }

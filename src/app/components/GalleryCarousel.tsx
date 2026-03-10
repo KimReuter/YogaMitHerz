@@ -37,7 +37,7 @@ export default function GalleryCarousel() {
 
   return (
     <section className="py-20 px-6 bg-iris-golden">
-      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-iris-charcoal">
+      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-iris-terracotta">
         Einblicke in meine Yogawelt
       </h2>
 
