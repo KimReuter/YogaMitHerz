@@ -40,7 +40,7 @@ export default function FeedbackSection() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % feedbacks.length);
-    }, 6000);
+    }, 15000);
     return () => clearInterval(timer);
   }, []);
 
