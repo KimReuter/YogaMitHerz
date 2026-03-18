@@ -68,7 +68,7 @@ export default function HomePage() {
             <img
               src="/iris-portrait.jpg"
               alt="Iris Portrait"
-              className="rounded-full w-64 h-64 object-cover mx-auto border-4 border-iris-moss shadow-lg"
+              className="relative z-[2] rounded-full w-64 h-64 object-cover mx-auto border-4 border-iris-moss shadow-lg"
             />
           </FadeIn>
           <FadeIn direction="right" delay={0.15}>
@@ -109,7 +109,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <FadeIn delay={0}>
-              <div className="bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-500 ease-in-out h-full">
+              <div className="relative z-[2] bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-500 ease-in-out h-full">
                 <div className="text-4xl mb-4">💗</div>
                 <h3 className="text-2xl font-semibold mb-2">Yoga mit Herz</h3>
                 <p>Authentisch, liebevoll und ganz nah am Leben. Kein Leistungsdruck, nur du mit dir.</p>
@@ -117,7 +117,7 @@ export default function HomePage() {
             </FadeIn>
 
             <FadeIn delay={0.15}>
-              <div className="bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-500 ease-in-out h-full">
+              <div className="relative z-[2] bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-500 ease-in-out h-full">
                 <div className="text-4xl mb-4">🌙</div>
                 <h3 className="text-2xl font-semibold mb-2">Raum für Ruhe</h3>
                 <p>Entspannung, Meditation und Atem. Momente, in denen du auftanken darfst.</p>
@@ -125,7 +125,7 @@ export default function HomePage() {
             </FadeIn>
 
             <FadeIn delay={0.3}>
-              <div className="bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-500 ease-in-out h-full">
+              <div className="relative z-[2] bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-500 ease-in-out h-full">
                 <div className="text-4xl mb-4">🌀</div>
                 <h3 className="text-2xl font-semibold mb-2">Bewegung in deinem Rhythmus</h3>
                 <p>Du musst nichts beweisen. <br />
@@ -176,7 +176,7 @@ export default function HomePage() {
             <img
               src="/iris-portrait.jpg"
               alt="Iris Portrait"
-              className="w-full rounded-2xl shadow-lg object-cover"
+              className="relative z-[2] w-full rounded-2xl shadow-lg object-cover"
             />
           </FadeIn>
 

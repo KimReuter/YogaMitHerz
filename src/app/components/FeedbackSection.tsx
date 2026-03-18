@@ -59,7 +59,7 @@ export default function FeedbackSection() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 1.2 }}
-          className="bg-iris-sand p-6 rounded-xl shadow-lg max-w-xl"
+          className="relative z-[2] bg-iris-sand p-6 rounded-xl shadow-lg max-w-xl"
         >
           <p className="text-lg italic mb-4 text-iris-charcoal">
             „{currentFeedback.text}“
