@@ -3,6 +3,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Button from '../components/Button';
 
 export default function ContactPage() {
   const [sent, setSent] = useState(false);
@@ -118,12 +119,7 @@ export default function ContactPage() {
                 />
               </div>
 
-              <button
-                className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-iris-terracotta text-white font-semibold
-                           hover:brightness-110 transition"
-              >
-                Nachricht losschicken ✨
-              </button>
+              <Button type="submit">Nachricht losschicken ✨</Button>
 
               {error && <p className="text-sm text-red-600">{error}</p>}
 
@@ -165,12 +161,7 @@ export default function ContactPage() {
             <p className="mb-4">
               Schau dir meinen Stundenplan an – such dir einen Termin aus und melde dich unkompliziert an.
             </p>
-            <a
-              href="/timetable"
-              className="inline-block px-5 py-3 rounded-full bg-iris-golden text-iris-charcoal font-semibold hover:brightness-110 transition"
-            >
-              Zu meinen Kursen
-            </a>
+            <Button href="/timetable">Zu meinen Kursen</Button>
           </div>
         </div>
       </section>

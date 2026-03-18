@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Button from '../components/Button';
 
 const influences = [
   {
@@ -190,12 +191,9 @@ export default function YogaArtenPage() {
             Schau in den Stundenplan – such dir einen Termin aus und komm auf die Matte. <br />
             Genau so, wie du heute bist.
           </p>
-          <a
-            href="/timetable"
-            className="inline-block mt-4 px-6 py-3 rounded-full bg-white text-iris-terracotta font-semibold hover:bg-iris-terracotta hover:text-white transition-colors"
-          >
+          <Button variant="inverted" href="/timetable" className="mt-4">
             Zu meinen Kursen
-          </a>
+          </Button>
         </motion.div>
       </section>
     </main>

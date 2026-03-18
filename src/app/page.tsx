@@ -5,7 +5,7 @@ import FeedbackSection from './components/FeedbackSection';
 import GalleryCarousel from './components/GalleryCarousel';
 import WaveDivider from './components/WaveDivider';
 import FadeIn from './components/FadeIn';
-import { LeafSprig, BotanicalDivider } from './components/BotanicalOrnaments';
+import Button from './components/Button';
 
 
 export default function HomePage() {
@@ -54,7 +54,7 @@ export default function HomePage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             href="/yoga"
-            className="inline-block px-6 py-3 bg-iris-terracotta hover:bg-iris-terracotta/80 text-white rounded-full text-lg font-medium transition shadow-md"
+            className="inline-flex items-center justify-center px-6 py-3 bg-iris-terracotta hover:bg-iris-terracotta/80 text-white hover:text-white rounded-full text-lg font-medium transition shadow-md"
           >
             Zu meinen Kursen
           </motion.a>
@@ -68,7 +68,7 @@ export default function HomePage() {
             <img
               src="/iris-portrait.jpg"
               alt="Iris Portrait"
-              className="rounded-full w-64 h-64 object-cover mx-auto border-4 border-iris-moss shadow-lg"
+              className="relative z-[2] rounded-full w-64 h-64 object-cover mx-auto border-4 border-iris-moss shadow-lg"
             />
           </FadeIn>
           <FadeIn direction="right" delay={0.15}>
@@ -102,19 +102,14 @@ export default function HomePage() {
       <section className="py-24 px-6 bg-iris-golden text-center">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
-            <div className="flex items-center justify-center gap-3 mb-3">
-              <LeafSprig className="text-iris-terracotta" size={52} />
-              <h2 className="text-3xl md:text-4xl font-bold text-center text-iris-terracotta">
-                Was ich dir anbieten möchte
-              </h2>
-              <LeafSprig className="text-iris-terracotta" size={52} flipped />
-            </div>
-            <BotanicalDivider className="text-iris-terracotta mb-10" />
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-iris-terracotta mb-10">
+              Was ich dir anbieten möchte
+            </h2>
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <FadeIn delay={0}>
-              <div className="bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-500 ease-in-out h-full">
+              <div className="relative z-[2] bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-500 ease-in-out h-full">
                 <div className="text-4xl mb-4">💗</div>
                 <h3 className="text-2xl font-semibold mb-2">Yoga mit Herz</h3>
                 <p>Authentisch, liebevoll und ganz nah am Leben. Kein Leistungsdruck, nur du mit dir.</p>
@@ -122,7 +117,7 @@ export default function HomePage() {
             </FadeIn>
 
             <FadeIn delay={0.15}>
-              <div className="bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-500 ease-in-out h-full">
+              <div className="relative z-[2] bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-500 ease-in-out h-full">
                 <div className="text-4xl mb-4">🌙</div>
                 <h3 className="text-2xl font-semibold mb-2">Raum für Ruhe</h3>
                 <p>Entspannung, Meditation und Atem. Momente, in denen du auftanken darfst.</p>
@@ -130,7 +125,7 @@ export default function HomePage() {
             </FadeIn>
 
             <FadeIn delay={0.3}>
-              <div className="bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-500 ease-in-out h-full">
+              <div className="relative z-[2] bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-500 ease-in-out h-full">
                 <div className="text-4xl mb-4">🌀</div>
                 <h3 className="text-2xl font-semibold mb-2">Bewegung in deinem Rhythmus</h3>
                 <p>Du musst nichts beweisen. <br />
@@ -154,23 +149,13 @@ export default function HomePage() {
 
           {/* Erste Stunde */}
           <FadeIn direction="right" delay={0.15} className="flex flex-col justify-start h-full space-y-6 text-center md:text-left">
-            <div>
-              <div className="flex items-center gap-2 justify-center md:justify-start mb-1">
-                <LeafSprig className="text-iris-terracotta" size={44} />
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta">
-                Bereit für deine erste Yogastunde?
-              </h2>
-            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta">
+              Bereit für deine erste Yogastunde?
+            </h2>
             <p className="text-lg">
               Vielleicht hast du Lust, Yoga mit mir auszuprobieren. Du bist herzlich willkommen – genau so, wie du bist.
             </p>
-            <a
-              href="/yoga"
-              className="inline-flex items-center justify-center bg-iris-terracotta hover:bg-iris-charcoal text-white px-4 py-2 rounded-full text-base font-medium transition min-w-[180px]"
-            >
-              Entdecke Yoga mit mir
-            </a>
+            <Button href="/yoga">Entdecke Yoga mit mir</Button>
           </FadeIn>
         </div>
       </section>
@@ -191,7 +176,7 @@ export default function HomePage() {
             <img
               src="/iris-portrait.jpg"
               alt="Iris Portrait"
-              className="w-full rounded-2xl shadow-lg object-cover"
+              className="relative z-[2] w-full rounded-2xl shadow-lg object-cover"
             />
           </FadeIn>
 
@@ -204,22 +189,12 @@ export default function HomePage() {
               Schreib mir, wenn du Fragen, Lust auf eine Yogastunde oder einfach ein kleines „Hallo" hast. Ich freue mich, von dir zu lesen – du bist jederzeit willkommen!
             </p>
             <div className="flex gap-4 flex-wrap">
-              <a
-                href="https://wa.me/4917662468814"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 bg-iris-terracotta hover:bg-iris-terracotta/80 text-white rounded-full font-medium transition"
-              >
+              <Button href="https://wa.me/4917662468814" target="_blank" rel="noopener noreferrer">
                 Schreib mir auf WhatsApp
-              </a>
-              <a
-                href="https://www.instagram.com/iriswallenaar/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 border-2 border-iris-terracotta text-iris-terracotta hover:bg-iris-terracotta rounded-full font-medium transition"
-              >
+              </Button>
+              <Button variant="outline" href="https://www.instagram.com/iriswallenaar/" target="_blank" rel="noopener noreferrer">
                 Folge mir auf Instagram
-              </a>
+              </Button>
             </div>
           </FadeIn>
         </div>
