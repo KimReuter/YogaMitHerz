@@ -8,7 +8,7 @@ const variantClasses: Record<Variant, string> = {
   inverted: 'bg-white text-iris-terracotta hover:bg-iris-terracotta hover:text-white',
 };
 
-const base = 'inline-flex items-center justify-center min-w-[11rem] px-6 py-3 rounded-full font-medium transition';
+const base = 'inline-flex items-center justify-center min-w-[11rem] whitespace-nowrap px-6 py-3 rounded-full font-medium transition';
 
 type CommonProps = {
   variant?: Variant;
