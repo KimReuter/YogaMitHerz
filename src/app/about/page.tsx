@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import WaveDivider from '@/components/WaveDivider';
+import { LeafSprig, BotanicalDivider } from '@/components/BotanicalOrnaments';
 
 export default function AboutPage() {
   return (
@@ -90,18 +92,20 @@ export default function AboutPage() {
 
       {/* Philosophie */}
       <section className="bg-iris-golden text-iris-charcoal">
-        <main className="px-6 py-16 max-w-4xl mx-auto space-y-16">
-          <motion.h2
-            className="text-2xl font-semibold mb-6 text-iris-terracotta"
+        <main className="px-6 py-16 max-w-4xl mx-auto">
+          <motion.div
+            className="flex items-center justify-center gap-3 mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            Meine Philosophie
-          </motion.h2>
+            <LeafSprig size={44} className="text-iris-terracotta/50" flipped />
+            <h2 className="text-2xl font-semibold text-iris-terracotta">Meine Philosophie</h2>
+            <LeafSprig size={44} className="text-iris-terracotta/50" />
+          </motion.div>
 
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2">
             {[
               {
                 title: 'Von Herz zu Herz',
@@ -122,30 +126,44 @@ export default function AboutPage() {
             ].map(({ title, content }, idx) => (
               <motion.div
                 key={idx}
+                className="bg-iris-sand/40 rounded-2xl p-6 border border-iris-moss/20 shadow-sm"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
               >
-                <p><strong>{title}:</strong> {content}</p>
+                <h3 className="font-semibold text-iris-terracotta mb-3 flex items-center gap-2">
+                  <LeafSprig size={26} className="text-iris-terracotta/50" />
+                  {title}
+                </h3>
+                <p className="text-base leading-relaxed">{content}</p>
               </motion.div>
             ))}
           </div>
         </main>
       </section>
 
+      {/* Wellen-Übergang golden → sand */}
+      <div className="bg-iris-golden">
+        <WaveDivider fill="#EDD59E" />
+      </div>
+
       {/* Kurz über mich */}
-      <section className="bg-iris-sand text-iris-charcoal py-16">
+      <section className="bg-iris-sand text-iris-charcoal pt-4 pb-20">
         <div className="max-w-2xl mx-auto px-6">
-          <motion.h2
-            className="text-2xl font-semibold mb-10 text-iris-terracotta text-center"
+          <BotanicalDivider className="text-iris-terracotta mb-8" />
+
+          <motion.div
+            className="flex items-center justify-center gap-3 mb-10"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            Kurz über mich
-          </motion.h2>
+            <LeafSprig size={40} className="text-iris-terracotta/50" flipped />
+            <h2 className="text-2xl font-semibold text-iris-terracotta">Kurz über mich</h2>
+            <LeafSprig size={40} className="text-iris-terracotta/50" />
+          </motion.div>
 
           <ul className="space-y-5">
             {[
