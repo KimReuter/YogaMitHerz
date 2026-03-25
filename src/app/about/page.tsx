@@ -114,7 +114,7 @@ export default function AboutPage() {
               },
               {
                 title: 'Asana erleben – ohne Druck',
-                content: 'Yoga ist für mich kein klassisches Workout – auch wenn es manchmal durchaus warm und anstrengend werden kann. 😉 Es geht nicht um die perfekte Haltung, sondern um das Spüren, Atmen und Dasein im Jetzt. Meine Anleitungen laden dich ein, deinen Körper liebevoll zu erkunden – ohne Leistungsdruck, dafür mit viel Achtsamkeit.',
+                content: <>Yoga ist für mich kein klassisches Workout – auch wenn es manchmal durchaus warm und anstrengend werden kann. 😉<br />Es geht nicht um die perfekte Haltung, sondern um das Spüren, Atmen und Dasein im Jetzt. Meine Anleitungen laden dich ein, deinen Körper liebevoll zu erkunden – ohne Leistungsdruck, dafür mit viel Achtsamkeit.</>,
               },
               {
                 title: 'Raum für Rückverbindung',
