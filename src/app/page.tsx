@@ -150,10 +150,10 @@ export default function HomePage() {
           {/* Erste Stunde */}
           <FadeIn direction="right" delay={0.15} className="flex flex-col justify-start h-full space-y-6 text-center md:text-left">
             <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta">
-              Bereit für deine erste Yogastunde?
+              Vielleicht hast du Lust, Yoga mit mir auszuprobieren?
             </h2>
             <p className="text-lg">
-              Vielleicht hast du Lust, Yoga mit mir auszuprobieren. Du bist herzlich willkommen – genau so, wie du bist.
+              Du bist herzlich willkommen – genau so, wie du bist.
             </p>
             <Button href="/yoga">Entdecke Yoga mit mir</Button>
           </FadeIn>
