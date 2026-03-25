@@ -110,15 +110,15 @@ export default function AboutPage() {
               },
               {
                 title: 'Vielfalt statt Schubladen',
-                content: 'Ich folge keinem bestimmten Stil dogmatisch. Stattdessen kombiniere ich Elemente aus Hatha, Vinyasa und Ashtanga – je nachdem, was sich stimmig anfühlt. So können wir gemeinsam einen Zugang zu Yoga finden, der wirklich zu dir passt.',
+                content: 'Ich folge keinem bestimmten Stil dogmatisch. Stattdessen verbinde ich Elemente aus Hatha-, Vinyasa- und Ashtanga-Yoga – je nachdem, was sich im Moment stimmig anfühlt. Durch verschiedene Varianten der Asanas gehe ich auf unterschiedliche Schwierigkeitsgrade ein, um jeden genau dort abzuholen, wo er an diesem Tag gerade steht.',
               },
               {
                 title: 'Asana erleben – ohne Druck',
-                content: 'Yoga ist für mich keine akrobatische Show. Es geht nicht um die perfekte Haltung, sondern um das Spüren, Atmen und Dasein im Jetzt. Meine Anleitungen laden dich ein, deinen Körper liebevoll zu erkunden – ohne Leistungsdruck, dafür mit viel Achtsamkeit.',
+                content: 'Yoga ist für mich kein klassisches Workout – auch wenn es manchmal durchaus warm und anstrengend werden kann. 😉 Es geht nicht um die perfekte Haltung, sondern um das Spüren, Atmen und Dasein im Jetzt. Meine Anleitungen laden dich ein, deinen Körper liebevoll zu erkunden – ohne Leistungsdruck, dafür mit viel Achtsamkeit.',
               },
               {
                 title: 'Raum für Rückverbindung',
-                content: 'Im Alltag verlieren wir oft den Kontakt zu uns selbst. Meine Stunden sind eine Einladung, wieder zurück in die eigene Mitte zu finden. Mit sanften Impulsen, bewussten Atemzügen und Momenten der Stille schaffen wir Raum für Rückverbindung – zu dir selbst und zur Welt um dich herum.',
+                content: 'Im Alltag verlieren wir oft den Kontakt zu uns selbst. Meine Stunden sind eine Einladung, wieder zurück in die eigene Mitte zu finden. Mit sanften Impulsen, bewussten Atemzügen und Momenten der Stille entsteht Raum für Rückverbindung – zu dir selbst und zum Frieden in dir.',
               },
             ].map(({ title, content }, idx) => (
               <motion.div
