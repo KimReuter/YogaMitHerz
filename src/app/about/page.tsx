@@ -1,6 +1,5 @@
 'use client';
 
-import YogaPoetry from '@/components/YogaPoetry';
 import TimelineSection from '@/components/TimelineSection';
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -90,8 +89,52 @@ export default function AboutPage() {
         </main>
       </section>
 
-      {/* Zusätzliche Abschnitte */}
-      <YogaPoetry />
+      {/* Philosophie */}
+      <section className="bg-iris-golden text-iris-charcoal">
+        <main className="px-6 py-16 max-w-4xl mx-auto space-y-16">
+          <motion.h2
+            className="text-2xl font-semibold mb-6 text-iris-terracotta"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Meine Philosophie
+          </motion.h2>
+
+          <div className="grid gap-8 md:grid-cols-2">
+            {[
+              {
+                title: 'Von Herz zu Herz',
+                content: 'Meine Yogastunden entstehen aus dem Moment heraus. Ich unterrichte nicht nach starren Plänen, sondern spüre, was gerade gebraucht wird – im Raum, im Körper, im Herzen. Jeder Mensch bringt etwas Einzigartiges mit, und genau das darf in meinen Stunden seinen Platz finden.',
+              },
+              {
+                title: 'Vielfalt statt Schubladen',
+                content: 'Ich folge keinem bestimmten Stil dogmatisch. Stattdessen kombiniere ich Elemente aus Hatha, Vinyasa und Ashtanga – je nachdem, was sich stimmig anfühlt. So können wir gemeinsam einen Zugang zu Yoga finden, der wirklich zu dir passt.',
+              },
+              {
+                title: 'Asana erleben – ohne Druck',
+                content: 'Yoga ist für mich keine akrobatische Show. Es geht nicht um die perfekte Haltung, sondern um das Spüren, Atmen und Dasein im Jetzt. Meine Anleitungen laden dich ein, deinen Körper liebevoll zu erkunden – ohne Leistungsdruck, dafür mit viel Achtsamkeit.',
+              },
+              {
+                title: 'Raum für Rückverbindung',
+                content: 'Im Alltag verlieren wir oft den Kontakt zu uns selbst. Meine Stunden sind eine Einladung, wieder zurück in die eigene Mitte zu finden. Mit sanften Impulsen, bewussten Atemzügen und Momenten der Stille schaffen wir Raum für Rückverbindung – zu dir selbst und zur Welt um dich herum.',
+              },
+            ].map(({ title, content }, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+              >
+                <p><strong>{title}:</strong> {content}</p>
+              </motion.div>
+            ))}
+          </div>
+        </main>
+      </section>
+
       <TimelineSection />
     </>
   );
