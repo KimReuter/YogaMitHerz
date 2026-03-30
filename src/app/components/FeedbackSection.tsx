@@ -10,11 +10,11 @@ const feedbacks = [
   },
   {
     name: 'Ricarda',
-    text: 'Ich habe mich in Iris’ Yogaunterricht sehr wohl und gut aufgehoben gefühlt. Die einfühlsame Klangunterstützung hat mich zusätzlich auf einer tieferen Ebene berührt und das Erlebnis noch besonderer gemacht. Ihre Yoga Stunde habe ich mit einem wunderbaren leichten Gefühl verlassen. ❤️',
+    text: 'Ich habe mich in Iris' Yogaunterricht sehr wohl und gut aufgehoben gefühlt. Die einfühlsame Klangunterstützung hat mich zusätzlich auf einer tieferen Ebene berührt und das Erlebnis noch besonderer gemacht. Ihre Yoga Stunde habe ich mit einem wunderbaren leichten Gefühl verlassen. ❤️',
   },
   {
     name: 'Christine',
-    text: 'Iris Yoga ist für mich "Oldie "immer eine Herausforderung, da ich ja nicht mehr so beweglich bin. Du nimmst darauf Rücksicht und gibst mir das Gefühl, viele Asanas gut zu können, mein Körper fühlt sich danach immer mobiler und beweglicher an. Dafür danke ich dir.',
+    text: 'Iris Yoga ist für mich "Oldie" immer eine Herausforderung, da ich ja nicht mehr so beweglich bin. Du nimmst darauf Rücksicht und gibst mir das Gefühl, viele Asanas gut zu können, mein Körper fühlt sich danach immer mobiler und beweglicher an. Dafür danke ich dir.',
   },
   {
     name: 'Hannes',
@@ -22,16 +22,16 @@ const feedbacks = [
   },
   {
     name: 'Heike',
-    text: 'Das erste Mal zum Yoga war ich bei meiner Reha. Da habe ich es kennen und lieben gelernt. Als Claudia mich dann bei dir mit untergebracht hat,  war ich sehr froh. Mittlerweile habe ich auch andere Yogalehrer kennengelernt. Bei dir fühle ich mich aber am ALLERBESTEN aufgehoben. Ich bin beweglicher und entspannter geworden und fühle mich danach immer wohl. Anfangs war ich immer noch etwas aufgewühlt und konnte schlecht einschlafen. Jetzt hat sich mein Körper und meine Seele daran gewöhnt. Ich finde deine Stunden mit Allem einfach toll. Das sag ich auch jeden der mich danach fragt. Mach bitte weiter so. 😘🧘‍♀️👏 Namaste'
+    text: 'Bei dir fühle ich mich am ALLERBESTEN aufgehoben. Ich bin beweglicher und entspannter geworden und fühle mich danach immer wohl. Ich finde deine Stunden mit Allem einfach toll. Das sag ich auch jedem, der mich danach fragt. Mach bitte weiter so. 😘🧘‍♀️',
   },
   {
     name: 'Bettina',
-    text: 'Tausend Dinge, die uns die Woche über begegnen und belasten, von denen man sich nur durch körperliche Aktivität, in die Stille gehen, Atem- und Meditationstechniken befreien kann. Du hast die seltene Gabe uns gedanklich abzuholen, Körper und Geist in die Entspannung zu führen. Auf Deine Geschichte zu Beginn der Stunde, freue ich mich immer ganz besonders. Aus diesen Gründen komme ich in Deine Yogastunde!'
+    text: 'Du hast die seltene Gabe, uns gedanklich abzuholen, Körper und Geist in die Entspannung zu führen. Auf deine Geschichte zu Beginn der Stunde freue ich mich immer ganz besonders. Aus diesen Gründen komme ich in deine Yogastunde!',
   },
   {
     name: 'Katrin',
-    text: 'Bis vor ein paar Jahren habe ich Yoga belächelt. Ich bin jemand, der "richtigen Sport" schätzt. Inzwischen kann ich mir ein Leben ohne Yoga bei Iris nicht mehr vorstellen. Das Klischee von "verknoteten" Menschen in weißen Gewändern muss man nicht erfüllen. Aber alltagstauglich dem Körper etwas Gutes tun und daraus Kraft und Lebensfreude für die nächsten Tage gewinnen - das lernte ich bei Iris. Danke.'
-  }
+    text: 'Bis vor ein paar Jahren habe ich Yoga belächelt. Inzwischen kann ich mir ein Leben ohne Yoga bei Iris nicht mehr vorstellen. Alltagstauglich dem Körper etwas Gutes tun und daraus Kraft und Lebensfreude für die nächsten Tage gewinnen – das lernte ich bei Iris. Danke.',
+  },
 ];
 
 export default function FeedbackSection() {
@@ -40,33 +40,61 @@ export default function FeedbackSection() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % feedbacks.length);
-    }, 15000);
+    }, 12000);
     return () => clearInterval(timer);
   }, []);
 
-  const currentFeedback = feedbacks[index];
+  const current = feedbacks[index];
 
   return (
-    <div className="flex flex-col justify-start h-full space-y-6">
+    <div className="max-w-2xl mx-auto text-center space-y-8">
       <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta">
-        Ein paar Worte von Menschen, die bereits mit mir auf der Matte waren
+        Ein paar Worte von Menschen,<br className="hidden md:block" /> die bereits mit mir auf der Matte waren
       </h2>
 
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 1.2 }}
-          className="relative z-[2] bg-iris-sand p-6 rounded-xl shadow-lg max-w-xl"
+      <div className="relative px-4">
+        {/* Dekorative Zitatmarke */}
+        <span
+          aria-hidden
+          className="absolute -top-8 -left-2 text-[7rem] leading-none text-iris-terracotta/15 font-serif select-none pointer-events-none"
         >
-          <p className="text-lg italic mb-4 text-iris-charcoal">
-            „{currentFeedback.text}“
-          </p>
-          <p className="text-iris-terracotta font-semibold">– {currentFeedback.name}</p>
-        </motion.div>
-      </AnimatePresence>
+          „
+        </span>
+
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.9 }}
+            className="relative z-10 space-y-5 pt-4"
+          >
+            <p className="text-lg md:text-xl italic text-iris-charcoal leading-relaxed">
+              {current.text}
+            </p>
+            <p className="text-iris-terracotta font-semibold tracking-widest uppercase text-sm">
+              — {current.name}
+            </p>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* Dot-Navigation */}
+      <div className="flex justify-center items-center gap-2 pt-2">
+        {feedbacks.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setIndex(i)}
+            aria-label={`Zeugnis ${i + 1}`}
+            className={`rounded-full transition-all duration-300 ${
+              i === index
+                ? 'bg-iris-terracotta w-6 h-2'
+                : 'bg-iris-terracotta/30 w-2 h-2 hover:bg-iris-terracotta/60'
+            }`}
+          />
+        ))}
+      </div>
     </div>
   );
 }

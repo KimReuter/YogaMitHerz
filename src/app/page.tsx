@@ -140,25 +140,26 @@ export default function HomePage() {
 
       {/* Energiearbeit-Section: vorübergehend ausgeblendet – siehe /energy/page.tsx */}
 
-      {/* Feedback + Erste Stunde nebeneinander */}
-      <section className="py-28 px-6 bg-iris-golden">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
-          {/* Feedback */}
-          <FadeIn direction="left" className="flex flex-col justify-start h-full">
-            <FeedbackSection />
-          </FadeIn>
+      {/* Kundenstimmen */}
+      <section className="py-24 px-6 bg-iris-golden">
+        <FadeIn>
+          <FeedbackSection />
+        </FadeIn>
+      </section>
 
-          {/* Erste Stunde */}
-          <FadeIn direction="right" delay={0.15} className="flex flex-col justify-start h-full space-y-6 text-center md:text-left">
+      {/* CTA */}
+      <section className="pb-24 px-6 bg-iris-golden">
+        <FadeIn delay={0.1}>
+          <div className="max-w-xl mx-auto text-center space-y-6">
             <h2 className="text-4xl md:text-5xl font-bold text-iris-terracotta">
-              Vielleicht hast du Lust, Yoga mit mir auszuprobieren?
+              Vielleicht hast du Lust,<br className="hidden md:block" /> Yoga mit mir auszuprobieren?
             </h2>
             <p className="text-lg">
               Du bist herzlich willkommen – genau so, wie du bist.
             </p>
             <Button href="/yoga">Entdecke Yoga mit mir</Button>
-          </FadeIn>
-        </div>
+          </div>
+        </FadeIn>
       </section>
 
       {/* Galerie */}
