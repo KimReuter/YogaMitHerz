@@ -134,7 +134,7 @@ export default function AboutPage() {
               <motion.div
                 key={idx}
                 className="bg-iris-sand/60 overflow-hidden flex flex-col justify-center"
-                style={{ borderRadius: shape, padding: '4rem' }}
+                style={{ borderRadius: shape, padding: '5.5rem 4rem' }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
