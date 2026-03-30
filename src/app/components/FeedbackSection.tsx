@@ -10,7 +10,7 @@ const feedbacks = [
   },
   {
     name: 'Ricarda',
-    text: 'Ich habe mich in Iris' Yogaunterricht sehr wohl und gut aufgehoben gefühlt. Die einfühlsame Klangunterstützung hat mich zusätzlich auf einer tieferen Ebene berührt und das Erlebnis noch besonderer gemacht. Ihre Yoga Stunde habe ich mit einem wunderbaren leichten Gefühl verlassen. ❤️',
+    text: 'Ich habe mich in Iris\u2019 Yogaunterricht sehr wohl und gut aufgehoben gefühlt. Die einfühlsame Klangunterstützung hat mich zusätzlich auf einer tieferen Ebene berührt und das Erlebnis noch besonderer gemacht. Ihre Yoga Stunde habe ich mit einem wunderbaren leichten Gefühl verlassen. ❤️',
   },
   {
     name: 'Christine',
