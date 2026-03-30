@@ -37,7 +37,7 @@ export default function Navbar() {
         {/* Wellenförmige Unterkante beim Scrollen */}
         <div
           aria-hidden
-          className="absolute left-0 right-0 pointer-events-none transition-opacity duration-500"
+          className="absolute left-0 right-0 pointer-events-none transition-opacity duration-300"
           style={{ top: '100%', height: '28px', opacity: scrolled || open ? 1 : 0 }}
         >
           <svg
