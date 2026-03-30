@@ -97,7 +97,7 @@ export default function AboutPage() {
 
       {/* Philosophie */}
       <section className="bg-iris-golden text-iris-charcoal">
-        <main className="px-6 py-16 max-w-6xl mx-auto">
+        <main className="px-6 py-16 max-w-7xl mx-auto">
           <motion.h2
             className="text-2xl font-semibold text-iris-terracotta text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
@@ -134,7 +134,7 @@ export default function AboutPage() {
               <motion.div
                 key={idx}
                 className="bg-iris-sand/60 overflow-hidden flex flex-col justify-center"
-                style={{ borderRadius: shape, padding: '5.5rem 4rem' }}
+                style={{ borderRadius: shape, padding: '6.5rem 4.5rem' }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
