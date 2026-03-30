@@ -28,7 +28,8 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative z-10 bg-iris-golden/90 backdrop-blur-sm p-8 rounded-xl max-w-2xl w-full flex flex-col gap-6 shadow-xl"
+          className="relative z-10 bg-iris-golden/90 backdrop-blur-sm p-8 max-w-2xl w-full flex flex-col gap-6 shadow-xl"
+          style={{ borderRadius: '58% 42% 50% 50% / 48% 44% 56% 52%' }}
         >
           <motion.h1
             initial={{ opacity: 0, y: 40 }}

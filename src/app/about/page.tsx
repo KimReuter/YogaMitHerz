@@ -139,15 +139,10 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
               >
                 <motion.div
-                  className="bg-iris-sand/60 overflow-hidden flex flex-col justify-center"
+                  className="bg-iris-sand/60 overflow-hidden flex flex-col justify-center cursor-default"
                   style={{ borderRadius: shape, padding: '6.5rem 4.5rem' }}
-                  animate={{ y: [0, -5, 0] }}
-                  transition={{
-                    duration: 5 + idx * 0.5,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                    delay: idx * 1.2,
-                  }}
+                  whileHover={{ scale: 1.03, y: -6, boxShadow: '0 28px 64px rgba(0,0,0,0.11)' }}
+                  transition={{ duration: 0.4, ease: 'easeOut' }}
                 >
                   <h3 className="text-3xl font-semibold text-iris-terracotta mb-4 text-center">{title}</h3>
                   <p className="text-base leading-relaxed text-justify">{content}</p>
