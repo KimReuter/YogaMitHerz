@@ -113,23 +113,28 @@ export default function AboutPage() {
               {
                 title: 'Von Herz zu Herz',
                 content: 'Meine Yogastunden entstehen aus dem Moment heraus. Ich unterrichte nicht nach starren Plänen, sondern spüre, was gerade gebraucht wird – im Raum, im Körper, im Herzen. Jeder Mensch bringt etwas Einzigartiges mit, und genau das darf in meinen Stunden seinen Platz finden.',
+                shape: '62% 38% 28% 72% / 58% 32% 68% 42%',
               },
               {
                 title: 'Vielfalt statt Schubladen',
                 content: 'Ich folge keinem bestimmten Stil dogmatisch. Stattdessen verbinde ich Elemente aus Hatha-, Vinyasa- und Ashtanga-Yoga – je nachdem, was sich im Moment stimmig anfühlt. Durch verschiedene Varianten der Asanas gehe ich auf unterschiedliche Schwierigkeitsgrade ein, um jeden genau dort abzuholen, wo er an diesem Tag gerade steht.',
+                shape: '35% 65% 68% 32% / 32% 35% 65% 68%',
               },
               {
                 title: 'Asana erleben – ohne Druck',
                 content: <>Yoga ist für mich kein klassisches Workout – auch wenn es manchmal durchaus warm und anstrengend werden kann. 😉<br />Es geht nicht um die perfekte Haltung, sondern um das Spüren, Atmen und Dasein im Jetzt. Meine Anleitungen laden dich ein, deinen Körper liebevoll zu erkunden – ohne Leistungsdruck, dafür mit viel Achtsamkeit.</>,
+                shape: '72% 28% 38% 62% / 65% 72% 28% 35%',
               },
               {
                 title: 'Raum für Rückverbindung',
                 content: 'Im Alltag verlieren wir oft den Kontakt zu uns selbst. Meine Stunden sind eine Einladung, wieder zurück in die eigene Mitte zu finden. Mit sanften Impulsen, bewussten Atemzügen und Momenten der Stille entsteht Raum für Rückverbindung – zu dir selbst und zum Frieden in dir.',
+                shape: '42% 58% 65% 35% / 68% 42% 58% 32%',
               },
-            ].map(({ title, content }, idx) => (
+            ].map(({ title, content, shape }, idx) => (
               <motion.div
                 key={idx}
-                className="bg-iris-sand/40 rounded-2xl p-6 border border-iris-moss/20 shadow-sm"
+                className="bg-iris-sand/60 p-8"
+                style={{ borderRadius: shape }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
