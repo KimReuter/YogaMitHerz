@@ -79,7 +79,8 @@ export default function AboutPage() {
 
             {/* Abschlussblock */}
             <motion.div
-              className="bg-iris-sand/50 rounded-2xl px-7 py-6 space-y-4"
+              className="bg-iris-sand/50 px-8 py-8 space-y-4"
+              style={{ borderRadius: '2.5rem 0.5rem 2.5rem 0.5rem' }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
