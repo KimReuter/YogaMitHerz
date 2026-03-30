@@ -77,23 +77,40 @@ export default function AboutPage() {
               </motion.p>
             ))}
 
-            {/* Abschlussblock */}
-            <motion.div
-              className="bg-gradient-to-br from-white/60 to-iris-sand/70 px-8 py-8 space-y-4"
-              style={{ borderRadius: '2.5rem 0.5rem 2.5rem 0.5rem' }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.15 }}
-            >
-              <p>Dein Yoga-Weg ist genau wie du – ganz individuell und einzigartig. Und gleichzeitig doch auch ähnlich.</p>
-              <p>Individuell deshalb, weil jeder von uns seine eigenen Voraussetzungen, Vorlieben und Herausforderungen mitbringt. Und doch sind unsere Wege im Yoga auch verbunden – denn am Ende suchen wir alle auf unsere Weise Ruhe, Entspannung und ein Stück inneren Frieden.</p>
-              <p>Dafür verbinde ich verschiedene Yogastile miteinander, biete Varianten der Asanas für unterschiedliche Bedürfnisse an und lade dich durch Worte und Inspiration dazu ein, Körper und Gedanken achtsam wahrzunehmen.</p>
-            </motion.div>
-
           </div>
         </main>
       </section>
+
+      {/* Wellen-Übergang golden → sand */}
+      <div className="bg-iris-golden">
+        <WaveDivider fill="#EDD59E" />
+      </div>
+
+      {/* Abschlussblock */}
+      <section className="bg-iris-sand text-iris-charcoal">
+        <div className="max-w-3xl mx-auto px-6 py-16 space-y-6 text-[1.05rem] leading-[1.85]">
+          {[
+            'Dein Yoga-Weg ist genau wie du – ganz individuell und einzigartig. Und gleichzeitig doch auch ähnlich.',
+            'Individuell deshalb, weil jeder von uns seine eigenen Voraussetzungen, Vorlieben und Herausforderungen mitbringt. Und doch sind unsere Wege im Yoga auch verbunden – denn am Ende suchen wir alle auf unsere Weise Ruhe, Entspannung und ein Stück inneren Frieden.',
+            'Dafür verbinde ich verschiedene Yogastile miteinander, biete Varianten der Asanas für unterschiedliche Bedürfnisse an und lade dich durch Worte und Inspiration dazu ein, Körper und Gedanken achtsam wahrzunehmen.',
+          ].map((text, idx) => (
+            <motion.p
+              key={idx}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: idx * 0.1 }}
+            >
+              {text}
+            </motion.p>
+          ))}
+        </div>
+      </section>
+
+      {/* Wellen-Übergang sand → golden */}
+      <div className="bg-iris-sand">
+        <WaveDivider fill="#D69A3B" />
+      </div>
 
       {/* Philosophie */}
       <section className="bg-iris-golden text-iris-charcoal">

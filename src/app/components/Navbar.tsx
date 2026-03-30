@@ -34,6 +34,21 @@ export default function Navbar() {
             : 'bg-transparent'
         )}
       >
+        {/* Wellenförmige Unterkante beim Scrollen */}
+        <div
+          aria-hidden
+          className="absolute left-0 right-0 pointer-events-none transition-opacity duration-500"
+          style={{ top: '100%', height: '28px', opacity: scrolled || open ? 1 : 0 }}
+        >
+          <svg
+            viewBox="0 0 1440 28"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            style={{ display: 'block', width: '100%', height: '100%' }}
+          >
+            <path d="M0,0 C480,28 960,0 1440,20 L1440,0 Z" fill="rgba(214,154,59,0.95)" />
+          </svg>
+        </div>
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
           {/* Desktop: Links links */}

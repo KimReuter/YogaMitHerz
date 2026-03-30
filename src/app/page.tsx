@@ -28,8 +28,8 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative z-10 bg-iris-golden/90 backdrop-blur-sm p-8 max-w-2xl w-full flex flex-col gap-6 shadow-xl"
-          style={{ borderRadius: '58% 42% 50% 50% / 48% 44% 56% 52%' }}
+          className="relative z-10 bg-iris-golden/90 backdrop-blur-sm max-w-2xl w-full flex flex-col gap-6 shadow-xl overflow-hidden"
+          style={{ borderRadius: '52% 48% 48% 52% / 50% 46% 54% 50%', padding: '4.5rem 3.5rem' }}
         >
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -55,7 +55,7 @@ export default function HomePage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             href="/yoga"
-            className="inline-flex items-center justify-center px-6 py-3 bg-iris-terracotta hover:bg-iris-terracotta/80 text-white hover:text-white rounded-full text-lg font-medium transition shadow-md"
+            className="self-center inline-flex items-center justify-center px-6 py-3 bg-iris-terracotta hover:bg-iris-terracotta/80 text-white hover:text-white rounded-full text-lg font-medium transition shadow-md"
           >
             Zu meinen Kursen
           </motion.a>
