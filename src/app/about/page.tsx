@@ -133,14 +133,14 @@ export default function AboutPage() {
             ].map(({ title, content, shape }, idx) => (
               <motion.div
                 key={idx}
-                className="bg-iris-sand/60 p-12 overflow-hidden"
-                style={{ borderRadius: shape }}
+                className="bg-iris-sand/60 overflow-hidden"
+                style={{ borderRadius: shape, padding: '4.5rem' }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
               >
-                <h3 className="text-lg font-semibold text-iris-terracotta mb-3">{title}</h3>
+                <h3 className="text-2xl font-semibold text-iris-terracotta mb-4">{title}</h3>
                 <p className="text-base leading-relaxed">{content}</p>
               </motion.div>
             ))}
