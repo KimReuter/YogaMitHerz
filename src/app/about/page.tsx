@@ -24,7 +24,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-iris-golden text-4xl md:text-5xl font-bold text-center drop-shadow-lg"
+            className="text-iris-golden text-5xl md:text-6xl font-bold text-center drop-shadow-lg"
           >
             Mein Weg zum Yoga
           </motion.h1>
@@ -39,7 +39,7 @@ export default function AboutPage() {
       <section className="bg-iris-golden text-iris-charcoal">
         <main className="px-6 py-16 max-w-3xl mx-auto">
           <motion.h2
-            className="text-2xl font-semibold mb-10 text-iris-terracotta"
+            className="text-3xl font-semibold mb-10 text-iris-terracotta"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -79,7 +79,7 @@ export default function AboutPage() {
 
             {/* Abschlussblock */}
             <motion.div
-              className="bg-iris-sand/50 px-8 py-8 space-y-4"
+              className="bg-gradient-to-br from-white/60 to-iris-sand/70 px-8 py-8 space-y-4"
               style={{ borderRadius: '2.5rem 0.5rem 2.5rem 0.5rem' }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -99,7 +99,7 @@ export default function AboutPage() {
       <section className="bg-iris-golden text-iris-charcoal">
         <main className="px-6 py-16 max-w-7xl mx-auto">
           <motion.h2
-            className="text-2xl font-semibold text-iris-terracotta text-center mb-12"
+            className="text-3xl font-semibold text-iris-terracotta text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -141,12 +141,12 @@ export default function AboutPage() {
                 <motion.div
                   className="bg-iris-sand/60 overflow-hidden flex flex-col justify-center"
                   style={{ borderRadius: shape, padding: '6.5rem 4.5rem' }}
-                  animate={{ y: [0, -10, 0] }}
+                  animate={{ y: [0, -5, 0] }}
                   transition={{
-                    duration: 3 + idx * 0.4,
+                    duration: 5 + idx * 0.5,
                     repeat: Infinity,
                     ease: 'easeInOut',
-                    delay: idx * 0.8,
+                    delay: idx * 1.2,
                   }}
                 >
                   <h3 className="text-3xl font-semibold text-iris-terracotta mb-4 text-center">{title}</h3>
@@ -169,7 +169,7 @@ export default function AboutPage() {
           <BotanicalDivider className="text-iris-terracotta mb-8" />
 
           <motion.h2
-            className="text-2xl font-semibold text-iris-terracotta text-center mb-10"
+            className="text-3xl font-semibold text-iris-terracotta text-center mb-10"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

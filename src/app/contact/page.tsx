@@ -43,7 +43,7 @@ export default function ContactPage() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative z-10 text-iris-golden text-4xl md:text-5xl font-bold text-center drop-shadow"
+          className="relative z-10 text-iris-golden text-5xl md:text-6xl font-bold text-center drop-shadow"
         >
           Dein Weg zu deiner Yogastunde beginnt hier.
         </motion.h1>
@@ -57,7 +57,7 @@ export default function ContactPage() {
       <section className="max-w-5xl mx-auto px-6 py-16 grid gap-12 md:grid-cols-2">
         {/* Formular */}
         <div className="bg-white rounded-2xl border border-iris-golden/30 p-6 shadow-sm">
-          <h2 className="text-2xl font-semibold mb-4 text-iris-terracotta">Schreib mir</h2>
+          <h2 className="text-3xl font-semibold mb-4 text-iris-terracotta">Schreib mir</h2>
 
           {sent ? (
             <p className="text-green-700">
@@ -162,7 +162,7 @@ export default function ContactPage() {
           </div>
 
           <div className="rounded-2xl p-6 bg-iris-sand">
-            <h3 className="text-lg font-semibold mb-2">Noch unsicher?</h3>
+            <h3 className="text-xl font-semibold mb-2">Noch unsicher?</h3>
             <p className="mb-4">
               Schau dir meinen Stundenplan an – such dir einen Termin aus und melde dich unkompliziert an.
             </p>

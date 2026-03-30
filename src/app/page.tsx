@@ -34,7 +34,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold tracking-tight text-iris-terracotta"
+            className="text-5xl md:text-6xl font-bold tracking-tight text-iris-terracotta"
           >
             Einlassen. Loslassen. Ankommen.
           </motion.h1>
@@ -73,7 +73,7 @@ export default function HomePage() {
           </FadeIn>
           <FadeIn direction="right" delay={0.15}>
             <div className="text-center md:text-left">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-iris-terracotta">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-iris-terracotta">
                 Namasté – Das Licht in meinem Herzen grüßt das Licht in deinem Herzen
               </h2>
               <p className="text-lg md:text-xl mb-4">
@@ -102,7 +102,7 @@ export default function HomePage() {
       <section className="py-24 px-6 bg-iris-golden text-center">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-iris-terracotta mb-10">
+            <h2 className="text-4xl md:text-5xl font-bold text-center text-iris-terracotta mb-10">
               Was ich dir anbieten möchte
             </h2>
           </FadeIn>
@@ -111,7 +111,7 @@ export default function HomePage() {
             <FadeIn delay={0}>
               <div className="relative z-[2] bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-500 ease-in-out h-full">
                 <div className="text-4xl mb-4">💗</div>
-                <h3 className="text-2xl font-semibold mb-2">Yoga mit Herz</h3>
+                <h3 className="text-3xl font-semibold mb-2">Yoga mit Herz</h3>
                 <p>Authentisch, liebevoll und ganz nah am Leben. Kein Leistungsdruck, nur du mit dir.</p>
               </div>
             </FadeIn>
@@ -119,7 +119,7 @@ export default function HomePage() {
             <FadeIn delay={0.15}>
               <div className="relative z-[2] bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-500 ease-in-out h-full">
                 <div className="text-4xl mb-4">🌙</div>
-                <h3 className="text-2xl font-semibold mb-2">Raum für Ruhe</h3>
+                <h3 className="text-3xl font-semibold mb-2">Raum für Ruhe</h3>
                 <p>Entspannung, Meditation und Atem. Momente, in denen du auftanken darfst.</p>
               </div>
             </FadeIn>
@@ -127,7 +127,7 @@ export default function HomePage() {
             <FadeIn delay={0.3}>
               <div className="relative z-[2] bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-500 ease-in-out h-full">
                 <div className="text-4xl mb-4">🌀</div>
-                <h3 className="text-2xl font-semibold mb-2">Bewegung in deinem Rhythmus</h3>
+                <h3 className="text-3xl font-semibold mb-2">Bewegung in deinem Rhythmus</h3>
                 <p>Du musst nichts beweisen. <br />
                 Du darfst einfach sein – und dich bewegen, <br />
                 wie es dir guttut.</p>
@@ -149,7 +149,7 @@ export default function HomePage() {
 
           {/* Erste Stunde */}
           <FadeIn direction="right" delay={0.15} className="flex flex-col justify-start h-full space-y-6 text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta">
+            <h2 className="text-4xl md:text-5xl font-bold text-iris-terracotta">
               Vielleicht hast du Lust, Yoga mit mir auszuprobieren?
             </h2>
             <p className="text-lg">
@@ -182,7 +182,7 @@ export default function HomePage() {
 
           {/* Textbereich */}
           <FadeIn direction="right" delay={0.15} className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta">
+            <h2 className="text-4xl md:text-5xl font-bold text-iris-terracotta">
               Ein Moment für dich – und für mich
             </h2>
             <p className="text-lg leading-relaxed">
