@@ -97,7 +97,7 @@ export default function AboutPage() {
 
       {/* Philosophie */}
       <section className="bg-iris-golden text-iris-charcoal">
-        <main className="px-6 py-16 max-w-4xl mx-auto">
+        <main className="px-6 py-16 max-w-6xl mx-auto">
           <motion.h2
             className="text-2xl font-semibold text-iris-terracotta text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
@@ -108,7 +108,7 @@ export default function AboutPage() {
             Meine Philosophie
           </motion.h2>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-8 md:grid-cols-2">
             {[
               {
                 title: 'Von Herz zu Herz',
@@ -133,15 +133,15 @@ export default function AboutPage() {
             ].map(({ title, content, shape }, idx) => (
               <motion.div
                 key={idx}
-                className="bg-iris-sand/60 overflow-hidden"
-                style={{ borderRadius: shape, padding: '4.5rem' }}
+                className="bg-iris-sand/60 overflow-hidden flex flex-col justify-center"
+                style={{ borderRadius: shape, padding: '4rem' }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
               >
                 <h3 className="text-2xl font-semibold text-iris-terracotta mb-4">{title}</h3>
-                <p className="text-base leading-relaxed">{content}</p>
+                <p className="text-base leading-relaxed text-justify">{content}</p>
               </motion.div>
             ))}
           </div>
