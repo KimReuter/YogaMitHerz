@@ -113,34 +113,34 @@ export default function AboutPage() {
               {
                 title: 'Von Herz zu Herz',
                 content: 'Meine Yogastunden entstehen aus dem Moment heraus. Ich unterrichte nicht nach starren Plänen, sondern spüre, was gerade gebraucht wird – im Raum, im Körper, im Herzen. Jeder Mensch bringt etwas Einzigartiges mit, und genau das darf in meinen Stunden seinen Platz finden.',
-                shape: '62% 38% 28% 72% / 58% 32% 68% 42%',
+                shape: '60% 40% 44% 56% / 54% 42% 58% 46%',
               },
               {
                 title: 'Vielfalt statt Schubladen',
                 content: 'Ich folge keinem bestimmten Stil dogmatisch. Stattdessen verbinde ich Elemente aus Hatha-, Vinyasa- und Ashtanga-Yoga – je nachdem, was sich im Moment stimmig anfühlt. Durch verschiedene Varianten der Asanas gehe ich auf unterschiedliche Schwierigkeitsgrade ein, um jeden genau dort abzuholen, wo er an diesem Tag gerade steht.',
-                shape: '35% 65% 68% 32% / 32% 35% 65% 68%',
+                shape: '42% 58% 60% 40% / 46% 42% 58% 54%',
               },
               {
                 title: 'Asana erleben – ohne Druck',
                 content: <>Yoga ist für mich kein klassisches Workout – auch wenn es manchmal durchaus warm und anstrengend werden kann. 😉<br />Es geht nicht um die perfekte Haltung, sondern um das Spüren, Atmen und Dasein im Jetzt. Meine Anleitungen laden dich ein, deinen Körper liebevoll zu erkunden – ohne Leistungsdruck, dafür mit viel Achtsamkeit.</>,
-                shape: '72% 28% 38% 62% / 65% 72% 28% 35%',
+                shape: '56% 44% 40% 60% / 60% 56% 44% 40%',
               },
               {
                 title: 'Raum für Rückverbindung',
                 content: 'Im Alltag verlieren wir oft den Kontakt zu uns selbst. Meine Stunden sind eine Einladung, wieder zurück in die eigene Mitte zu finden. Mit sanften Impulsen, bewussten Atemzügen und Momenten der Stille entsteht Raum für Rückverbindung – zu dir selbst und zum Frieden in dir.',
-                shape: '42% 58% 65% 35% / 68% 42% 58% 32%',
+                shape: '44% 56% 56% 44% / 42% 60% 40% 58%',
               },
             ].map(({ title, content, shape }, idx) => (
               <motion.div
                 key={idx}
-                className="bg-iris-sand/60 p-8"
+                className="bg-iris-sand/60 p-12 overflow-hidden"
                 style={{ borderRadius: shape }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
               >
-                <h3 className="font-semibold text-iris-terracotta mb-3">{title}</h3>
+                <h3 className="text-lg font-semibold text-iris-terracotta mb-3">{title}</h3>
                 <p className="text-base leading-relaxed">{content}</p>
               </motion.div>
             ))}
