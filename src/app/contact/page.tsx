@@ -4,6 +4,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import Button from '../components/Button';
+import WaveDivider from '../components/WaveDivider';
 
 export default function ContactPage() {
   const [sent, setSent] = useState(false);
@@ -31,7 +32,7 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="text-iris-charcoal">
+    <main className="bg-white text-iris-charcoal">
       {/* Hero */}
       <section
         className="relative h-[50vh] bg-cover bg-center flex items-center justify-center"
@@ -46,6 +47,10 @@ export default function ContactPage() {
         >
           Dein Weg zu deiner Yogastunde beginnt hier.
         </motion.h1>
+        {/* Wave: Hero → White */}
+        <div className="absolute bottom-0 left-0 right-0 z-10">
+          <WaveDivider fill="#FFFFFF" />
+        </div>
       </section>
 
       {/* Inhalt */}
@@ -165,6 +170,11 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Wave: White → Footer (Golden) */}
+      <div className="bg-white">
+        <WaveDivider fill="#D69A3B" />
+      </div>
     </main>
   );
 }

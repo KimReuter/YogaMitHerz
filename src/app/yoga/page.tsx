@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Button from '../components/Button';
+import WaveDivider from '../components/WaveDivider';
 
 const influences = [
   {
@@ -48,6 +49,10 @@ export default function YogaArtenPage() {
           >
             Ein Kurs – inspiriert von vielen Yoga‑Arten
           </motion.h1>
+        </div>
+        {/* Wave: Hero → Golden */}
+        <div className="absolute bottom-0 left-0 right-0 z-10">
+          <WaveDivider fill="#D69A3B" />
         </div>
       </section>
 
@@ -136,6 +141,11 @@ export default function YogaArtenPage() {
         </div>
       </section>
 
+      {/* Wave: Golden → Sand */}
+      <div className="bg-iris-golden">
+        <WaveDivider fill="#EDD59E" />
+      </div>
+
       {/* Was dich erwartet */}
       <section className="bg-iris-sand">
   <div className="max-w-6xl mx-auto px-6 py-16">
@@ -178,6 +188,11 @@ export default function YogaArtenPage() {
   </div>
 </section>
 
+      {/* Wave: Sand → Terracotta */}
+      <div className="bg-iris-sand">
+        <WaveDivider fill="#8E3821" />
+      </div>
+
       {/* CTA */}
       <section className="bg-iris-terracotta text-white py-12 px-6 text-center">
         <motion.div
@@ -196,6 +211,11 @@ export default function YogaArtenPage() {
           </Button>
         </motion.div>
       </section>
+
+      {/* Wave: Terracotta → Footer (Golden) */}
+      <div className="bg-iris-terracotta">
+        <WaveDivider fill="#D69A3B" />
+      </div>
     </main>
   );
 }

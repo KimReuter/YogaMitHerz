@@ -29,6 +29,10 @@ export default function AboutPage() {
             Mein Weg zum Yoga
           </motion.h1>
         </div>
+        {/* Wave: Hero → Golden */}
+        <div className="absolute bottom-0 left-0 right-0 z-10">
+          <WaveDivider fill="#D69A3B" />
+        </div>
       </section>
 
       {/* Abschnitt: Mein Weg zum Yoga */}
@@ -182,6 +186,11 @@ export default function AboutPage() {
           </ul>
         </div>
       </section>
+
+      {/* Wave: Sand → Footer (Golden) */}
+      <div className="bg-iris-sand">
+        <WaveDivider fill="#D69A3B" />
+      </div>
     </>
   );
 }
