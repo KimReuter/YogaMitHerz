@@ -140,7 +140,7 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
               >
-                <h3 className="text-2xl font-semibold text-iris-terracotta mb-4">{title}</h3>
+                <h3 className="text-2xl font-semibold text-iris-terracotta mb-4 text-center">{title}</h3>
                 <p className="text-base leading-relaxed text-justify">{content}</p>
               </motion.div>
             ))}
