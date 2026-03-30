@@ -55,7 +55,7 @@ export default function HomePage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             href="/yoga"
-            className="self-center inline-flex items-center justify-center px-6 py-3 bg-iris-terracotta hover:bg-iris-terracotta/80 text-white hover:text-white rounded-full text-lg font-medium transition shadow-md"
+            className="self-center inline-flex items-center justify-center px-10 py-3 bg-iris-terracotta hover:bg-iris-terracotta/80 text-white hover:text-white rounded-full text-lg font-medium transition shadow-md"
           >
             Zu meinen Kursen
           </motion.a>
