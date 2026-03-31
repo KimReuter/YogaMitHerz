@@ -158,14 +158,19 @@ export default function HomePage() {
         </FadeIn>
       </section>
 
+      {/* Wave: Golden → Sand */}
+      <div className="bg-iris-golden">
+        <WaveDivider fill="#EDD59E" />
+      </div>
+
       {/* CTA */}
-      <section className="pb-24 px-6 bg-iris-golden">
+      <section className="py-24 px-6 bg-iris-sand text-iris-charcoal">
         <FadeIn delay={0.1}>
-          <div className="max-w-xl mx-auto text-center space-y-6 bg-white/70 backdrop-blur-sm rounded-3xl px-10 py-12 shadow-lg">
+          <div className="max-w-xl mx-auto text-center space-y-6">
             <h2 className="text-4xl md:text-5xl font-bold text-iris-terracotta">
               Vielleicht hast du Lust,<br className="hidden md:block" /> Yoga mit mir auszuprobieren?
             </h2>
-            <p className="text-lg text-iris-charcoal">
+            <p className="text-lg">
               Du bist herzlich willkommen – genau so, wie du bist.
             </p>
             <a
@@ -177,6 +182,11 @@ export default function HomePage() {
           </div>
         </FadeIn>
       </section>
+
+      {/* Wave: Sand → Golden */}
+      <div className="bg-iris-sand">
+        <WaveDivider fill="#D69A3B" />
+      </div>
 
       {/* Galerie */}
       <GalleryCarousel />
