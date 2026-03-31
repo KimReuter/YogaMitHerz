@@ -198,7 +198,7 @@ export default function HomePage() {
           {/* Bild im asymmetrischen Blob-Rahmen */}
           <FadeIn direction="left">
             <motion.div
-              className="overflow-hidden w-full aspect-[3/4] shadow-xl"
+              className="overflow-hidden w-3/4 mx-auto aspect-[3/4] shadow-xl"
               style={{ borderRadius: '55% 45% 52% 48% / 48% 44% 56% 52%' }}
               whileHover={{ scale: 1.02, boxShadow: '0 28px 64px rgba(0,0,0,0.13)' }}
               transition={{ duration: 0.4, ease: 'easeOut' }}
