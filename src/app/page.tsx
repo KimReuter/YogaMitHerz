@@ -192,30 +192,28 @@ export default function HomePage() {
       </div>
 
       {/* Let's Connect */}
-      <section className="py-28 px-6 bg-iris-sand text-iris-charcoal">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-          {/* Bild */}
-          <FadeIn direction="left">
+      <section className="py-28 px-6 bg-iris-sand text-iris-charcoal text-center">
+        <div className="max-w-xl mx-auto space-y-8">
+          <FadeIn>
             <img
               src="/iris-portrait.jpg"
               alt="Iris Portrait"
-              className="relative z-[2] w-full rounded-2xl shadow-lg object-cover"
+              className="w-36 h-36 rounded-full object-cover object-top mx-auto shadow-lg ring-4 ring-iris-golden/40"
             />
           </FadeIn>
 
-          {/* Textbereich */}
-          <FadeIn direction="right" delay={0.15} className="space-y-6">
+          <FadeIn delay={0.15} className="space-y-6">
             <h2 className="text-4xl md:text-5xl font-bold text-iris-terracotta">
               Ein Moment für dich – und für mich
             </h2>
             <p className="text-lg leading-relaxed">
               Schreib mir, wenn du Fragen, Lust auf eine Yogastunde oder einfach ein kleines „Hallo" hast. Ich freue mich, von dir zu lesen – du bist jederzeit willkommen!
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button href="https://wa.me/4917662468814" target="_blank" rel="noopener noreferrer" className="flex-1">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button href="https://wa.me/4917662468814" target="_blank" rel="noopener noreferrer">
                 Schreib mir auf WhatsApp
               </Button>
-              <Button variant="outline" href="https://www.instagram.com/iriswallenaar/" target="_blank" rel="noopener noreferrer" className="flex-1">
+              <Button variant="outline" href="https://www.instagram.com/iriswallenaar/" target="_blank" rel="noopener noreferrer">
                 Folge mir auf Instagram
               </Button>
             </div>
