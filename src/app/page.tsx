@@ -211,11 +211,11 @@ export default function HomePage() {
             <p className="text-lg leading-relaxed">
               Schreib mir, wenn du Fragen, Lust auf eine Yogastunde oder einfach ein kleines „Hallo" hast. Ich freue mich, von dir zu lesen – du bist jederzeit willkommen!
             </p>
-            <div className="flex gap-4 flex-wrap">
-              <Button href="https://wa.me/4917662468814" target="_blank" rel="noopener noreferrer">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button href="https://wa.me/4917662468814" target="_blank" rel="noopener noreferrer" className="flex-1">
                 Schreib mir auf WhatsApp
               </Button>
-              <Button variant="outline" href="https://www.instagram.com/iriswallenaar/" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" href="https://www.instagram.com/iriswallenaar/" target="_blank" rel="noopener noreferrer" className="flex-1">
                 Folge mir auf Instagram
               </Button>
             </div>
