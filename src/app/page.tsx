@@ -212,14 +212,14 @@ export default function HomePage() {
           </FadeIn>
 
           {/* Textbereich */}
-          <FadeIn direction="right" delay={0.15} className="space-y-6">
+          <FadeIn direction="right" delay={0.15} className="space-y-6 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-iris-terracotta">
               Ein Moment für dich –<br />und für mich
             </h2>
             <p className="text-lg leading-relaxed">
               Schreib mir, wenn du Fragen, Lust auf eine Yogastunde oder einfach ein kleines „Hallo" hast. Ich freue mich, von dir zu lesen – du bist jederzeit willkommen!
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="https://wa.me/4917662468814" target="_blank" rel="noopener noreferrer" className="flex-1">
                 Schreib mir auf WhatsApp
               </Button>
