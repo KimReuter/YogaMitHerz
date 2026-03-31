@@ -151,45 +151,35 @@ export default function HomePage() {
 
       {/* Energiearbeit-Section: vorübergehend ausgeblendet – siehe /energy/page.tsx */}
 
-      {/* Wave: Golden → Sand */}
-      <div className="bg-iris-golden">
-        <WaveDivider fill="#EDD59E" />
-      </div>
-
       {/* Kundenstimmen */}
-      <section className="py-24 px-6 bg-iris-sand">
+      <section className="py-24 px-6 bg-iris-golden">
         <FadeIn>
           <FeedbackSection />
         </FadeIn>
       </section>
 
-      {/* Wave: Sand → Terracotta */}
-      <div className="bg-iris-sand">
-        <WaveDivider fill="#8E3821" />
+      {/* Wave: Golden → Sand */}
+      <div className="bg-iris-golden">
+        <WaveDivider fill="#EDD59E" />
       </div>
 
       {/* CTA */}
-      <section className="py-24 px-6 bg-iris-terracotta">
+      <section className="py-24 px-6 bg-iris-sand text-iris-charcoal">
         <FadeIn delay={0.1}>
           <div className="max-w-xl mx-auto text-center space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-white">
+            <h2 className="text-4xl md:text-5xl font-bold text-iris-terracotta">
               Vielleicht hast du Lust,<br className="hidden md:block" /> Yoga mit mir auszuprobieren?
             </h2>
-            <p className="text-lg text-white/85">
+            <p className="text-lg">
               Du bist herzlich willkommen – genau so, wie du bist.
             </p>
-            <a
-              href="/yoga"
-              className="inline-flex items-center justify-center px-10 py-3 bg-iris-golden hover:bg-iris-sand text-iris-charcoal rounded-full text-lg font-medium transition shadow-md"
-            >
-              Entdecke Yoga mit mir
-            </a>
+            <Button href="/yoga" className="px-10">Entdecke Yoga mit mir</Button>
           </div>
         </FadeIn>
       </section>
 
-      {/* Wave: Terracotta → Golden */}
-      <div className="bg-iris-terracotta">
+      {/* Wave: Sand → Golden */}
+      <div className="bg-iris-sand">
         <WaveDivider fill="#D69A3B" />
       </div>
 
@@ -203,33 +193,46 @@ export default function HomePage() {
 
       {/* Let's Connect */}
       <section className="py-28 px-6 bg-iris-sand text-iris-charcoal">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-          {/* Bild */}
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+
+          {/* Bild im asymmetrischen Blob-Rahmen */}
           <FadeIn direction="left">
-            <img
-              src="/iris-portrait.jpg"
-              alt="Iris Portrait"
-              className="relative z-[2] w-full rounded-2xl shadow-lg object-cover"
-            />
+            <motion.div
+              className="overflow-hidden w-3/4 mx-auto aspect-[3/4] shadow-xl"
+              style={{ borderRadius: '40% 60% 63% 37% / 55% 45% 40% 60%' }}
+              whileHover={{ scale: 1.02, boxShadow: '0 28px 64px rgba(0,0,0,0.13)' }}
+              transition={{ duration: 0.4, ease: 'easeOut' }}
+            >
+              <img
+                src="/iris-portrait.jpg"
+                alt="Iris Portrait"
+                className="w-full h-full object-cover object-top"
+              />
+            </motion.div>
           </FadeIn>
 
           {/* Textbereich */}
-          <FadeIn direction="right" delay={0.15} className="space-y-6">
+          <FadeIn direction="right" delay={0.15} className="space-y-6 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-iris-terracotta">
-              Ein Moment für dich – und für mich
+              Ein Moment für dich –<br />und für mich
             </h2>
             <p className="text-lg leading-relaxed">
               Schreib mir, wenn du Fragen, Lust auf eine Yogastunde oder einfach ein kleines „Hallo" hast. Ich freue mich, von dir zu lesen – du bist jederzeit willkommen!
             </p>
-            <div className="flex gap-4 flex-wrap">
-              <Button href="https://wa.me/4917662468814" target="_blank" rel="noopener noreferrer">
-                Schreib mir auf WhatsApp
-              </Button>
-              <Button variant="outline" href="https://www.instagram.com/iriswallenaar/" target="_blank" rel="noopener noreferrer">
-                Folge mir auf Instagram
-              </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex-1">
+                <Button href="https://wa.me/4917662468814" target="_blank" rel="noopener noreferrer" className="w-full">
+                  Schreib mir auf WhatsApp
+                </Button>
+              </div>
+              <div className="flex-1">
+                <Button variant="outline" href="https://www.instagram.com/iriswallenaar/" target="_blank" rel="noopener noreferrer" className="w-full">
+                  Folge mir auf Instagram
+                </Button>
+              </div>
             </div>
           </FadeIn>
+
         </div>
       </section>
 

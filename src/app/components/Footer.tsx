@@ -1,9 +1,11 @@
 // /app/components/Footer.tsx
 import Link from "next/link";
+import Button from "./Button";
 
 export default function Footer() {
   return (
     <footer className="bg-iris-golden text-iris-charcoal">
+
       <div className="max-w-6xl mx-auto px-6 py-12 grid gap-8 md:grid-cols-3">
         <div className="space-y-2">
           <p className="font-semibold">Yoga mit Herz</p>
@@ -15,14 +17,16 @@ export default function Footer() {
             <li><Link href="/" className="hover:underline">Start</Link></li>
             <li><Link href="/about" className="hover:underline">Über mich</Link></li>
             <li><Link href="/yoga" className="hover:underline">Meine Kurse</Link></li>
-            {/* <li><Link href="/energy" className="hover:underline">Energiearbeit</Link></li> */}
             <li><Link href="/contact" className="hover:underline">Kontakt</Link></li>
           </ul>
         </nav>
 
-        <div className="md:justify-self-end">
-          {/* Socials optional */}
-          {/* <div className="flex gap-4">…</div> */}
+        <div className="md:justify-self-end space-y-3">
+          <p className="text-iris-terracotta font-semibold uppercase tracking-widest text-sm">
+            Bereit für deine erste Stunde?
+          </p>
+          <p className="text-sm leading-relaxed opacity-80">Komm einfach so, wie du bist.</p>
+          <Button href="/yoga">Zu meinen Kursen</Button>
         </div>
       </div>
 

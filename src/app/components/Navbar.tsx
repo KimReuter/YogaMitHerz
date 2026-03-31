@@ -21,7 +21,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Menü schließen bei Routenwechsel (Link-Klick)
   const close = () => setOpen(false);
 
   return (
@@ -49,58 +48,61 @@ export default function Navbar() {
             <path d="M0,0 C480,28 960,0 1440,20 L1440,0 Z" fill="rgba(214,154,59,0.95)" />
           </svg>
         </div>
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-          {/* Desktop: Links links */}
-          <ul className={clsx(
-            'hidden md:flex gap-6 transition-colors duration-300',
-            scrolled ? 'text-iris-charcoal' : 'text-white drop-shadow'
-          )}>
-            <li><Link href="/">Start</Link></li>
-            <li><Link href="/about">Über mich</Link></li>
-          </ul>
+        <div className="relative max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-          {/* Zentrierter Titel */}
+          {/* Links: Brand */}
           <div className={clsx(
-            'absolute left-1/2 -translate-x-1/2 text-xl font-bold transition-colors duration-300',
+            'text-xl font-bold transition-colors duration-300 z-10',
             scrolled || open ? 'text-iris-terracotta' : 'text-white drop-shadow'
           )}>
             <Link href="/" onClick={close}>Yoga mit Herz</Link>
           </div>
 
-          {/* Desktop: Links rechts */}
+          {/* Mitte: Nav-Links (absolut zentriert) */}
           <ul className={clsx(
-            'hidden md:flex gap-6 transition-colors duration-300',
+            'hidden md:flex absolute left-1/2 -translate-x-1/2 gap-6 transition-colors duration-300',
             scrolled ? 'text-iris-charcoal' : 'text-white drop-shadow'
           )}>
-            <li><Link href="/yoga">Meine Kurse</Link></li>
-            <li><Link href="/contact">Kontakt</Link></li>
+            {links.map(({ href, label }) => (
+              <li key={href}><Link href={href} onClick={close}>{label}</Link></li>
+            ))}
           </ul>
 
-          {/* Mobile: Hamburger-Button */}
-          <button
-            className={clsx(
-              'md:hidden ml-auto p-2 rounded-md transition-colors',
-              scrolled || open ? 'text-iris-charcoal' : 'text-white drop-shadow'
-            )}
-            onClick={() => setOpen((o) => !o)}
-            aria-label={open ? 'Menü schließen' : 'Menü öffnen'}
-          >
-            {open ? (
-              // X-Icon
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </svg>
-            ) : (
-              // Hamburger-Icon
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                <line x1="3" y1="6"  x2="21" y2="6" />
-                <line x1="3" y1="12" x2="21" y2="12" />
-                <line x1="3" y1="18" x2="21" y2="18" />
-              </svg>
-            )}
-          </button>
+          {/* Rechts: CTA + Mobile Hamburger */}
+          <div className="flex items-center gap-3 z-10">
+            {/* CTA Button – immer in Terracotta, unabhängig vom Scroll-Status */}
+            <Link
+              href="/yoga"
+              onClick={close}
+              className="hidden md:inline-flex items-center justify-center px-5 py-2 rounded-full text-sm font-medium border-2 border-iris-terracotta text-iris-terracotta hover:bg-iris-terracotta hover:text-white transition-all duration-300"
+            >
+              Kurs buchen
+            </Link>
+
+            {/* Mobile: Hamburger-Button */}
+            <button
+              className={clsx(
+                'md:hidden p-2 rounded-md transition-colors',
+                scrolled || open ? 'text-iris-charcoal' : 'text-white drop-shadow'
+              )}
+              onClick={() => setOpen((o) => !o)}
+              aria-label={open ? 'Menü schließen' : 'Menü öffnen'}
+            >
+              {open ? (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              ) : (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                  <line x1="3" y1="6"  x2="21" y2="6" />
+                  <line x1="3" y1="12" x2="21" y2="12" />
+                  <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Dropdown-Menü */}
@@ -118,6 +120,15 @@ export default function Navbar() {
                   </Link>
                 </li>
               ))}
+              <li className="pt-3">
+                <Link
+                  href="/yoga"
+                  onClick={close}
+                  className="inline-flex items-center justify-center w-full py-3 rounded-full text-sm font-medium border-2 border-iris-terracotta text-iris-terracotta hover:bg-iris-terracotta hover:text-white transition-all"
+                >
+                  Kurs buchen
+                </Link>
+              </li>
             </ul>
           </div>
         )}
