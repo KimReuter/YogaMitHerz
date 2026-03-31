@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Button from '../components/Button';
+import WaveDivider from '../components/WaveDivider';
 
 const influences = [
   {
@@ -44,10 +45,14 @@ export default function YogaArtenPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-white text-4xl md:text-5xl font-bold text-center drop-shadow-lg"
+            className="text-white text-5xl md:text-6xl font-bold text-center drop-shadow-lg"
           >
             Ein Kurs – inspiriert von vielen Yoga‑Arten
           </motion.h1>
+        </div>
+        {/* Wave: Hero → Golden */}
+        <div className="absolute bottom-0 left-0 right-0 z-10">
+          <WaveDivider fill="#D69A3B" />
         </div>
       </section>
 
@@ -60,7 +65,7 @@ export default function YogaArtenPage() {
             transition={{ duration: 0.6 }}
             className="md:flex-1 space-y-4"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-iris-terracotta">
+            <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta">
               Wie ich unterrichte
             </h2>
             <p>
@@ -97,7 +102,7 @@ export default function YogaArtenPage() {
 
       {/* Ein Kurs – viele Einflüsse */}
       <section className="max-w-6xl mx-auto px-6 pb-12">
-        <h2 className="text-2xl md:text-3xl font-bold text-iris-terracotta mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta mb-8">
           Ein Kurs – viele Einflüsse
         </h2>
 
@@ -128,13 +133,18 @@ export default function YogaArtenPage() {
                 viewport={{ once: true, amount: 0.4 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
               >
-                <h3 className="text-xl md:text-2xl font-semibold">{item.title}</h3>
+                <h3 className="text-2xl md:text-3xl font-semibold">{item.title}</h3>
                 <p>{item.blurb}</p>
               </motion.div>
             </div>
           ))}
         </div>
       </section>
+
+      {/* Wave: Golden → Sand */}
+      <div className="bg-iris-golden">
+        <WaveDivider fill="#EDD59E" />
+      </div>
 
       {/* Was dich erwartet */}
       <section className="bg-iris-sand">
@@ -178,6 +188,11 @@ export default function YogaArtenPage() {
   </div>
 </section>
 
+      {/* Wave: Sand → Terracotta */}
+      <div className="bg-iris-sand">
+        <WaveDivider fill="#8E3821" />
+      </div>
+
       {/* CTA */}
       <section className="bg-iris-terracotta text-white py-12 px-6 text-center">
         <motion.div
@@ -186,7 +201,7 @@ export default function YogaArtenPage() {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto space-y-6"
         >
-          <h2 className="text-3xl md:text-4xl font-bold">Lust, es auszuprobieren?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold">Lust, es auszuprobieren?</h2>
           <p className="text-lg">
             Schau in den Stundenplan – such dir einen Termin aus und komm auf die Matte. <br />
             Genau so, wie du heute bist.
@@ -196,6 +211,11 @@ export default function YogaArtenPage() {
           </Button>
         </motion.div>
       </section>
+
+      {/* Wave: Terracotta → Footer (Golden) */}
+      <div className="bg-iris-terracotta">
+        <WaveDivider fill="#D69A3B" />
+      </div>
     </main>
   );
 }

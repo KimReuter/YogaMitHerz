@@ -24,10 +24,14 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-iris-golden text-4xl md:text-5xl font-bold text-center drop-shadow-lg"
+            className="text-iris-golden text-5xl md:text-6xl font-bold text-center drop-shadow-lg"
           >
             Mein Weg zum Yoga
           </motion.h1>
+        </div>
+        {/* Wave: Hero → Golden */}
+        <div className="absolute bottom-0 left-0 right-0 z-10">
+          <WaveDivider fill="#D69A3B" />
         </div>
       </section>
 
@@ -35,7 +39,7 @@ export default function AboutPage() {
       <section className="bg-iris-golden text-iris-charcoal">
         <main className="px-6 py-16 max-w-3xl mx-auto">
           <motion.h2
-            className="text-2xl font-semibold mb-10 text-iris-terracotta"
+            className="text-3xl font-semibold mb-10 text-iris-terracotta"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -73,28 +77,46 @@ export default function AboutPage() {
               </motion.p>
             ))}
 
-            {/* Abschlussblock */}
-            <motion.div
-              className="bg-iris-sand/50 rounded-2xl px-7 py-6 space-y-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.15 }}
-            >
-              <p>Dein Yoga-Weg ist genau wie du – ganz individuell und einzigartig. Und gleichzeitig doch auch ähnlich.</p>
-              <p>Individuell deshalb, weil jeder von uns seine eigenen Voraussetzungen, Vorlieben und Herausforderungen mitbringt. Und doch sind unsere Wege im Yoga auch verbunden – denn am Ende suchen wir alle auf unsere Weise Ruhe, Entspannung und ein Stück inneren Frieden.</p>
-              <p>Dafür verbinde ich verschiedene Yogastile miteinander, biete Varianten der Asanas für unterschiedliche Bedürfnisse an und lade dich durch Worte und Inspiration dazu ein, Körper und Gedanken achtsam wahrzunehmen.</p>
-            </motion.div>
-
           </div>
         </main>
       </section>
 
+      {/* Wellen-Übergang golden → sand */}
+      <div className="bg-iris-golden">
+        <WaveDivider fill="#EDD59E" />
+      </div>
+
+      {/* Abschlussblock */}
+      <section className="bg-iris-sand text-iris-charcoal">
+        <div className="max-w-3xl mx-auto px-6 py-16 space-y-6 text-[1.05rem] leading-[1.85]">
+          {[
+            'Dein Yoga-Weg ist genau wie du – ganz individuell und einzigartig. Und gleichzeitig doch auch ähnlich.',
+            'Individuell deshalb, weil jeder von uns seine eigenen Voraussetzungen, Vorlieben und Herausforderungen mitbringt. Und doch sind unsere Wege im Yoga auch verbunden – denn am Ende suchen wir alle auf unsere Weise Ruhe, Entspannung und ein Stück inneren Frieden.',
+            'Dafür verbinde ich verschiedene Yogastile miteinander, biete Varianten der Asanas für unterschiedliche Bedürfnisse an und lade dich durch Worte und Inspiration dazu ein, Körper und Gedanken achtsam wahrzunehmen.',
+          ].map((text, idx) => (
+            <motion.p
+              key={idx}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: idx * 0.1 }}
+            >
+              {text}
+            </motion.p>
+          ))}
+        </div>
+      </section>
+
+      {/* Wellen-Übergang sand → golden */}
+      <div className="bg-iris-sand">
+        <WaveDivider fill="#D69A3B" />
+      </div>
+
       {/* Philosophie */}
       <section className="bg-iris-golden text-iris-charcoal">
-        <main className="px-6 py-16 max-w-4xl mx-auto">
+        <main className="px-6 py-16 max-w-7xl mx-auto">
           <motion.h2
-            className="text-2xl font-semibold text-iris-terracotta text-center mb-12"
+            className="text-3xl font-semibold text-iris-terracotta text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -103,35 +125,45 @@ export default function AboutPage() {
             Meine Philosophie
           </motion.h2>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-8 md:grid-cols-2">
             {[
               {
                 title: 'Von Herz zu Herz',
                 content: 'Meine Yogastunden entstehen aus dem Moment heraus. Ich unterrichte nicht nach starren Plänen, sondern spüre, was gerade gebraucht wird – im Raum, im Körper, im Herzen. Jeder Mensch bringt etwas Einzigartiges mit, und genau das darf in meinen Stunden seinen Platz finden.',
+                shape: '60% 40% 44% 56% / 54% 42% 58% 46%',
               },
               {
                 title: 'Vielfalt statt Schubladen',
                 content: 'Ich folge keinem bestimmten Stil dogmatisch. Stattdessen verbinde ich Elemente aus Hatha-, Vinyasa- und Ashtanga-Yoga – je nachdem, was sich im Moment stimmig anfühlt. Durch verschiedene Varianten der Asanas gehe ich auf unterschiedliche Schwierigkeitsgrade ein, um jeden genau dort abzuholen, wo er an diesem Tag gerade steht.',
+                shape: '42% 58% 60% 40% / 46% 42% 58% 54%',
               },
               {
                 title: 'Asana erleben – ohne Druck',
                 content: <>Yoga ist für mich kein klassisches Workout – auch wenn es manchmal durchaus warm und anstrengend werden kann. 😉<br />Es geht nicht um die perfekte Haltung, sondern um das Spüren, Atmen und Dasein im Jetzt. Meine Anleitungen laden dich ein, deinen Körper liebevoll zu erkunden – ohne Leistungsdruck, dafür mit viel Achtsamkeit.</>,
+                shape: '56% 44% 40% 60% / 60% 56% 44% 40%',
               },
               {
                 title: 'Raum für Rückverbindung',
                 content: 'Im Alltag verlieren wir oft den Kontakt zu uns selbst. Meine Stunden sind eine Einladung, wieder zurück in die eigene Mitte zu finden. Mit sanften Impulsen, bewussten Atemzügen und Momenten der Stille entsteht Raum für Rückverbindung – zu dir selbst und zum Frieden in dir.',
+                shape: '44% 56% 56% 44% / 42% 60% 40% 58%',
               },
-            ].map(({ title, content }, idx) => (
+            ].map(({ title, content, shape }, idx) => (
               <motion.div
                 key={idx}
-                className="bg-iris-sand/40 rounded-2xl p-6 border border-iris-moss/20 shadow-sm"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
               >
-                <h3 className="font-semibold text-iris-terracotta mb-3">{title}</h3>
-                <p className="text-base leading-relaxed">{content}</p>
+                <motion.div
+                  className="bg-iris-sand/60 overflow-hidden flex flex-col justify-center cursor-default"
+                  style={{ borderRadius: shape, padding: '6.5rem 4.5rem' }}
+                  whileHover={{ scale: 1.03, y: -6, boxShadow: '0 28px 64px rgba(0,0,0,0.11)' }}
+                  transition={{ duration: 0.4, ease: 'easeOut' }}
+                >
+                  <h3 className="text-3xl font-semibold text-iris-terracotta mb-4 text-center">{title}</h3>
+                  <p className="text-base leading-relaxed text-justify">{content}</p>
+                </motion.div>
               </motion.div>
             ))}
           </div>
@@ -149,7 +181,7 @@ export default function AboutPage() {
           <BotanicalDivider className="text-iris-terracotta mb-8" />
 
           <motion.h2
-            className="text-2xl font-semibold text-iris-terracotta text-center mb-10"
+            className="text-3xl font-semibold text-iris-terracotta text-center mb-10"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -182,6 +214,11 @@ export default function AboutPage() {
           </ul>
         </div>
       </section>
+
+      {/* Wave: Sand → Footer (Golden) */}
+      <div className="bg-iris-sand">
+        <WaveDivider fill="#D69A3B" />
+      </div>
     </>
   );
 }
