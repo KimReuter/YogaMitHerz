@@ -1,35 +1,48 @@
 'use client';
 
-import React from 'react';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
-import Button from '../components/Button';
 import WaveDivider from '../components/WaveDivider';
+import FadeIn from '../components/FadeIn';
+import Button from '../components/Button';
 
-const influences = [
+const styleInfluences = ['Hatha', 'Vinyasa', 'Ashtanga'];
+
+const courses = [
   {
-    title: 'Hatha – Achtsam & geerdet',
-    image: '/images/hatha.jpg',
-    blurb:
-      'Ruhige, klare Ausrichtung, bewusste Haltungen, Zeit zum Nachspüren. Hatha bringt Fokus und Erdung in die Praxis.',
+    time: 'Donnerstag · 18:30 Uhr',
+    duration: '90 Minuten',
+    title: 'Kraftvoll & fordernd',
+    mood: 'Energie · Fokus · Stärke',
+    paragraphs: [
+      'In dieser 90-minütigen Praxis kann es schon mal ganz schön warm werden. 😉 Wir beginnen sanft mit Entspannung und Mobilisierung, bevor wir Kraft, Fokus und Achtsamkeit miteinander verbinden.',
+      'Die Übungen fordern dich, ohne zu überfordern, und schenken dir am Ende das kleine, aber kostbare Gefühl: „Das habe ich heute geschafft!" Ich passe die Intensität an die Gruppe an – mal intensiver, mal ruhiger, mal variiert – sodass du deinen eigenen Rhythmus finden kannst.',
+      'Zum Abschluss wartet eine ausgiebige Shavasana, in der Körper und Geist alles Gelernte integrieren dürfen. Am Ende gehst du zufrieden, glücklich – und mit einem Lächeln im Gesicht – nach Hause.',
+    ],
+    motto: 'Erlaube dir, zu leuchten – und nimm dieses Strahlen mit in deinen Alltag.',
+    bg: 'bg-iris-sand',
+    waveFill: '#D69A3B',
+    waveContainerBg: 'bg-iris-sand',
   },
   {
-    title: 'Vinyasa – Im Fluss',
-    image: '/images/vinyasa.jpg',
-    blurb:
-      'Atem & Bewegung verschmelzen. Mal sanft, mal kraftvoll – immer im Rhythmus deines Atems.',
+    time: 'Donnerstag · 20:15 Uhr',
+    duration: '60 Minuten',
+    title: 'Entspannend & beruhigend',
+    mood: 'Ankommen · Loslassen · Ruhe',
+    paragraphs: [
+      'Diese Praxis ist eine Einladung zum Ankommen und Loslassen. Wir bewegen uns achtsam, spüren den Körper und nehmen das wahr, was gerade ist.',
+      'Die Asanas beginnen leicht kräftigend, fließen dann in sanfte, passive und dehnende Sequenzen über. Auch hier rundet eine ausgiebige Shavasana die Stunde ab, sodass du Körper und Geist tief entspannen kannst.',
+    ],
+    motto: 'Gönn dir diesen Moment für dich – loslassen, einlassen, ankommen.',
+    bg: 'bg-iris-golden',
+    waveFill: '#EDD59E',
+    waveContainerBg: 'bg-iris-golden',
   },
-  {
-    title: 'Ashtanga – Klar & kraftvoll',
-    image: '/images/ashtanga.jpg',
-    blurb:
-      'Präzision, Stabilität, Präsenz. Kein Dogma, sondern Inspiration für Struktur und innere Stärke.',
-  }
 ];
 
-export default function YogaArtenPage() {
+export default function YogaPage() {
   return (
     <main className="bg-iris-golden text-iris-charcoal">
+
       {/* Hero */}
       <section className="relative h-[60vh] overflow-hidden">
         <video
@@ -43,101 +56,62 @@ export default function YogaArtenPage() {
         <div className="relative z-10 flex items-center justify-center h-full bg-black/40">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-white text-5xl md:text-6xl font-bold text-center drop-shadow-lg"
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-white text-5xl md:text-6xl font-bold text-center drop-shadow-lg px-6"
           >
-            Ein Kurs – inspiriert von vielen Yoga‑Arten
+            Meine Kurse
           </motion.h1>
         </div>
-        {/* Wave: Hero → Golden */}
         <div className="absolute bottom-0 left-0 right-0 z-10">
           <WaveDivider fill="#D69A3B" />
         </div>
       </section>
 
-      {/* Einleitung: Wie Iris unterrichtet */}
-      <section className="max-w-6xl mx-auto px-6 py-16">
-        <div className="md:flex md:items-start">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="md:flex-1 space-y-4"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta">
-              Wie ich unterrichte
+      {/* Für alle, die... */}
+      <section className="py-24 px-6 bg-iris-golden">
+        <div className="max-w-3xl mx-auto text-center">
+          <FadeIn>
+            <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta mb-12">
+              Für alle, die…
             </h2>
-            <p>
-              Mein Unterricht ist kein fester Stil – er entsteht im Moment. Ich kombiniere Elemente aus Hatha,
-              Vinyasa und Ashtanga, mal ruhig, mal dynamisch, immer achtsam. <br />
-              So bekommst du genau das, was du heute brauchst.
+          </FadeIn>
+
+          <ul className="space-y-5 text-left mb-12">
+            {[
+              'Yoga neu entdecken oder wieder zu sich selbst zurückfinden möchten.',
+              'den eigenen Körper achtsam spüren und bewegen wollen.',
+              'eine Balance aus Ruhe, Kraft und Entspannung suchen.',
+            ].map((item, i) => (
+              <FadeIn key={i} delay={i * 0.1}>
+                <li className="flex items-start gap-4">
+                  <span className="mt-2 flex-shrink-0 w-3 h-3 rounded-full bg-iris-terracotta ring-4 ring-iris-terracotta/20" />
+                  <span className="text-lg leading-relaxed">… {item}</span>
+                </li>
+              </FadeIn>
+            ))}
+          </ul>
+
+          <FadeIn delay={0.35}>
+            <p className="text-lg md:text-xl italic text-iris-terracotta font-medium leading-relaxed border-t border-iris-terracotta/20 pt-8">
+              Alles, was du brauchst, bist du selbst – und bequeme Kleidung.
             </p>
-            <div className="grid gap-3 sm:grid-cols-3">
-              <div className="flex items-center justify-center rounded-xl bg-white/60 px-4 py-3 text-sm shadow transition-transform duration-300 hover:scale-105">achtsam & vielfältig</div>
-              <div className="flex items-center justify-center rounded-xl bg-white/60 px-4 py-3 text-sm shadow transition-transform duration-300 hover:scale-105">atemgeführt & klar</div>
-              <div className="flex items-center justify-center rounded-xl bg-white/60 px-4 py-3 text-sm shadow transition-transform duration-300 hover:scale-105">sanft bis kraftvoll</div>
+          </FadeIn>
+
+          {/* Stil-Badges */}
+          <FadeIn delay={0.45}>
+            <div className="mt-10 flex flex-wrap justify-center items-center gap-3">
+              <span className="text-sm opacity-60 mr-1">Meine Praxis ist inspiriert von:</span>
+              {styleInfluences.map((style) => (
+                <span
+                  key={style}
+                  className="px-4 py-1.5 rounded-full text-sm border border-iris-terracotta/40 text-iris-terracotta"
+                >
+                  {style}
+                </span>
+              ))}
             </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-8 md:mt-0 md:ml-10 md:max-w-sm md:shrink-0 md:self-start rounded-2xl bg-white/70 p-5 shadow"
-          >
-            <h3 className="font-semibold mb-2">Für wen ist mein Kurs geeignet?</h3>
-            <ul className="list-disc list-inside space-y-1 text-sm">
-              <li>Einsteiger:innen & Wiedereinsteiger:innen</li>
-              <li>Menschen, die achtsam üben wollen</li>
-              <li>Alle, die Balance zwischen Ruhe & Kraft suchen</li>
-            </ul>
-            <p className="text-sm mt-3 opacity-80">
-              Du brauchst nichts außer dich selbst – <br />
-              und bequeme Kleidung.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Ein Kurs – viele Einflüsse */}
-      <section className="max-w-6xl mx-auto px-6 pb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta mb-8">
-          Ein Kurs – viele Einflüsse
-        </h2>
-
-        {/* Hinweis nur einmal */}
-        <p className="text-sm opacity-80 mb-10">
-           Hinweis: Dies sind <strong>Einflüsse</strong> meiner Praxis – keine getrennten Kursangebote.
-        </p>
-
-        <div className="space-y-16">
-          {influences.map((item, idx) => (
-            <div
-              key={item.title}
-              className={`flex flex-col md:flex-row items-center gap-10 ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
-            >
-              <div className="md:w-1/2">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={600}
-                  height={400}
-                  className="rounded-xl shadow-md object-cover w-full"
-                />
-              </div>
-              <motion.div
-                className="md:w-1/2 space-y-3"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.4 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-              >
-                <h3 className="text-2xl md:text-3xl font-semibold">{item.title}</h3>
-                <p>{item.blurb}</p>
-              </motion.div>
-            </div>
-          ))}
+          </FadeIn>
         </div>
       </section>
 
@@ -146,76 +120,90 @@ export default function YogaArtenPage() {
         <WaveDivider fill="#EDD59E" />
       </div>
 
-      {/* Was dich erwartet */}
-      <section className="bg-iris-sand">
-  <div className="max-w-6xl mx-auto px-6 py-16">
-    <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-      {[
-        {
-          title: 'Atem & Ankommen',
-          text: 'Wir starten ruhig, verbinden Atem & Körper – du kommst bei dir an.',
-        },
-        {
-          title: 'Fluss & Fokus',
-          text: 'Bewegte Sequenzen oder gehaltene Asanas – je nach Bedürfnis der Gruppe.',
-        },
-        {
-          title: 'Integration & Ruhe',
-          text: 'Nachspüren, Stille & Savasana –\n damit die Praxis wirken kann.',
-        },
-      ].map((b, i, arr) => (
-        <React.Fragment key={b.title}>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ scale: 1.04 }}
-            transition={{ duration: 0.5, delay: i * 0.05 }}
-            className="rounded-2xl bg-white/80 p-6 shadow w-full md:w-1/3 text-center"
-          >
-            <h4 className="font-semibold mb-2">{b.title}</h4>
-            <p className="text-sm whitespace-pre-line">{b.text}</p>
-          </motion.div>
+      {/* Kurse */}
+      {courses.map((course, idx) => (
+        <div key={idx}>
+          <section className={`py-24 px-6 ${course.bg}`}>
+            <div className="max-w-3xl mx-auto">
 
-          {/* Pfeil nur zwischen den Boxen */}
-          {i < arr.length - 1 && (
-            <div className="hidden md:block text-iris-terracotta">
-              ➝
+              {/* Zeit & Dauer */}
+              <FadeIn>
+                <div className="flex flex-wrap items-center gap-3 mb-6">
+                  <span className="px-4 py-1.5 rounded-full bg-iris-terracotta text-white text-sm font-medium">
+                    {course.time}
+                  </span>
+                  <span className="px-4 py-1.5 rounded-full border border-iris-terracotta/40 text-iris-terracotta text-sm">
+                    {course.duration}
+                  </span>
+                </div>
+              </FadeIn>
+
+              {/* Titel */}
+              <FadeIn delay={0.05}>
+                <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta mb-2">
+                  {course.title}
+                </h2>
+                <p className="text-sm tracking-widest uppercase opacity-60 mb-10">
+                  {course.mood}
+                </p>
+              </FadeIn>
+
+              {/* Beschreibung */}
+              <div className="space-y-5 text-[1.05rem] leading-[1.85]">
+                {course.paragraphs.map((para, i) => (
+                  <FadeIn key={i} delay={0.1 + i * 0.08}>
+                    <p>{para}</p>
+                  </FadeIn>
+                ))}
+              </div>
+
+              {/* Motto */}
+              <FadeIn delay={0.3}>
+                <blockquote className="mt-10 flex items-start gap-4 bg-iris-terracotta/10 rounded-2xl px-6 py-5">
+                  <span className="text-2xl flex-shrink-0">💛</span>
+                  <p className="italic text-iris-terracotta font-medium leading-relaxed">
+                    {course.motto}
+                  </p>
+                </blockquote>
+              </FadeIn>
             </div>
-          )}
-        </React.Fragment>
-      ))}
-    </div>
-  </div>
-</section>
+          </section>
 
-      {/* Wave: Sand → Terracotta */}
-      <div className="bg-iris-sand">
-        <WaveDivider fill="#8E3821" />
-      </div>
+          {/* Wave zwischen Kursen oder vor CTA */}
+          <div className={course.waveContainerBg}>
+            <WaveDivider fill={course.waveFill} />
+          </div>
+        </div>
+      ))}
 
       {/* CTA */}
-      <section className="bg-iris-terracotta text-white py-12 px-6 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto space-y-6"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold">Lust, es auszuprobieren?</h2>
-          <p className="text-lg">
-            Schau in den Stundenplan – such dir einen Termin aus und komm auf die Matte. <br />
-            Genau so, wie du heute bist.
-          </p>
-          <Button variant="inverted" href="/timetable" className="mt-4">
-            Zu meinen Kursen
-          </Button>
-        </motion.div>
+      <section className="py-24 px-6 bg-iris-sand">
+        <FadeIn>
+          <div className="max-w-xl mx-auto text-center space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta">
+              Lust, es auszuprobieren?
+            </h2>
+            <p className="text-lg leading-relaxed">
+              Komm einfach vorbei – du brauchst keine Vorkenntnisse und musst dich nicht anmelden.
+              Schreib mir gerne, wenn du noch Fragen hast.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button href="https://wa.me/4917662468814" target="_blank" rel="noopener noreferrer">
+                Schreib mir auf WhatsApp
+              </Button>
+              <Button variant="outline" href="/contact">
+                Zum Kontaktformular
+              </Button>
+            </div>
+          </div>
+        </FadeIn>
       </section>
 
-      {/* Wave: Terracotta → Footer (Golden) */}
-      <div className="bg-iris-terracotta">
+      {/* Wave: Sand → Footer */}
+      <div className="bg-iris-sand">
         <WaveDivider fill="#D69A3B" />
       </div>
+
     </main>
   );
 }
