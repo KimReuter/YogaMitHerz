@@ -58,7 +58,7 @@ export default function YogaPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-white text-5xl md:text-6xl font-bold text-center drop-shadow-lg px-6"
+            className="text-iris-golden text-5xl md:text-6xl font-bold text-center drop-shadow-lg px-6"
           >
             Meine Kurse
           </motion.h1>

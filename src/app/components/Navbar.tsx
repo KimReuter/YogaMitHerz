@@ -73,7 +73,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3 z-10">
             {/* CTA Button – immer in Terracotta, unabhängig vom Scroll-Status */}
             <Link
-              href="/yoga"
+              href="/contact"
               onClick={close}
               className="hidden md:inline-flex items-center justify-center px-5 py-2 rounded-full text-sm font-medium border-2 border-iris-terracotta text-iris-terracotta hover:bg-iris-terracotta hover:text-white transition-all duration-300"
             >
@@ -122,7 +122,7 @@ export default function Navbar() {
               ))}
               <li className="pt-3">
                 <Link
-                  href="/yoga"
+                  href="/contact"
                   onClick={close}
                   className="inline-flex items-center justify-center w-full py-3 rounded-full text-sm font-medium border-2 border-iris-terracotta text-iris-terracotta hover:bg-iris-terracotta hover:text-white transition-all"
                 >

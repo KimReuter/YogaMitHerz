@@ -11,9 +11,9 @@ import Button from './components/Button';
 export default function HomePage() {
   return (
     <main className="bg-iris-golden text-iris-charcoal">
-      {/* Hero mit Parallax-Bild */}
+      {/* Hero mit Bild */}
       <section
-        className="relative min-h-screen bg-fixed bg-center bg-cover flex flex-col justify-center items-center text-center px-6"
+        className="relative min-h-screen bg-center bg-cover flex flex-col justify-center items-center text-center px-6"
         style={{ backgroundImage: "url('/Iris_Hero.jpg')" }}
       >
         {/* Dunkler Overlay für Lesbarkeit des Headers */}
@@ -28,8 +28,8 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative z-10 bg-iris-golden/90 backdrop-blur-sm max-w-2xl w-full flex flex-col gap-6 shadow-xl overflow-hidden"
-          style={{ borderRadius: '52% 48% 48% 52% / 50% 46% 54% 50%', padding: '4.5rem 3.5rem' }}
+          className="relative z-10 bg-iris-golden/90 backdrop-blur-sm max-w-2xl w-full flex flex-col gap-6 shadow-xl overflow-hidden px-8 py-14 md:px-[3.5rem] md:py-[4.5rem]"
+          style={{ borderRadius: '52% 48% 48% 52% / 50% 46% 54% 50%' }}
         >
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
