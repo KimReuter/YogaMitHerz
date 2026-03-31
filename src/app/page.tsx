@@ -63,7 +63,7 @@ export default function HomePage() {
       </section>
 
       {/* Begrüßung & Philosophie (2-Spalten-Layout) */}
-      <section className="pt-12 pb-28 md:py-28 px-6 bg-iris-golden">
+      <section className="pt-12 pb-12 md:py-28 px-6 bg-iris-golden">
         <div className="max-w-6xl mx-auto md:grid grid-cols-2 items-center gap-16">
           <FadeIn direction="left">
             <img
@@ -100,7 +100,7 @@ export default function HomePage() {
       </section>
 
       {/* Was dich erwartet */}
-      <section className="py-24 px-6 bg-iris-golden text-center">
+      <section className="pt-8 pb-24 md:py-24 px-6 bg-iris-golden text-center">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-bold text-center text-iris-terracotta mb-14">
