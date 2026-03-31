@@ -220,12 +220,16 @@ export default function HomePage() {
               Schreib mir, wenn du Fragen, Lust auf eine Yogastunde oder einfach ein kleines „Hallo" hast. Ich freue mich, von dir zu lesen – du bist jederzeit willkommen!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="https://wa.me/4917662468814" target="_blank" rel="noopener noreferrer" className="flex-1">
-                Schreib mir auf WhatsApp
-              </Button>
-              <Button variant="outline" href="https://www.instagram.com/iriswallenaar/" target="_blank" rel="noopener noreferrer" className="flex-1">
-                Folge mir auf Instagram
-              </Button>
+              <div className="flex-1">
+                <Button href="https://wa.me/4917662468814" target="_blank" rel="noopener noreferrer" className="w-full">
+                  Schreib mir auf WhatsApp
+                </Button>
+              </div>
+              <div className="flex-1">
+                <Button variant="outline" href="https://www.instagram.com/iriswallenaar/" target="_blank" rel="noopener noreferrer" className="w-full">
+                  Folge mir auf Instagram
+                </Button>
+              </div>
             </div>
           </FadeIn>
 
