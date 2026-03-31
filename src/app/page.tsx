@@ -100,7 +100,7 @@ export default function HomePage() {
       </section>
 
       {/* Was dich erwartet */}
-      <section className="pt-8 pb-24 md:py-24 px-6 bg-iris-golden text-center">
+      <section className="pt-8 pb-12 md:py-24 px-6 bg-iris-golden text-center">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-bold text-center text-iris-terracotta mb-14">
@@ -152,7 +152,7 @@ export default function HomePage() {
       {/* Energiearbeit-Section: vorübergehend ausgeblendet – siehe /energy/page.tsx */}
 
       {/* Kundenstimmen */}
-      <section className="py-24 px-6 bg-iris-golden">
+      <section className="pt-8 pb-24 md:py-24 px-6 bg-iris-golden">
         <FadeIn>
           <FeedbackSection />
         </FadeIn>
@@ -198,7 +198,7 @@ export default function HomePage() {
           {/* Bild im asymmetrischen Blob-Rahmen */}
           <FadeIn direction="left">
             <motion.div
-              className="overflow-hidden w-3/4 mx-auto aspect-[3/4] shadow-xl"
+              className="overflow-hidden w-1/2 md:w-3/4 mx-auto aspect-[3/4] shadow-xl"
               style={{ borderRadius: '40% 60% 63% 37% / 55% 45% 40% 60%' }}
               whileHover={{ scale: 1.02, boxShadow: '0 28px 64px rgba(0,0,0,0.13)' }}
               transition={{ duration: 0.4, ease: 'easeOut' }}
