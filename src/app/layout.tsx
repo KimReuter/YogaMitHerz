@@ -13,10 +13,13 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de">
-      <body className={`${cookie.variable} m-0 p-0 overflow-x-hidden`}>
+      <body className={`${cookie.variable} m-0 p-0`}>
         <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        {/* overflow-x-hidden darf NICHT auf body/html sitzen – das bricht position:fixed auf iOS */}
+        <div className="overflow-x-hidden">
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
