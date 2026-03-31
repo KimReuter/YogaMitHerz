@@ -1,5 +1,6 @@
 // /app/components/Footer.tsx
 import Link from "next/link";
+import Button from "./Button";
 
 export default function Footer() {
   return (
@@ -25,12 +26,7 @@ export default function Footer() {
             Bereit für deine erste Stunde?
           </p>
           <p className="text-sm leading-relaxed opacity-80">Komm einfach so, wie du bist.</p>
-          <Link
-            href="/yoga"
-            className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-iris-terracotta text-white text-sm font-medium hover:bg-iris-terracotta/80 transition border-2 border-transparent"
-          >
-            Zu meinen Kursen
-          </Link>
+          <Button href="/yoga">Zu meinen Kursen</Button>
         </div>
       </div>
 
