@@ -69,7 +69,7 @@ export default function HomePage() {
             <img
               src="/iris-portrait.jpg"
               alt="Iris Portrait"
-              className="relative z-[2] rounded-full w-64 h-64 object-cover mx-auto border-4 border-iris-moss shadow-lg mb-10 md:mb-0"
+              className="relative z-[2] rounded-full w-64 h-64 object-cover mx-auto border-4 border-iris-moss shadow-lg mb-12 md:mb-0"
             />
           </FadeIn>
           <FadeIn direction="right" delay={0.15}>
