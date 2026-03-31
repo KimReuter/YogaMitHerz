@@ -151,47 +151,32 @@ export default function HomePage() {
 
       {/* Energiearbeit-Section: vorübergehend ausgeblendet – siehe /energy/page.tsx */}
 
-      {/* Wave: Golden → Sand */}
-      <div className="bg-iris-golden">
-        <WaveDivider fill="#EDD59E" />
-      </div>
-
       {/* Kundenstimmen */}
-      <section className="py-24 px-6 bg-iris-sand">
+      <section className="py-24 px-6 bg-iris-golden">
         <FadeIn>
           <FeedbackSection />
         </FadeIn>
       </section>
 
-      {/* Wave: Sand → Terracotta */}
-      <div className="bg-iris-sand">
-        <WaveDivider fill="#8E3821" />
-      </div>
-
       {/* CTA */}
-      <section className="py-24 px-6 bg-iris-terracotta">
+      <section className="pb-24 px-6 bg-iris-golden">
         <FadeIn delay={0.1}>
-          <div className="max-w-xl mx-auto text-center space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-white">
+          <div className="max-w-xl mx-auto text-center space-y-6 bg-white/70 backdrop-blur-sm rounded-3xl px-10 py-12 shadow-lg">
+            <h2 className="text-4xl md:text-5xl font-bold text-iris-terracotta">
               Vielleicht hast du Lust,<br className="hidden md:block" /> Yoga mit mir auszuprobieren?
             </h2>
-            <p className="text-lg text-white/85">
+            <p className="text-lg text-iris-charcoal">
               Du bist herzlich willkommen – genau so, wie du bist.
             </p>
             <a
               href="/yoga"
-              className="inline-flex items-center justify-center px-10 py-3 bg-iris-golden hover:bg-iris-sand text-iris-charcoal rounded-full text-lg font-medium transition shadow-md"
+              className="inline-flex items-center justify-center px-10 py-3 bg-iris-terracotta hover:bg-iris-terracotta/80 text-white rounded-full text-lg font-medium transition shadow-md"
             >
               Entdecke Yoga mit mir
             </a>
           </div>
         </FadeIn>
       </section>
-
-      {/* Wave: Terracotta → Golden */}
-      <div className="bg-iris-terracotta">
-        <WaveDivider fill="#D69A3B" />
-      </div>
 
       {/* Galerie */}
       <GalleryCarousel />
