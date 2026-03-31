@@ -173,12 +173,7 @@ export default function HomePage() {
             <p className="text-lg">
               Du bist herzlich willkommen – genau so, wie du bist.
             </p>
-            <a
-              href="/yoga"
-              className="inline-flex items-center justify-center px-10 py-3 bg-iris-terracotta hover:bg-iris-terracotta/80 text-white rounded-full text-lg font-medium transition shadow-md"
-            >
-              Entdecke Yoga mit mir
-            </a>
+            <Button href="/yoga" className="px-10">Entdecke Yoga mit mir</Button>
           </div>
         </FadeIn>
       </section>
