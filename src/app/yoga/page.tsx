@@ -77,7 +77,7 @@ export default function YogaPage() {
             </h2>
           </FadeIn>
 
-          <ul className="space-y-5 text-left mb-12">
+          <ul className="space-y-5 text-left mb-12 max-w-fit mx-auto">
             {[
               'Yoga neu entdecken oder wieder zu sich selbst zurückfinden möchten.',
               'den eigenen Körper achtsam spüren und bewegen wollen.',
