@@ -56,7 +56,7 @@ export default function FeedbackSection() {
         {/* Dekorative Zitatmarke */}
         <span
           aria-hidden
-          className="absolute -top-8 -left-2 text-[7rem] leading-none text-iris-terracotta/15 font-serif select-none pointer-events-none"
+          className="absolute -top-8 -left-16 text-[7rem] leading-none text-iris-terracotta/15 font-serif select-none pointer-events-none"
         >
           „
         </span>
