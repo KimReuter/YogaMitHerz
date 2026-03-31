@@ -5,22 +5,6 @@ export default function Footer() {
   return (
     <footer className="bg-iris-golden text-iris-charcoal">
 
-      {/* Footer CTA */}
-      <div className="border-b border-iris-terracotta/20 py-12 px-6 text-center">
-        <p className="text-iris-terracotta font-semibold uppercase tracking-widest text-sm mb-3">
-          Bereit für deine erste Stunde?
-        </p>
-        <h2 className="text-2xl md:text-3xl font-bold text-iris-charcoal mb-6">
-          Komm einfach so, wie du bist.
-        </h2>
-        <Link
-          href="/yoga"
-          className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-iris-terracotta text-white font-medium hover:bg-iris-terracotta/80 transition border-2 border-transparent"
-        >
-          Zu meinen Kursen
-        </Link>
-      </div>
-
       <div className="max-w-6xl mx-auto px-6 py-12 grid gap-8 md:grid-cols-3">
         <div className="space-y-2">
           <p className="font-semibold">Yoga mit Herz</p>
@@ -32,14 +16,21 @@ export default function Footer() {
             <li><Link href="/" className="hover:underline">Start</Link></li>
             <li><Link href="/about" className="hover:underline">Über mich</Link></li>
             <li><Link href="/yoga" className="hover:underline">Meine Kurse</Link></li>
-            {/* <li><Link href="/energy" className="hover:underline">Energiearbeit</Link></li> */}
             <li><Link href="/contact" className="hover:underline">Kontakt</Link></li>
           </ul>
         </nav>
 
-        <div className="md:justify-self-end">
-          {/* Socials optional */}
-          {/* <div className="flex gap-4">…</div> */}
+        <div className="md:justify-self-end space-y-3">
+          <p className="text-iris-terracotta font-semibold uppercase tracking-widest text-sm">
+            Bereit für deine erste Stunde?
+          </p>
+          <p className="text-sm leading-relaxed opacity-80">Komm einfach so, wie du bist.</p>
+          <Link
+            href="/yoga"
+            className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-iris-terracotta text-white text-sm font-medium hover:bg-iris-terracotta/80 transition border-2 border-transparent"
+          >
+            Zu meinen Kursen
+          </Link>
         </div>
       </div>
 
