@@ -70,11 +70,24 @@ export default function Navbar() {
 
           {/* Desktop: Links rechts */}
           <ul className={clsx(
-            'hidden md:flex gap-6 transition-colors duration-300',
+            'hidden md:flex items-center gap-6 transition-colors duration-300',
             scrolled ? 'text-iris-charcoal' : 'text-white drop-shadow'
           )}>
             <li><Link href="/yoga">Meine Kurse</Link></li>
             <li><Link href="/contact">Kontakt</Link></li>
+            <li>
+              <Link
+                href="/yoga"
+                className={clsx(
+                  'inline-flex items-center justify-center px-5 py-2 rounded-full text-sm font-medium border-2 transition-all duration-300',
+                  scrolled || open
+                    ? 'border-iris-terracotta text-iris-terracotta hover:bg-iris-terracotta hover:text-white'
+                    : 'border-white text-white hover:bg-white hover:text-iris-terracotta'
+                )}
+              >
+                Kurs buchen
+              </Link>
+            </li>
           </ul>
 
           {/* Mobile: Hamburger-Button */}

@@ -1,10 +1,37 @@
-// /app/contact/page.tsx
 'use client';
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import Button from '../components/Button';
 import WaveDivider from '../components/WaveDivider';
+import FadeIn from '../components/FadeIn';
+import Button from '../components/Button';
+
+const contactMethods = [
+  {
+    emoji: '💬',
+    label: 'WhatsApp',
+    desc: 'Schnell und unkompliziert – schreib mir einfach eine Nachricht.',
+    href: 'https://wa.me/4917662468814',
+    cta: 'Jetzt schreiben',
+    target: '_blank',
+  },
+  {
+    emoji: '📷',
+    label: 'Instagram',
+    desc: 'Schau hinter die Kulissen und bleib auf dem Laufenden.',
+    href: 'https://www.instagram.com/iriswallenaar/',
+    cta: 'Profil besuchen',
+    target: '_blank',
+  },
+  {
+    emoji: '✉️',
+    label: 'E-Mail',
+    desc: 'Für alles, was ein bisschen mehr Worte braucht.',
+    href: 'mailto:hello@yogamitherz.de',
+    cta: 'E-Mail schreiben',
+    target: undefined,
+  },
+];
 
 export default function ContactPage() {
   const [sent, setSent] = useState(false);
@@ -13,15 +40,12 @@ export default function ContactPage() {
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError(null);
-
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form) as any);
-
     const res = await fetch('/api/contact', {
       method: 'POST',
       body: JSON.stringify(data),
     });
-
     if (res.ok) {
       setSent(true);
       form.reset();
@@ -32,149 +56,170 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="bg-white text-iris-charcoal">
+    <main className="bg-iris-golden text-iris-charcoal">
+
       {/* Hero */}
       <section
-        className="relative h-[50vh] bg-cover bg-center flex items-center justify-center"
+        className="relative h-[55vh] bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: "url('/contact-hero.jpg')" }}
       >
-        <div className="absolute inset-0 bg-black/30" />
-        <motion.h1
+        <div className="absolute inset-0 bg-black/35" />
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="relative z-10 text-iris-golden text-5xl md:text-6xl font-bold text-center drop-shadow"
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9 }}
+          className="relative z-10 text-center px-6"
         >
-          Dein Weg zu deiner Yogastunde beginnt hier.
-        </motion.h1>
-        {/* Wave: Hero → White */}
+          <h1 className="text-iris-golden text-5xl md:text-6xl font-bold drop-shadow-lg">
+            Lass uns in Kontakt kommen
+          </h1>
+          <p className="mt-4 text-white/90 text-lg md:text-xl drop-shadow">
+            Ich freue mich, von dir zu hören.
+          </p>
+        </motion.div>
         <div className="absolute bottom-0 left-0 right-0 z-10">
-          <WaveDivider fill="#FFFFFF" />
+          <WaveDivider fill="#D69A3B" />
         </div>
       </section>
 
-      {/* Inhalt */}
-      <section className="max-w-5xl mx-auto px-6 py-16 grid gap-12 md:grid-cols-2">
-        {/* Formular */}
-        <div className="bg-white rounded-2xl border border-iris-golden/30 p-6 shadow-sm">
-          <h2 className="text-3xl font-semibold mb-4 text-iris-terracotta">Schreib mir</h2>
+      {/* Intro */}
+      <section className="py-16 px-6 bg-iris-golden text-center">
+        <FadeIn>
+          <p className="max-w-2xl mx-auto text-lg md:text-xl leading-relaxed">
+            Ob du Fragen zu meinen Kursen hast, eine Probestunde ausprobieren möchtest
+            oder einfach ein herzliches „Hallo" senden willst –{' '}
+            <span className="text-iris-terracotta font-medium">ich bin für dich da.</span>{' '}
+            Schreib mir einfach, wie es dir am liebsten ist.
+          </p>
+        </FadeIn>
+      </section>
 
-          {sent ? (
-            <p className="text-green-700">
-              Danke für deine Nachricht! Ich melde mich so schnell wie möglich bei dir. ✨
-            </p>
-          ) : (
-            <form onSubmit={onSubmit} className="space-y-4">
-              {/* Honeypot (unsichtbar, aber für Bots attraktiv) */}
-              <div
-                aria-hidden="true"
-                className="absolute -left-[9999px] top-auto w-px h-px overflow-hidden"
-              >
-                <label className="block text-sm mb-1">Bitte dieses Feld leer lassen</label>
-                <input
-                  type="text"
-                  name="website"           // unverdächtiger Name
-                  autoComplete="off"
-                  tabIndex={-1}
-                  className="border rounded-md px-3 py-2"
-                />
-              </div>
+      {/* Wave: Golden → Sand */}
+      <div className="bg-iris-golden">
+        <WaveDivider fill="#EDD59E" />
+      </div>
 
-              <div>
-                <label className="block text-sm mb-1">Wie darf ich dich ansprechen?</label>
-                <input
-                  name="name"
-                  required
-                  className="w-full border rounded-xl px-3 py-2"
-                  placeholder="Dein Name"
-                />
-              </div>
+      {/* Kontaktwege */}
+      <section className="py-20 px-6 bg-iris-sand">
+        <div className="max-w-4xl mx-auto">
+          <FadeIn>
+            <h2 className="text-3xl font-semibold text-iris-terracotta text-center mb-12">
+              So erreichst du mich
+            </h2>
+          </FadeIn>
 
-              <div>
-                <label className="block text-sm mb-1">Wo darf ich dir antworten?</label>
-                <input
-                  name="email"
-                  type="email"
-                  required
-                  className="w-full border rounded-xl px-3 py-2"
-                  placeholder="deine@mail.de"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm mb-1">Stimmung des Tages</label>
-                <select name="mood" className="w-full border rounded-xl px-3 py-2">
-                  <option value="">Wähle deine Stimmung (optional)</option>
-                  <option>😄 Energiegeladen</option>
-                  <option>😊 Ausgeglichen</option>
-                  <option>😌 Ruhig</option>
-                  <option>😴 Müde</option>
-                  <option>🤩 Vorfreude!</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-sm mb-1">Erzähl mir, was ich für dich tun kann.</label>
-                <textarea
-                  name="message"
-                  required
-                  rows={5}
-                  className="w-full border rounded-xl px-3 py-2"
-                  placeholder="Deine Nachricht…"
-                />
-              </div>
-
-              <Button type="submit">Nachricht losschicken ✨</Button>
-
-              {error && <p className="text-sm text-red-600">{error}</p>}
-
-              <p className="text-xs opacity-70">
-                Mit dem Senden akzeptierst du unsere{' '}
-                <a href="/privacy" className="underline">Datenschutzerklärung</a>.
-              </p>
-            </form>
-          )}
-        </div>
-
-        {/* Alternativen + Mini-CTA */}
-        <div className="space-y-6">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <a
-              href="https://wa.me/4917662468814" // <- Nummer anpassen (ohne +, mit Ländervorwahl)
-              target="_blank"
-              className="rounded-2xl px-4 py-6 text-center font-semibold bg-green-500 text-white hover:brightness-110 transition"
-            >
-              WhatsApp
-            </a>
-            <a
-              href="mailto:hello@yogamitherz.de" // <- Mail anpassen
-              className="rounded-2xl px-4 py-6 text-center font-semibold bg-iris-terracotta text-white hover:brightness-110 transition"
-            >
-              E‑Mail
-            </a>
-            <a
-              href="https://www.instagram.com/iriswallenaar/" // <- IG-Link anpassen
-              target="_blank"
-              className="rounded-2xl px-4 py-6 text-center font-semibold bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white hover:brightness-110 transition"
-            >
-              Instagram
-            </a>
-          </div>
-
-          <div className="rounded-2xl p-6 bg-iris-sand">
-            <h3 className="text-xl font-semibold mb-2">Noch unsicher?</h3>
-            <p className="mb-4">
-              Schau dir meinen Stundenplan an – such dir einen Termin aus und melde dich unkompliziert an.
-            </p>
-            <Button href="/timetable">Zu meinen Kursen</Button>
+          <div className="grid gap-6 sm:grid-cols-3">
+            {contactMethods.map(({ emoji, label, desc, href, cta, target }, i) => (
+              <FadeIn key={i} delay={i * 0.1}>
+                <motion.a
+                  href={href}
+                  target={target}
+                  rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+                  className="flex flex-col items-center text-center gap-3 bg-iris-golden/60 overflow-hidden cursor-pointer px-6 py-10 rounded-3xl"
+                  whileHover={{ scale: 1.03, y: -5, boxShadow: '0 24px 56px rgba(0,0,0,0.11)' }}
+                  transition={{ duration: 0.35, ease: 'easeOut' }}
+                >
+                  <span className="text-4xl">{emoji}</span>
+                  <h3 className="text-xl font-semibold text-iris-terracotta">{label}</h3>
+                  <p className="text-sm leading-relaxed">{desc}</p>
+                  <span className="mt-2 text-sm font-medium text-iris-terracotta underline underline-offset-4 decoration-iris-terracotta/50">
+                    {cta} →
+                  </span>
+                </motion.a>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Wave: White → Footer (Golden) */}
-      <div className="bg-white">
+      {/* Wave: Sand → Golden */}
+      <div className="bg-iris-sand">
         <WaveDivider fill="#D69A3B" />
       </div>
+
+      {/* Formular */}
+      <section className="py-20 px-6 bg-iris-golden">
+        <div className="max-w-2xl mx-auto">
+          <FadeIn>
+            <h2 className="text-3xl font-semibold text-iris-terracotta text-center mb-2">
+              Oder schreib mir direkt
+            </h2>
+            <p className="text-center mb-10 opacity-80">
+              Ich antworte dir so schnell wie möglich – versprochen. 🙏
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.1}>
+            <div className="bg-iris-sand/70 rounded-3xl p-8 md:p-12">
+              {sent ? (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="text-center py-8 space-y-4"
+                >
+                  <div className="text-5xl">✨</div>
+                  <h3 className="text-2xl font-semibold text-iris-terracotta">Danke für deine Nachricht!</h3>
+                  <p>Ich melde mich so schnell wie möglich bei dir.</p>
+                </motion.div>
+              ) : (
+                <form onSubmit={onSubmit} className="space-y-6">
+                  {/* Honeypot */}
+                  <div
+                    aria-hidden="true"
+                    className="absolute -left-[9999px] top-auto w-px h-px overflow-hidden"
+                  >
+                    <input type="text" name="website" autoComplete="off" tabIndex={-1} />
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    <div className="space-y-1">
+                      <label className="block text-sm font-medium">Dein Name</label>
+                      <input
+                        name="name"
+                        required
+                        placeholder="Wie darf ich dich ansprechen?"
+                        className="w-full bg-white/70 border border-iris-terracotta/20 rounded-xl px-4 py-3 placeholder:text-iris-charcoal/40 focus:outline-none focus:border-iris-terracotta transition"
+                      />
+                    </div>
+                    <div className="space-y-1">
+                      <label className="block text-sm font-medium">Deine E-Mail</label>
+                      <input
+                        name="email"
+                        type="email"
+                        required
+                        placeholder="deine@mail.de"
+                        className="w-full bg-white/70 border border-iris-terracotta/20 rounded-xl px-4 py-3 placeholder:text-iris-charcoal/40 focus:outline-none focus:border-iris-terracotta transition"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-1">
+                    <label className="block text-sm font-medium">Deine Nachricht</label>
+                    <textarea
+                      name="message"
+                      required
+                      rows={6}
+                      placeholder="Was liegt dir am Herzen?"
+                      className="w-full bg-white/70 border border-iris-terracotta/20 rounded-xl px-4 py-3 placeholder:text-iris-charcoal/40 focus:outline-none focus:border-iris-terracotta transition resize-none"
+                    />
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <p className="text-xs opacity-60">
+                      Mit dem Senden akzeptierst du unsere{' '}
+                      <a href="/privacy" className="underline hover:opacity-80">Datenschutzerklärung</a>.
+                    </p>
+                    <Button type="submit">Nachricht senden</Button>
+                  </div>
+
+                  {error && <p className="text-sm text-red-600 mt-2">{error}</p>}
+                </form>
+              )}
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
     </main>
   );
 }

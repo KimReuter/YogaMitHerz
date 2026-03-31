@@ -4,6 +4,23 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-iris-golden text-iris-charcoal">
+
+      {/* Footer CTA */}
+      <div className="border-b border-iris-terracotta/20 py-12 px-6 text-center">
+        <p className="text-iris-terracotta font-semibold uppercase tracking-widest text-sm mb-3">
+          Bereit für deine erste Stunde?
+        </p>
+        <h2 className="text-2xl md:text-3xl font-bold text-iris-charcoal mb-6">
+          Komm einfach so, wie du bist.
+        </h2>
+        <Link
+          href="/yoga"
+          className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-iris-terracotta text-white font-medium hover:bg-iris-terracotta/80 transition border-2 border-transparent"
+        >
+          Zu meinen Kursen
+        </Link>
+      </div>
+
       <div className="max-w-6xl mx-auto px-6 py-12 grid gap-8 md:grid-cols-3">
         <div className="space-y-2">
           <p className="font-semibold">Yoga mit Herz</p>

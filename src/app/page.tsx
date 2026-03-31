@@ -199,7 +199,7 @@ export default function HomePage() {
           <FadeIn direction="left">
             <motion.div
               className="overflow-hidden w-3/4 mx-auto aspect-[3/4] shadow-xl"
-              style={{ borderRadius: '55% 45% 52% 48% / 48% 44% 56% 52%' }}
+              style={{ borderRadius: '40% 60% 63% 37% / 55% 45% 40% 60%' }}
               whileHover={{ scale: 1.02, boxShadow: '0 28px 64px rgba(0,0,0,0.13)' }}
               transition={{ duration: 0.4, ease: 'easeOut' }}
             >
@@ -214,7 +214,7 @@ export default function HomePage() {
           {/* Textbereich */}
           <FadeIn direction="right" delay={0.15} className="space-y-6">
             <h2 className="text-4xl md:text-5xl font-bold text-iris-terracotta">
-              Ein Moment für dich – und für mich
+              Ein Moment für dich –<br />und für mich
             </h2>
             <p className="text-lg leading-relaxed">
               Schreib mir, wenn du Fragen, Lust auf eine Yogastunde oder einfach ein kleines „Hallo" hast. Ich freue mich, von dir zu lesen – du bist jederzeit willkommen!
