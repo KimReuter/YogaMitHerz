@@ -63,13 +63,13 @@ export default function HomePage() {
       </section>
 
       {/* Begrüßung & Philosophie (2-Spalten-Layout) */}
-      <section className="py-28 px-6 bg-iris-golden">
+      <section className="pt-12 pb-28 md:py-28 px-6 bg-iris-golden">
         <div className="max-w-6xl mx-auto md:grid grid-cols-2 items-center gap-16">
           <FadeIn direction="left">
             <img
               src="/iris-portrait.jpg"
               alt="Iris Portrait"
-              className="relative z-[2] rounded-full w-64 h-64 object-cover mx-auto border-4 border-iris-moss shadow-lg"
+              className="relative z-[2] rounded-full w-64 h-64 object-cover mx-auto border-4 border-iris-moss shadow-lg mb-10 md:mb-0"
             />
           </FadeIn>
           <FadeIn direction="right" delay={0.15}>
