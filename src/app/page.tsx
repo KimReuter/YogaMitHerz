@@ -103,64 +103,95 @@ export default function HomePage() {
       <section className="py-24 px-6 bg-iris-golden text-center">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl font-bold text-center text-iris-terracotta mb-10">
+            <h2 className="text-4xl md:text-5xl font-bold text-center text-iris-terracotta mb-14">
               Was ich dir anbieten möchte
             </h2>
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <FadeIn delay={0}>
-              <div className="relative z-[2] bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-500 ease-in-out h-full">
-                <div className="text-4xl mb-4">💗</div>
-                <h3 className="text-3xl font-semibold mb-2">Yoga mit Herz</h3>
-                <p>Authentisch, liebevoll und ganz nah am Leben. Kein Leistungsdruck, nur du mit dir.</p>
-              </div>
-            </FadeIn>
-
-            <FadeIn delay={0.15}>
-              <div className="relative z-[2] bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-500 ease-in-out h-full">
-                <div className="text-4xl mb-4">🌙</div>
-                <h3 className="text-3xl font-semibold mb-2">Raum für Ruhe</h3>
-                <p>Entspannung, Meditation und Atem. Momente, in denen du auftanken darfst.</p>
-              </div>
-            </FadeIn>
-
-            <FadeIn delay={0.3}>
-              <div className="relative z-[2] bg-iris-moss/20 p-6 rounded-xl shadow-md hover:scale-[1.02] transition-transform duration-500 ease-in-out h-full">
-                <div className="text-4xl mb-4">🌀</div>
-                <h3 className="text-3xl font-semibold mb-2">Bewegung in deinem Rhythmus</h3>
-                <p>Du musst nichts beweisen. <br />
-                Du darfst einfach sein – und dich bewegen, <br />
-                wie es dir guttut.</p>
-              </div>
-            </FadeIn>
+            {[
+              {
+                emoji: '💗',
+                title: 'Yoga mit Herz',
+                text: 'Authentisch, liebevoll und ganz nah am Leben. Kein Leistungsdruck, nur du mit dir.',
+                shape: '58% 42% 48% 52% / 52% 44% 56% 48%',
+                delay: 0,
+              },
+              {
+                emoji: '🌙',
+                title: 'Raum für Ruhe',
+                text: 'Entspannung, Meditation und Atem. Momente, in denen du auftanken darfst.',
+                shape: '44% 56% 54% 46% / 48% 56% 44% 52%',
+                delay: 0.15,
+              },
+              {
+                emoji: '🌀',
+                title: 'Bewegung in deinem Rhythmus',
+                text: 'Du musst nichts beweisen. Du darfst einfach sein – und dich bewegen, wie es dir guttut.',
+                shape: '52% 48% 42% 58% / 56% 46% 54% 44%',
+                delay: 0.3,
+              },
+            ].map(({ emoji, title, text, shape, delay }, idx) => (
+              <FadeIn key={idx} delay={delay}>
+                <motion.div
+                  className="bg-iris-sand/60 overflow-hidden flex flex-col items-center justify-center cursor-default text-center"
+                  style={{ borderRadius: shape, padding: '3.5rem 2.5rem' }}
+                  whileHover={{ scale: 1.03, y: -6, boxShadow: '0 28px 64px rgba(0,0,0,0.11)' }}
+                  transition={{ duration: 0.4, ease: 'easeOut' }}
+                >
+                  <div className="text-4xl mb-4">{emoji}</div>
+                  <h3 className="text-2xl font-semibold text-iris-terracotta mb-3">{title}</h3>
+                  <p className="text-base leading-relaxed">{text}</p>
+                </motion.div>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Energiearbeit-Section: vorübergehend ausgeblendet – siehe /energy/page.tsx */}
 
+      {/* Wave: Golden → Sand */}
+      <div className="bg-iris-golden">
+        <WaveDivider fill="#EDD59E" />
+      </div>
+
       {/* Kundenstimmen */}
-      <section className="py-24 px-6 bg-iris-golden">
+      <section className="py-24 px-6 bg-iris-sand">
         <FadeIn>
           <FeedbackSection />
         </FadeIn>
       </section>
 
+      {/* Wave: Sand → Terracotta */}
+      <div className="bg-iris-sand">
+        <WaveDivider fill="#8E3821" />
+      </div>
+
       {/* CTA */}
-      <section className="pb-24 px-6 bg-iris-golden">
+      <section className="py-24 px-6 bg-iris-terracotta">
         <FadeIn delay={0.1}>
           <div className="max-w-xl mx-auto text-center space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-iris-terracotta">
+            <h2 className="text-4xl md:text-5xl font-bold text-white">
               Vielleicht hast du Lust,<br className="hidden md:block" /> Yoga mit mir auszuprobieren?
             </h2>
-            <p className="text-lg">
+            <p className="text-lg text-white/85">
               Du bist herzlich willkommen – genau so, wie du bist.
             </p>
-            <Button href="/yoga">Entdecke Yoga mit mir</Button>
+            <a
+              href="/yoga"
+              className="inline-flex items-center justify-center px-10 py-3 bg-iris-golden hover:bg-iris-sand text-iris-charcoal rounded-full text-lg font-medium transition shadow-md"
+            >
+              Entdecke Yoga mit mir
+            </a>
           </div>
         </FadeIn>
       </section>
+
+      {/* Wave: Terracotta → Golden */}
+      <div className="bg-iris-terracotta">
+        <WaveDivider fill="#D69A3B" />
+      </div>
 
       {/* Galerie */}
       <GalleryCarousel />
