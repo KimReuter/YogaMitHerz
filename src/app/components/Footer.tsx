@@ -30,7 +30,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-iris-terracotta/30">
+      <div>
         <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
             <Link href="/privacy" className="hover:underline">Datenschutzerklärung</Link>

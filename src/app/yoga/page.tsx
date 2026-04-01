@@ -94,7 +94,7 @@ export default function YogaPage() {
           </ul>
 
           <FadeIn delay={0.35}>
-            <p className="text-lg md:text-xl italic text-iris-terracotta font-medium leading-relaxed border-t border-iris-terracotta/20 pt-8">
+            <p className="text-lg md:text-xl italic text-iris-terracotta font-medium leading-relaxed">
               Alles, was du brauchst, bist du selbst – und bequeme Kleidung.
             </p>
           </FadeIn>

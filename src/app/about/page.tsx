@@ -56,7 +56,7 @@ export default function AboutPage() {
 
             {/* Pull Quote */}
             <motion.blockquote
-              className="border-l-4 border-iris-terracotta pl-6 my-2 italic text-xl text-iris-terracotta leading-relaxed"
+              className="pl-6 my-2 italic text-xl text-iris-terracotta leading-relaxed"
               initial={{ opacity: 0, x: -16 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
