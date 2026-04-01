@@ -80,7 +80,7 @@ export default function HomePage() {
               <p className="text-lg md:text-xl mb-4">
                 Ich bin Iris und lade dich ein, gemeinsam mit mir auf der Matte deinen ganz eigenen Weg zu dir zu entdecken. Einen Weg, der dich mit deinem Körper, deinem Inneren und deinem Atem verbindet – und dir Raum für Ruhe, Frieden und Entspannung schenkt.
               </p>
-              <div className="relative mt-6 pl-12 border-l-2 border-iris-terracotta/40">
+              <div className="relative mt-6 pl-12">
                 <span
                   aria-hidden
                   className="absolute -top-4 left-3 text-6xl leading-none text-iris-terracotta/25 font-serif select-none"
