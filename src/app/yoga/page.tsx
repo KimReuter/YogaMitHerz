@@ -25,7 +25,7 @@ const courses = [
   },
   {
     time: 'Donnerstag · 20:15 Uhr',
-    duration: '60 Minuten',
+    duration: '90 Minuten',
     title: 'Entspannend & beruhigend',
     mood: 'Ankommen · Loslassen · Ruhe',
     paragraphs: [
