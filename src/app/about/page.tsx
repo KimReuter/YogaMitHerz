@@ -48,7 +48,7 @@ export default function AboutPage() {
             Mein Weg zum Yoga
           </motion.h2>
 
-          <div className="space-y-6 text-[1.05rem] leading-[1.85]">
+          <div className="space-y-6 text-[1.05rem] leading-[1.85] text-justify">
 
             <motion.p initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               Mein eigener Weg zum Yoga begann vor über zehn Jahren – durch eine liebe Freundin. Anfangs war ich eher skeptisch. Doch der Ashtanga-Stil, mit seinen fordernden und fließenden Abläufen, war in diesem Moment genau das Richtige für mich. Mein Geist war so beschäftigt, dass ich am Ende jeder Stunde plötzlich diese tiefe Entspannung spürte. Mit der Zeit fühlte ich mich wieder kraftvoller, beweglicher – und vor allem ausgeglichener.
@@ -88,7 +88,7 @@ export default function AboutPage() {
 
       {/* Abschlussblock */}
       <section className="bg-iris-sand text-iris-charcoal">
-        <div className="max-w-3xl mx-auto px-6 py-16 space-y-6 text-[1.05rem] leading-[1.85]">
+        <div className="max-w-3xl mx-auto px-6 py-16 space-y-6 text-[1.05rem] leading-[1.85] text-justify">
           {[
             'Dein Yoga-Weg ist genau wie du – ganz individuell und einzigartig. Und gleichzeitig doch auch ähnlich.',
             'Individuell deshalb, weil jeder von uns seine eigenen Voraussetzungen, Vorlieben und Herausforderungen mitbringt. Und doch sind unsere Wege im Yoga auch verbunden – denn am Ende suchen wir alle auf unsere Weise Ruhe, Entspannung und ein Stück inneren Frieden.',
