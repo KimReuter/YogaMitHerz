@@ -20,7 +20,7 @@ const courses = [
     ],
     motto: 'Erlaube dir, zu leuchten – und nimm dieses Strahlen mit in deinen Alltag.',
     bg: 'bg-iris-sand',
-    waveFill: '#D69A3B',
+    waveFill: '#C4A675',
     waveContainerBg: 'bg-iris-sand',
   },
   {
@@ -34,7 +34,7 @@ const courses = [
     ],
     motto: 'Gönn dir diesen Moment für dich – loslassen, einlassen, ankommen.',
     bg: 'bg-iris-golden',
-    waveFill: '#EDD59E',
+    waveFill: '#FFBD59',
     waveContainerBg: 'bg-iris-golden',
   },
 ];
@@ -65,7 +65,7 @@ export default function YogaPage() {
           </motion.h1>
         </div>
         <div className="absolute bottom-0 left-0 right-0 z-10">
-          <WaveDivider fill="#D69A3B" />
+          <WaveDivider fill="#C4A675" />
         </div>
       </section>
 
@@ -118,7 +118,7 @@ export default function YogaPage() {
 
       {/* Wave: Golden → Sand */}
       <div className="bg-iris-golden">
-        <WaveDivider fill="#EDD59E" />
+        <WaveDivider fill="#FFBD59" />
       </div>
 
       {/* Kurse */}
@@ -202,7 +202,7 @@ export default function YogaPage() {
 
       {/* Wave: Sand → Footer */}
       <div className="bg-iris-sand">
-        <WaveDivider fill="#D69A3B" />
+        <WaveDivider fill="#C4A675" />
       </div>
 
     </main>

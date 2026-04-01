@@ -78,7 +78,7 @@ export default function ContactPage() {
           </p>
         </motion.div>
         <div className="absolute bottom-0 left-0 right-0 z-10">
-          <WaveDivider fill="#D69A3B" />
+          <WaveDivider fill="#C4A675" />
         </div>
       </section>
 
@@ -96,7 +96,7 @@ export default function ContactPage() {
 
       {/* Wave: Golden → Sand */}
       <div className="bg-iris-golden">
-        <WaveDivider fill="#EDD59E" />
+        <WaveDivider fill="#FFBD59" />
       </div>
 
       {/* Kontaktwege */}
@@ -134,7 +134,7 @@ export default function ContactPage() {
 
       {/* Wave: Sand → Golden */}
       <div className="bg-iris-sand">
-        <WaveDivider fill="#D69A3B" />
+        <WaveDivider fill="#C4A675" />
       </div>
 
       {/* Formular */}

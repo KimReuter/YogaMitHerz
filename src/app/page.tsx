@@ -21,7 +21,7 @@ export default function HomePage() {
 
         {/* Wave: Hero → Golden */}
         <div className="absolute bottom-0 left-0 right-0 z-10">
-          <WaveDivider fill="#D69A3B" />
+          <WaveDivider fill="#C4A675" />
         </div>
 
         <motion.div
@@ -160,7 +160,7 @@ export default function HomePage() {
 
       {/* Wave: Golden → Sand */}
       <div className="bg-iris-golden">
-        <WaveDivider fill="#EDD59E" />
+        <WaveDivider fill="#FFBD59" />
       </div>
 
       {/* CTA */}
@@ -180,7 +180,7 @@ export default function HomePage() {
 
       {/* Wave: Sand → Golden */}
       <div className="bg-iris-sand">
-        <WaveDivider fill="#D69A3B" />
+        <WaveDivider fill="#C4A675" />
       </div>
 
       {/* Galerie */}
@@ -188,7 +188,7 @@ export default function HomePage() {
 
       {/* Wave: Golden → Sand */}
       <div className="bg-iris-golden">
-        <WaveDivider fill="#EDD59E" />
+        <WaveDivider fill="#FFBD59" />
       </div>
 
       {/* Let's Connect */}
@@ -238,7 +238,7 @@ export default function HomePage() {
 
       {/* Wave: Sand → Footer (Golden) */}
       <div className="bg-iris-sand">
-        <WaveDivider fill="#D69A3B" />
+        <WaveDivider fill="#C4A675" />
       </div>
     </main>
   );
