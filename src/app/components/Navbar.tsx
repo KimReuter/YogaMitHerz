@@ -45,7 +45,7 @@ export default function Navbar() {
             preserveAspectRatio="none"
             style={{ display: 'block', width: '100%', height: '100%' }}
           >
-            <path d="M0,0 C480,28 960,0 1440,20 L1440,0 Z" fill="rgba(214,154,59,0.95)" />
+            <path d="M0,0 C480,28 960,0 1440,20 L1440,0 Z" fill="rgba(196,166,117,0.95)" />
           </svg>
         </div>
 
