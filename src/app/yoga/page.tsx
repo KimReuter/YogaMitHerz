@@ -44,7 +44,7 @@ export default function YogaPage() {
     <main className="bg-iris-golden text-iris-charcoal">
 
       {/* Hero */}
-      <section className="relative h-[60vh] overflow-hidden">
+      <section className="relative h-[60vh] overflow-hidden mb-[-2px]">
         <video
           className="absolute inset-0 w-full h-full object-cover"
           src="/videos/yoga-hero.mp4"

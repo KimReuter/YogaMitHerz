@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero mit Parallax */}
-      <section className="relative h-[60vh] overflow-hidden">
+      <section className="relative h-[60vh] overflow-hidden mb-[-2px]">
         <div
           className="absolute inset-0 bg-fixed bg-center bg-cover"
           style={{
