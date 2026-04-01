@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import WaveDivider from '@/components/WaveDivider';
-import { BotanicalDivider } from '@/components/BotanicalOrnaments';
+
 
 export default function AboutPage() {
   return (
@@ -178,8 +178,6 @@ export default function AboutPage() {
       {/* Kurz über mich */}
       <section className="bg-iris-sand text-iris-charcoal pt-4 pb-20">
         <div className="max-w-2xl mx-auto px-6">
-          <BotanicalDivider className="text-iris-terracotta mb-8" />
-
           <motion.h2
             className="text-3xl font-semibold text-iris-terracotta text-center mb-10"
             initial={{ opacity: 0, y: 20 }}

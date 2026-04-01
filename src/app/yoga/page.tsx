@@ -106,7 +106,7 @@ export default function YogaPage() {
               {styleInfluences.map((style) => (
                 <span
                   key={style}
-                  className="px-4 py-1.5 rounded-full text-sm border border-iris-terracotta/40 text-iris-terracotta"
+                  className="px-4 py-1.5 rounded-full text-sm bg-iris-terracotta/10 text-iris-terracotta"
                 >
                   {style}
                 </span>
@@ -133,7 +133,7 @@ export default function YogaPage() {
                   <span className="px-4 py-1.5 rounded-full bg-iris-terracotta text-white text-sm font-medium">
                     {course.time}
                   </span>
-                  <span className="px-4 py-1.5 rounded-full border border-iris-terracotta/40 text-iris-terracotta text-sm">
+                  <span className="px-4 py-1.5 rounded-full bg-iris-terracotta/10 text-iris-terracotta text-sm">
                     {course.duration}
                   </span>
                 </div>
