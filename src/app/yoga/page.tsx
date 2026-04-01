@@ -52,6 +52,7 @@ export default function YogaPage() {
           muted
           loop
           playsInline
+          preload="none"
         />
         <div className="relative z-10 flex items-center justify-center h-full bg-black/40">
           <motion.h1
@@ -149,7 +150,7 @@ export default function YogaPage() {
               </FadeIn>
 
               {/* Beschreibung */}
-              <div className="space-y-5 text-[1.05rem] leading-[1.85]">
+              <div className="space-y-5 text-[1.05rem] leading-[1.85] text-justify">
                 {course.paragraphs.map((para, i) => (
                   <FadeIn key={i} delay={0.1 + i * 0.08}>
                     <p>{para}</p>
