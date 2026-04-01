@@ -108,20 +108,22 @@ export default function ContactPage() {
             </h2>
           </FadeIn>
 
-          <div className="grid gap-6 sm:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-3 items-stretch">
             {contactMethods.map(({ emoji, label, desc, href, cta, target }, i) => (
-              <FadeIn key={i} delay={i * 0.1}>
+              <FadeIn key={i} delay={i * 0.1} className="h-full">
                 <motion.a
                   href={href}
                   target={target}
                   rel={target === '_blank' ? 'noopener noreferrer' : undefined}
-                  className="flex flex-col items-center text-center gap-3 bg-iris-golden/60 overflow-hidden cursor-pointer px-6 py-10 rounded-3xl"
+                  className="h-full flex flex-col items-center text-center gap-3 bg-iris-golden/60 overflow-hidden cursor-pointer px-6 py-10 rounded-3xl justify-between"
                   whileHover={{ scale: 1.03, y: -5, boxShadow: '0 24px 56px rgba(0,0,0,0.11)' }}
                   transition={{ duration: 0.35, ease: 'easeOut' }}
                 >
-                  <span className="text-4xl">{emoji}</span>
-                  <h3 className="text-xl font-semibold text-iris-terracotta">{label}</h3>
-                  <p className="text-sm leading-relaxed">{desc}</p>
+                  <div className="flex flex-col items-center gap-3">
+                    <span className="text-4xl">{emoji}</span>
+                    <h3 className="text-xl font-semibold text-iris-terracotta">{label}</h3>
+                    <p className="text-sm leading-relaxed">{desc}</p>
+                  </div>
                   <span className="mt-2 text-sm font-medium text-iris-terracotta underline underline-offset-4 decoration-iris-terracotta/50">
                     {cta} →
                   </span>
