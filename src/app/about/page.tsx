@@ -11,7 +11,7 @@ export default function AboutPage() {
       {/* Hero mit Parallax */}
       <section className="relative h-[60vh] overflow-hidden mb-[-2px]">
         <div
-          className="absolute inset-0 bg-fixed bg-center bg-cover"
+          className="absolute inset-0 bg-center bg-cover"
           style={{
             backgroundImage: "url('/Iris_Hero.jpg')",
             backgroundPosition: "center 35%",
