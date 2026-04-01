@@ -31,7 +31,7 @@ export default function AboutPage() {
         </div>
         {/* Wave: Hero → Golden */}
         <div className="absolute bottom-0 left-0 right-0 z-10">
-          <WaveDivider fill="#D69A3B" />
+          <WaveDivider fill="#C4A675" />
         </div>
       </section>
 
@@ -83,7 +83,7 @@ export default function AboutPage() {
 
       {/* Wellen-Übergang golden → sand */}
       <div className="bg-iris-golden">
-        <WaveDivider fill="#EDD59E" />
+        <WaveDivider fill="#FFBD59" />
       </div>
 
       {/* Abschlussblock */}
@@ -109,7 +109,7 @@ export default function AboutPage() {
 
       {/* Wellen-Übergang sand → golden */}
       <div className="bg-iris-sand">
-        <WaveDivider fill="#D69A3B" />
+        <WaveDivider fill="#C4A675" />
       </div>
 
       {/* Philosophie */}
@@ -172,7 +172,7 @@ export default function AboutPage() {
 
       {/* Wellen-Übergang golden → sand */}
       <div className="bg-iris-golden">
-        <WaveDivider fill="#EDD59E" />
+        <WaveDivider fill="#FFBD59" />
       </div>
 
       {/* Kurz über mich */}
@@ -215,7 +215,7 @@ export default function AboutPage() {
 
       {/* Wave: Sand → Footer (Golden) */}
       <div className="bg-iris-sand">
-        <WaveDivider fill="#D69A3B" />
+        <WaveDivider fill="#C4A675" />
       </div>
     </>
   );

@@ -30,7 +30,7 @@ function dotRing(n: number, r: number, dotR: number, off = 0) {
 // Viertel davon liegt im Viewport (Zentrum ist in der Ecke)
 function MandalaFlower() {
   return (
-    <g fill="none" stroke="#8E3821">
+    <g fill="none" stroke="#7A0000">
       {/* ── Kern ── */}
       <circle cx={0} cy={0} r={8} strokeWidth="2" />
       <circle cx={0} cy={0} r={24} strokeWidth="0.9" />
