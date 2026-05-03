@@ -18,7 +18,7 @@ export default function ImpressumPage() {
           <div>
             <h2 className="text-lg font-semibold mb-2">Kontakt</h2>
             <p>
-              Telefon: +49&nbsp;123&nbsp;456789 <br />
+              Telefon: +49&nbsp;174&nbsp;9735048 <br />
               E-Mail: info@yogamitherz.de
             </p>
           </div>

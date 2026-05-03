@@ -13,7 +13,7 @@ export default function HomePage() {
     <main className="bg-iris-golden text-iris-charcoal">
       {/* Hero mit Bild */}
       <section
-        className="relative min-h-screen bg-center bg-cover flex flex-col justify-center items-center text-center mb-[-2px]"
+        className="relative min-h-screen bg-center bg-cover flex flex-col justify-center items-center text-center mb-[-4px]"
         style={{ backgroundImage: "url('/Iris_Hero.jpg')" }}
       >
         {/* Dunkler Overlay für Lesbarkeit des Headers */}
@@ -225,11 +225,6 @@ export default function HomePage() {
                   Schreib mir auf WhatsApp
                 </Button>
               </div>
-              <div className="flex-1">
-                <Button variant="outline" href="https://www.instagram.com/iriswallenaar/" target="_blank" rel="noopener noreferrer" className="w-full">
-                  Folge mir auf Instagram
-                </Button>
-              </div>
             </div>
           </FadeIn>
 
@@ -237,7 +232,7 @@ export default function HomePage() {
       </section>
 
       {/* Wave: Sand → Footer (Golden) */}
-      <div className="bg-iris-sand">
+      <div className="bg-iris-sand mb-[-2px]">
         <WaveDivider fill="#C4A675" />
       </div>
     </main>

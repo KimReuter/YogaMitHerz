@@ -44,7 +44,7 @@ export default function YogaPage() {
     <main className="bg-iris-golden text-iris-charcoal">
 
       {/* Hero */}
-      <section className="relative h-[60vh] overflow-hidden mb-[-2px]">
+      <section className="relative h-[60vh] overflow-hidden mb-[-4px]">
         <video
           className="absolute inset-0 w-full h-full object-cover"
           src="/videos/yoga-hero.mp4"
@@ -201,7 +201,7 @@ export default function YogaPage() {
       </section>
 
       {/* Wave: Sand → Footer */}
-      <div className="bg-iris-sand">
+      <div className="bg-iris-sand mb-[-2px]">
         <WaveDivider fill="#C4A675" />
       </div>
 
