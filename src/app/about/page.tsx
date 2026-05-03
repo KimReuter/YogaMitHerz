@@ -36,7 +36,7 @@ export default function AboutPage() {
       </section>
 
       {/* Abschnitt: Mein Weg zum Yoga */}
-      <section className="bg-iris-golden text-iris-charcoal">
+      <section className="bg-iris-golden text-iris-charcoal mb-[-2px]">
         <main className="px-6 py-16 max-w-3xl mx-auto">
           <motion.h2
             className="text-3xl font-semibold mb-10 text-iris-terracotta"
@@ -82,12 +82,12 @@ export default function AboutPage() {
       </section>
 
       {/* Wellen-Übergang golden → sand */}
-      <div className="bg-iris-golden">
+      <div className="bg-iris-golden mb-[-2px]">
         <WaveDivider fill="#FFBD59" />
       </div>
 
       {/* Abschlussblock */}
-      <section className="bg-iris-sand text-iris-charcoal">
+      <section className="bg-iris-sand text-iris-charcoal mb-[-2px]">
         <div className="max-w-3xl mx-auto px-6 py-16 space-y-6 text-[1.05rem] leading-[1.85] text-justify">
           {[
             'Dein Yoga-Weg ist genau wie du – ganz individuell und einzigartig. Und gleichzeitig doch auch ähnlich.',
@@ -108,12 +108,12 @@ export default function AboutPage() {
       </section>
 
       {/* Wellen-Übergang sand → golden */}
-      <div className="bg-iris-sand">
+      <div className="bg-iris-sand mb-[-2px]">
         <WaveDivider fill="#C4A675" />
       </div>
 
       {/* Philosophie */}
-      <section className="bg-iris-golden text-iris-charcoal">
+      <section className="bg-iris-golden text-iris-charcoal mb-[-2px]">
         <main className="px-6 py-16 max-w-7xl mx-auto">
           <motion.h2
             className="text-3xl font-semibold text-iris-terracotta text-center mb-12"
@@ -171,12 +171,12 @@ export default function AboutPage() {
       </section>
 
       {/* Wellen-Übergang golden → sand */}
-      <div className="bg-iris-golden">
+      <div className="bg-iris-golden mb-[-2px]">
         <WaveDivider fill="#FFBD59" />
       </div>
 
       {/* Kurz über mich */}
-      <section className="bg-iris-sand text-iris-charcoal pt-4 pb-20">
+      <section className="bg-iris-sand text-iris-charcoal pt-4 pb-20 mb-[-2px]">
         <div className="max-w-2xl mx-auto px-6">
           <motion.h2
             className="text-3xl font-semibold text-iris-terracotta text-center mb-10"
