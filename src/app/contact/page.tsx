@@ -16,14 +16,6 @@ const contactMethods = [
     target: '_blank',
   },
   {
-    emoji: '📷',
-    label: 'Instagram',
-    desc: 'Schau hinter die Kulissen und bleib auf dem Laufenden.',
-    href: 'https://www.instagram.com/iriswallenaar/',
-    cta: 'Profil besuchen',
-    target: '_blank',
-  },
-  {
     emoji: '✉️',
     label: 'E-Mail',
     desc: 'Für alles, was ein bisschen mehr Worte braucht.',
@@ -108,7 +100,7 @@ export default function ContactPage() {
             </h2>
           </FadeIn>
 
-          <div className="grid gap-6 sm:grid-cols-3 items-stretch">
+          <div className="grid gap-6 sm:grid-cols-2 items-stretch max-w-2xl mx-auto">
             {contactMethods.map(({ emoji, label, desc, href, cta, target }, i) => (
               <FadeIn key={i} delay={i * 0.1} className="h-full">
                 <motion.a
