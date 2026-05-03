@@ -221,7 +221,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <div className="flex-1">
-                <Button href="https://wa.me/4917662468814" target="_blank" rel="noopener noreferrer" className="w-full">
+                <Button href="https://wa.me/491749735048" target="_blank" rel="noopener noreferrer" className="w-full">
                   Schreib mir auf WhatsApp
                 </Button>
               </div>

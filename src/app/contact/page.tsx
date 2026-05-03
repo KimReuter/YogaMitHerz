@@ -11,7 +11,7 @@ const contactMethods = [
     emoji: '💬',
     label: 'WhatsApp',
     desc: 'Schnell und unkompliziert – schreib mir einfach eine Nachricht.',
-    href: 'https://wa.me/4917662468814',
+    href: 'https://wa.me/491749735048',
     cta: 'Jetzt schreiben',
     target: '_blank',
   },
