@@ -70,7 +70,7 @@ export default function YogaPage() {
       </section>
 
       {/* Für alle, die... */}
-      <section className="py-24 px-6 bg-iris-golden">
+      <section className="py-24 px-6 bg-iris-golden mb-[-2px]">
         <div className="max-w-3xl mx-auto text-center">
           <FadeIn>
             <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta mb-12">
@@ -117,14 +117,14 @@ export default function YogaPage() {
       </section>
 
       {/* Wave: Golden → Sand */}
-      <div className="bg-iris-golden">
+      <div className="bg-iris-golden mb-[-2px]">
         <WaveDivider fill="#FFBD59" />
       </div>
 
       {/* Kurse */}
       {courses.map((course, idx) => (
         <div key={idx}>
-          <section className={`py-24 px-6 ${course.bg}`}>
+          <section className={`py-24 px-6 mb-[-2px] ${course.bg}`}>
             <div className="max-w-3xl mx-auto">
 
               {/* Zeit & Dauer */}
@@ -171,7 +171,7 @@ export default function YogaPage() {
           </section>
 
           {/* Wave zwischen Kursen oder vor CTA */}
-          <div className={course.waveContainerBg}>
+          <div className={`${course.waveContainerBg} mb-[-2px]`}>
             <WaveDivider fill={course.waveFill} />
           </div>
         </div>
