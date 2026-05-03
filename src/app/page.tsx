@@ -108,7 +108,7 @@ export default function HomePage() {
             </h2>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {[
               {
                 emoji: '💗',
@@ -134,7 +134,7 @@ export default function HomePage() {
             ].map(({ emoji, title, text, shape, delay }, idx) => (
               <FadeIn key={idx} delay={delay}>
                 <motion.div
-                  className="bg-iris-sand/60 overflow-hidden flex flex-col items-center justify-center cursor-default text-center px-8 py-14 md:px-5 md:py-10 lg:px-10 lg:py-14"
+                  className="bg-iris-sand/60 overflow-hidden flex flex-col items-center justify-center cursor-default text-center px-10 py-14"
                   style={{ borderRadius: shape }}
                   whileHover={{ scale: 1.03, y: -6, boxShadow: '0 28px 64px rgba(0,0,0,0.11)' }}
                   transition={{ duration: 0.4, ease: 'easeOut' }}
