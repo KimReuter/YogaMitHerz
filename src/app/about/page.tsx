@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero mit Parallax */}
-      <section className="relative h-[60vh] overflow-hidden mb-[-2px]">
+      <section className="relative h-[60vh] overflow-hidden mb-[-4px]">
         <div
           className="absolute inset-0 bg-center bg-cover"
           style={{
@@ -213,8 +213,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Wave: Sand → Footer (Golden) */}
-      <div className="bg-iris-sand">
+      
+      <div className="bg-iris-sand mb-[-2px]">
         <WaveDivider fill="#C4A675" />
       </div>
     </>
