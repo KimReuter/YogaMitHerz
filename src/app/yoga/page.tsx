@@ -189,7 +189,7 @@ export default function YogaPage() {
               Schreib mir gerne, wenn du noch Fragen hast.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <div className="flex-1"><Button className="w-full" href="https://wa.me/4917662468814" target="_blank" rel="noopener noreferrer">
+              <div className="flex-1"><Button className="w-full" href="https://wa.me/491749735048" target="_blank" rel="noopener noreferrer">
                 Schreib mir auf WhatsApp
               </Button></div>
               <div className="flex-1"><Button className="w-full" variant="outline" href="/contact">
