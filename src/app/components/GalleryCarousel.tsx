@@ -9,6 +9,8 @@ const images = [
   '/gallery/galerie_placeholder3.jpg',
   '/gallery/galerie_placeholder4.jpg',
   '/gallery/galerie_placeholder5.jpg',
+  '/gallery/galerie_placeholder6.jpg',
+  '/gallery/galerie_placeholder7.jpg',
 ];
 
 export default function GalleryCarousel() {
