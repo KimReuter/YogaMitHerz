@@ -204,7 +204,7 @@ export default function HomePage() {
               transition={{ duration: 0.4, ease: 'easeOut' }}
             >
               <img
-                src="/iris-portrait.jpg"
+                src="/iris-portrait-contact.jpg"
                 alt="Iris Portrait"
                 className="w-full h-full object-cover object-top"
               />
