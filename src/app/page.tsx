@@ -134,8 +134,8 @@ export default function HomePage() {
             ].map(({ emoji, title, text, shape, delay }, idx) => (
               <FadeIn key={idx} delay={delay}>
                 <motion.div
-                  className="bg-iris-sand/60 overflow-hidden flex flex-col items-center justify-center cursor-default text-center"
-                  style={{ borderRadius: shape, padding: '3.5rem 2.5rem' }}
+                  className="bg-iris-sand/60 overflow-hidden flex flex-col items-center justify-center cursor-default text-center px-8 py-14 md:px-5 md:py-10 lg:px-10 lg:py-14"
+                  style={{ borderRadius: shape }}
                   whileHover={{ scale: 1.03, y: -6, boxShadow: '0 28px 64px rgba(0,0,0,0.11)' }}
                   transition={{ duration: 0.4, ease: 'easeOut' }}
                 >
