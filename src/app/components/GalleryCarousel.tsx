@@ -14,67 +14,112 @@ const images = [
 ];
 
 export default function GalleryCarousel() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const mobileRef = useRef<HTMLDivElement>(null);
+  const desktopRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const scrollAmount = 316;
+  const updateMobileScroll = () => {
+    if (!mobileRef.current) return;
+    const { scrollLeft, clientWidth } = mobileRef.current;
+    setActiveIndex(Math.round(scrollLeft / clientWidth));
+  };
 
-  const updateScrollState = () => {
-    if (!containerRef.current) return;
-    const { scrollLeft, scrollWidth, clientWidth } = containerRef.current;
+  const updateDesktopScroll = () => {
+    if (!desktopRef.current) return;
+    const { scrollLeft, scrollWidth, clientWidth } = desktopRef.current;
     setCanScrollLeft(scrollLeft > 0);
     setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 1);
   };
 
-  const scroll = (direction: 'left' | 'right') => {
-    if (!containerRef.current) return;
-    const amount = direction === 'left' ? -scrollAmount : scrollAmount;
-    containerRef.current.scrollBy({ left: amount, behavior: 'smooth' });
+  const scrollDesktop = (direction: 'left' | 'right') => {
+    desktopRef.current?.scrollBy({ left: direction === 'left' ? -316 : 316, behavior: 'smooth' });
+  };
+
+  const scrollMobileTo = (index: number) => {
+    if (!mobileRef.current) return;
+    mobileRef.current.scrollTo({ left: index * mobileRef.current.clientWidth, behavior: 'smooth' });
   };
 
   useEffect(() => {
-    updateScrollState();
+    updateDesktopScroll();
   }, []);
 
   return (
-    <section className="py-20 px-6 bg-iris-golden">
-      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-iris-terracotta">
+    <section className="py-20 bg-iris-golden overflow-hidden">
+      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-iris-terracotta px-6">
         Einblicke in meine Yogawelt
       </h2>
 
-      <div className="flex items-center justify-center gap-4 max-w-6xl mx-auto">
-        {/* Pfeil links */}
+      {/* Mobile: Vollbreites Swipe-Karussell */}
+      <div className="md:hidden">
+        <div
+          ref={mobileRef}
+          onScroll={updateMobileScroll}
+          className="flex overflow-x-auto scrollbar-hide"
+          style={{ scrollSnapType: 'x mandatory' }}
+        >
+          {images.map((src, i) => (
+            <div
+              key={i}
+              className="flex-shrink-0 w-full px-5"
+              style={{ scrollSnapAlign: 'center' }}
+            >
+              <img
+                src={src}
+                alt={`Yoga Bild ${i + 1}`}
+                className="w-full h-64 object-cover rounded-2xl shadow-lg"
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Dot-Indikatoren */}
+        <div className="flex justify-center gap-2 mt-5">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => scrollMobileTo(i)}
+              aria-label={`Bild ${i + 1}`}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                i === activeIndex ? 'w-6 bg-iris-terracotta' : 'w-2 bg-iris-terracotta/30'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop: Pfeil-Navigation + horizontales Scrollen */}
+      <div className="hidden md:flex items-center justify-center gap-4 max-w-6xl mx-auto px-6">
         <button
-          onClick={() => scroll('left')}
-          className="bg-iris-terracotta hover:bg-iris-terracotta/80 text-white p-2 rounded-full transition disabled:opacity-30 disabled:cursor-not-allowed shadow-md"
+          onClick={() => scrollDesktop('left')}
+          className="flex-shrink-0 bg-iris-terracotta hover:bg-iris-terracotta/80 text-white p-2 rounded-full transition disabled:opacity-30 disabled:cursor-not-allowed shadow-md"
           disabled={!canScrollLeft}
           aria-label="Zurück"
         >
           <ChevronLeft />
         </button>
 
-        {/* Bildreihe */}
         <div
-          ref={containerRef}
-          onScroll={updateScrollState}
+          ref={desktopRef}
+          onScroll={updateDesktopScroll}
           className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth"
-          style={{ width: '932px' }} // 3x 300px + 2x 16px spacing
+          style={{ width: '932px' }}
         >
-          {images.map((src, index) => (
+          {images.map((src, i) => (
             <img
-              key={index}
+              key={i}
               src={src}
-              alt={`Yoga Bild ${index + 1}`}
+              alt={`Yoga Bild ${i + 1}`}
               className="w-[300px] h-[200px] object-cover rounded-xl shadow-lg flex-shrink-0"
             />
           ))}
         </div>
 
-        {/* Pfeil rechts */}
         <button
-          onClick={() => scroll('right')}
-          className="bg-iris-terracotta hover:bg-iris-terracotta/80 text-white p-2 rounded-full transition disabled:opacity-30 disabled:cursor-not-allowed shadow-md"
+          onClick={() => scrollDesktop('right')}
+          className="flex-shrink-0 bg-iris-terracotta hover:bg-iris-terracotta/80 text-white p-2 rounded-full transition disabled:opacity-30 disabled:cursor-not-allowed shadow-md"
           disabled={!canScrollRight}
           aria-label="Weiter"
         >
