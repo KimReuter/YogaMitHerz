@@ -75,7 +75,7 @@ export default function YogaPage() {
 
           <ul className="space-y-5 text-left mb-12 max-w-fit mx-auto">
             {[
-              'Yoga neu entdecken oder wieder zu sich selbst zurückfinden möchten.',
+              'Yoga neu oder einfach mal anders entdecken wollen.',
               'den eigenen Körper achtsam spüren und bewegen wollen.',
               'eine Balance aus Ruhe, Kraft und Entspannung suchen.',
             ].map((item, i) => (
