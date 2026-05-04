@@ -110,16 +110,30 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Wellen-Übergang sand → golden */}
-      <div className="bg-iris-sand mb-[-2px]">
-        <WaveDivider fill="#C4A675" />
-      </div>
+      {/* Philosophie mit Hintergrundbild */}
+      <section className="relative overflow-hidden mb-[-2px]">
+        {/* Hintergrundbild */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/meinePhilosophie.jpg')" }}
+        />
+        {/* Dunkler Overlay */}
+        <div className="absolute inset-0 bg-black/50" />
 
-      {/* Philosophie */}
-      <section className="bg-iris-golden text-iris-charcoal mb-[-2px]">
-        <main className="px-6 py-16 max-w-7xl mx-auto">
+        {/* Welle oben: Sand fließt von oben ins Bild */}
+        <div className="absolute top-0 left-0 right-0 z-10">
+          <WaveDivider fill="#FFBD59" flip />
+        </div>
+
+        {/* Welle unten: fließt aus dem Bild zu Sand */}
+        <div className="absolute bottom-0 left-0 right-0 z-10">
+          <WaveDivider fill="#FFBD59" />
+        </div>
+
+        {/* Inhalt */}
+        <div className="relative z-20 px-6 pt-28 pb-28 max-w-7xl mx-auto">
           <motion.h2
-            className="text-3xl font-semibold text-iris-terracotta text-center mb-12"
+            className="text-3xl font-semibold text-iris-sand text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -159,24 +173,19 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
               >
                 <motion.div
-                  className="bg-iris-sand/60 overflow-hidden flex flex-col justify-center cursor-default"
-                  style={{ borderRadius: shape, padding: '6.5rem 4.5rem' }}
-                  whileHover={{ scale: 1.03, y: -6, boxShadow: '0 28px 64px rgba(0,0,0,0.11)' }}
+                  className="bg-iris-sand/85 overflow-hidden flex flex-col justify-center cursor-default px-10 py-14"
+                  style={{ borderRadius: shape }}
+                  whileHover={{ scale: 1.03, y: -6, boxShadow: '0 28px 64px rgba(0,0,0,0.2)' }}
                   transition={{ duration: 0.4, ease: 'easeOut' }}
                 >
-                  <h3 className="text-3xl font-semibold text-iris-terracotta mb-4 text-center">{title}</h3>
-                  <p className="text-base leading-relaxed text-justify">{content}</p>
+                  <h3 className="text-2xl font-semibold text-iris-terracotta mb-4 text-center">{title}</h3>
+                  <p className="text-base leading-relaxed text-justify text-iris-charcoal">{content}</p>
                 </motion.div>
               </motion.div>
             ))}
           </div>
-        </main>
+        </div>
       </section>
-
-      {/* Wellen-Übergang golden → sand */}
-      <div className="bg-iris-golden mb-[-2px]">
-        <WaveDivider fill="#FFBD59" />
-      </div>
 
       {/* Kurz über mich */}
       <section className="bg-iris-sand text-iris-charcoal pt-4 pb-20 mb-[-2px]">
