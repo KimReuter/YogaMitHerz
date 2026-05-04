@@ -5,7 +5,11 @@ import WaveDivider from '../components/WaveDivider';
 import FadeIn from '../components/FadeIn';
 import Button from '../components/Button';
 
-const styleInfluences = ['Hatha', 'Vinyasa', 'Ashtanga'];
+const styleInfluences = [
+  { name: 'Hatha', desc: 'ruhig, achtsam, ausgleichend' },
+  { name: 'Vinyasa', desc: 'fließend, kraftvoll, lebendig' },
+  { name: 'Ashtanga', desc: 'strukturiert, klar, zentrierend' },
+];
 
 const courses = [
   {
@@ -94,18 +98,25 @@ export default function YogaPage() {
             </p>
           </FadeIn>
 
-          {/* Stil-Badges */}
+          {/* Stil-Karten */}
           <FadeIn delay={0.45}>
-            <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-3">
-              <span className="text-sm opacity-60">Meine Praxis ist inspiriert von:</span>
-              {styleInfluences.map((style) => (
-                <span
-                  key={style}
-                  className="w-32 text-center py-1.5 rounded-full text-sm bg-iris-terracotta/10 text-iris-terracotta"
-                >
-                  {style}
-                </span>
-              ))}
+            <div className="mt-10">
+              <span className="block text-sm opacity-60 text-center mb-5">Meine Praxis ist inspiriert von:</span>
+              <div className="flex flex-col md:flex-row justify-center gap-4">
+                {styleInfluences.map(({ name, desc }, i) => (
+                  <motion.div
+                    key={name}
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                    className="flex flex-col items-center text-center gap-1.5 bg-iris-terracotta/10 rounded-2xl px-8 py-5 min-w-[160px]"
+                  >
+                    <span className="font-semibold text-iris-terracotta text-base">{name}</span>
+                    <span className="text-sm opacity-70 leading-snug">{desc}</span>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </FadeIn>
         </div>
