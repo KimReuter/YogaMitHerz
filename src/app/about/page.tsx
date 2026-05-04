@@ -187,48 +187,26 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Kurz über mich */}
-      <section className="bg-iris-sand text-iris-charcoal pt-4 pb-20 mb-[-2px]">
-        <div className="max-w-2xl mx-auto px-6">
-          <motion.h2
-            className="text-3xl font-semibold text-iris-terracotta text-center mb-10"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            Kurz über mich
-          </motion.h2>
+      {/* Namaste Bild */}
+      <section className="relative overflow-hidden mb-[-2px]">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/uebermich-namaste.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-black/20" />
 
-          <ul className="space-y-5">
-            {[
-              'Yogalehrerin aus Leidenschaft',
-              'Yogapraxis seit über 10 Jahren',
-              'Hatha-Yogalehrer-Ausbildung bei Kerstin Nirmala Bucher (Zwickau) 2018–2020',
-              'Kinderyoga-Ausbildung 2017',
-              'Verbindung von kraftvollen, fließenden und ruhigen Elementen',
-              'Yoga mit Herz in kleinen Gruppen',
-            ].map((item, idx) => (
-              <motion.li
-                key={idx}
-                className="flex items-start gap-4"
-                initial={{ opacity: 0, x: -16 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.08 }}
-              >
-                <span className="mt-2 flex-shrink-0 w-3 h-3 rounded-full bg-iris-terracotta ring-4 ring-iris-terracotta/20" />
-                <span className="text-[1.05rem] leading-relaxed">{item}</span>
-              </motion.li>
-            ))}
-          </ul>
+        {/* Welle oben: von Sand kommend */}
+        <div className="absolute top-0 left-0 right-0 z-10">
+          <WaveDivider fill="#FFBD59" flip />
         </div>
-      </section>
 
-      
-      <div className="bg-iris-sand mb-[-2px]">
-        <WaveDivider fill="#C4A675" />
-      </div>
+        {/* Welle unten: zu Golden (Footer) */}
+        <div className="absolute bottom-0 left-0 right-0 z-10">
+          <WaveDivider fill="#C4A675" />
+        </div>
+
+        <div className="h-[60vh] md:h-[70vh]" />
+      </section>
     </>
   );
 }
