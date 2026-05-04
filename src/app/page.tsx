@@ -46,7 +46,8 @@ export default function HomePage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl"
           >
-            Entdecke Yoga von Herzen – ein Raum für dich, ganz gleich mit welcher Erfahrung du kommst. <br />
+            Entdecke Yoga von Herzen – ein Raum für dich,<br />
+            ganz gleich mit welcher Erfahrung du kommst.<br />
             Komm bei dir an, atme durch und nimm dir Zeit nur für dich.
           </motion.p>
 
