@@ -8,6 +8,7 @@ const links = [
   { href: '/',        label: 'Start' },
   { href: '/about',   label: 'Über mich' },
   { href: '/yoga',    label: 'Meine Kurse' },
+  { href: '/reiki',   label: 'Reiki' },
   { href: '/contact', label: 'Kontakt' },
 ];
 
