@@ -96,7 +96,7 @@ export default function YogaPage() {
 
           {/* Stil-Badges */}
           <FadeIn delay={0.45}>
-            <div className="mt-10 flex flex-col items-center gap-3">
+            <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-3">
               <span className="text-sm opacity-60">Meine Praxis ist inspiriert von:</span>
               {styleInfluences.map((style) => (
                 <span
