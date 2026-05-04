@@ -200,10 +200,12 @@ export default function YogaPage() {
             </div>
           </section>
 
-          {/* Wave zwischen Kursen oder vor CTA */}
-          <div className={`${course.waveContainerBg} mb-[-2px]`}>
-            <WaveDivider fill={course.waveFill} />
-          </div>
+          {/* Wave zwischen Kursen – nur nicht nach dem letzten */}
+          {idx < courses.length - 1 && (
+            <div className={`${course.waveContainerBg} mb-[-2px]`}>
+              <WaveDivider fill={course.waveFill} />
+            </div>
+          )}
         </div>
       ))}
 
@@ -217,9 +219,9 @@ export default function YogaPage() {
         {/* Overlay für Lesbarkeit */}
         <div className="absolute inset-0 bg-black/45" />
 
-        {/* Wave oben → von Golden-Sektion kommend */}
+        {/* Wave oben → von goldener Kurs-Sektion kommend */}
         <div className="absolute top-0 left-0 right-0 z-10">
-          <WaveDivider fill="#FFBD59" flip />
+          <WaveDivider fill="#C4A675" flip />
         </div>
 
         {/* Wave nach unten → Footer (Golden) */}
