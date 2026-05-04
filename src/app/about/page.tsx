@@ -173,8 +173,8 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
               >
                 <motion.div
-                  className="bg-iris-sand/85 overflow-hidden flex flex-col justify-center cursor-default px-10 py-14"
-                  style={{ borderRadius: shape }}
+                  className="bg-iris-sand/85 overflow-hidden flex flex-col justify-center cursor-default"
+                  style={{ borderRadius: shape, padding: '5.5rem 4rem' }}
                   whileHover={{ scale: 1.03, y: -6, boxShadow: '0 28px 64px rgba(0,0,0,0.2)' }}
                   transition={{ duration: 0.4, ease: 'easeOut' }}
                 >
