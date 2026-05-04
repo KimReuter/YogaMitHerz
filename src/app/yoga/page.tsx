@@ -26,6 +26,8 @@ const courses = [
     bg: 'bg-iris-sand',
     waveFill: '#C4A675',
     waveContainerBg: 'bg-iris-sand',
+    image: '/meineKurseV.jpg',
+    imageRight: true,
   },
   {
     time: 'Donnerstag · 20:15 Uhr',
@@ -40,6 +42,8 @@ const courses = [
     bg: 'bg-iris-golden',
     waveFill: '#FFBD59',
     waveContainerBg: 'bg-iris-golden',
+    image: '/meineKurseVI.jpg',
+    imageRight: false,
   },
 ];
 
@@ -131,48 +135,68 @@ export default function YogaPage() {
       {courses.map((course, idx) => (
         <div key={idx}>
           <section className={`py-24 px-6 mb-[-2px] ${course.bg}`}>
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
 
-              {/* Zeit & Dauer */}
-              <FadeIn>
-                <div className="flex flex-wrap items-center gap-3 mb-6">
-                  <span className="px-4 py-1.5 rounded-full bg-iris-terracotta text-white text-sm font-medium">
-                    {course.time}
-                  </span>
-                  <span className="px-4 py-1.5 rounded-full bg-iris-terracotta/10 text-iris-terracotta text-sm">
-                    {course.duration}
-                  </span>
+              {/* Text-Spalte */}
+              <div className={`flex flex-col justify-center ${course.imageRight ? 'md:order-1' : 'md:order-2'}`}>
+
+                {/* Zeit & Dauer */}
+                <FadeIn>
+                  <div className="flex flex-wrap items-center gap-3 mb-6">
+                    <span className="px-4 py-1.5 rounded-full bg-iris-terracotta text-white text-sm font-medium">
+                      {course.time}
+                    </span>
+                    <span className="px-4 py-1.5 rounded-full bg-iris-terracotta/10 text-iris-terracotta text-sm">
+                      {course.duration}
+                    </span>
+                  </div>
+                </FadeIn>
+
+                {/* Titel */}
+                <FadeIn delay={0.05}>
+                  <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta mb-2">
+                    {course.title}
+                  </h2>
+                  <p className="text-sm tracking-widest uppercase opacity-60 mb-10">
+                    {course.mood}
+                  </p>
+                </FadeIn>
+
+                {/* Beschreibung */}
+                <div className="space-y-5 text-[1.05rem] leading-[1.85] text-justify">
+                  {course.paragraphs.map((para, i) => (
+                    <FadeIn key={i} delay={0.1 + i * 0.08}>
+                      <p>{para}</p>
+                    </FadeIn>
+                  ))}
+                </div>
+
+                {/* Motto */}
+                <FadeIn delay={0.3}>
+                  <blockquote className="mt-10 flex items-start gap-4 bg-iris-terracotta/10 rounded-2xl px-6 py-5">
+                    <span className="text-2xl flex-shrink-0">💛</span>
+                    <p className="italic text-iris-terracotta font-medium leading-relaxed">
+                      {course.motto}
+                    </p>
+                  </blockquote>
+                </FadeIn>
+              </div>
+
+              {/* Bild-Spalte (nur Desktop) */}
+              <FadeIn
+                direction={course.imageRight ? 'right' : 'left'}
+                delay={0.15}
+                className={`hidden md:block ${course.imageRight ? 'md:order-2' : 'md:order-1'}`}
+              >
+                <div className="h-full min-h-[400px] overflow-hidden rounded-3xl shadow-xl">
+                  <img
+                    src={course.image}
+                    alt={course.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </FadeIn>
 
-              {/* Titel */}
-              <FadeIn delay={0.05}>
-                <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta mb-2">
-                  {course.title}
-                </h2>
-                <p className="text-sm tracking-widest uppercase opacity-60 mb-10">
-                  {course.mood}
-                </p>
-              </FadeIn>
-
-              {/* Beschreibung */}
-              <div className="space-y-5 text-[1.05rem] leading-[1.85] text-justify">
-                {course.paragraphs.map((para, i) => (
-                  <FadeIn key={i} delay={0.1 + i * 0.08}>
-                    <p>{para}</p>
-                  </FadeIn>
-                ))}
-              </div>
-
-              {/* Motto */}
-              <FadeIn delay={0.3}>
-                <blockquote className="mt-10 flex items-start gap-4 bg-iris-terracotta/10 rounded-2xl px-6 py-5">
-                  <span className="text-2xl flex-shrink-0">💛</span>
-                  <p className="italic text-iris-terracotta font-medium leading-relaxed">
-                    {course.motto}
-                  </p>
-                </blockquote>
-              </FadeIn>
             </div>
           </section>
 
@@ -184,13 +208,26 @@ export default function YogaPage() {
       ))}
 
       {/* CTA */}
-      <section className="py-24 px-6 bg-iris-sand">
+      <section className="relative overflow-hidden py-24 px-6 mb-[-2px]">
+        {/* Hintergrundbild */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/meineKurseKontakt.jpg')" }}
+        />
+        {/* Overlay für Lesbarkeit */}
+        <div className="absolute inset-0 bg-black/45" />
+
+        {/* Wave nach unten → Footer (Golden) */}
+        <div className="absolute bottom-0 left-0 right-0 z-10">
+          <WaveDivider fill="#C4A675" />
+        </div>
+
         <FadeIn>
-          <div className="max-w-xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta">
+          <div className="relative z-10 max-w-xl mx-auto text-center space-y-6 pb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-iris-golden">
               Lust, es auszuprobieren?
             </h2>
-            <p className="text-lg leading-relaxed">
+            <p className="text-lg leading-relaxed text-white/90">
               Komm einfach vorbei – du brauchst keine Vorkenntnisse und musst dich nicht anmelden.
               Schreib mir gerne, wenn du noch Fragen hast.
             </p>
@@ -205,11 +242,6 @@ export default function YogaPage() {
           </div>
         </FadeIn>
       </section>
-
-      {/* Wave: Sand → Footer */}
-      <div className="bg-iris-sand mb-[-2px]">
-        <WaveDivider fill="#C4A675" />
-      </div>
 
     </main>
   );
