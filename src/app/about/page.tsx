@@ -91,7 +91,7 @@ export default function AboutPage() {
 
       {/* Abschlussblock */}
       <section className="bg-iris-sand text-iris-charcoal mb-[-2px]">
-        <div className="max-w-3xl mx-auto px-6 py-16 space-y-6 text-[1.05rem] leading-[1.85] text-justify">
+        <div className="max-w-6xl mx-auto px-6 py-16 space-y-6 text-[1.05rem] leading-[1.85] text-justify">
           {[
             'Dein Yoga-Weg ist genau wie du – ganz individuell und einzigartig. Und gleichzeitig doch auch ähnlich.',
             'Individuell deshalb, weil jeder von uns seine eigenen Voraussetzungen, Vorlieben und Herausforderungen mitbringt. Und doch sind unsere Wege im Yoga auch verbunden – denn am Ende suchen wir alle auf unsere Weise Ruhe, Entspannung und ein Stück inneren Frieden.',
