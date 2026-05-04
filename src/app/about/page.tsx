@@ -89,24 +89,44 @@ export default function AboutPage() {
         <WaveDivider fill="#FFBD59" />
       </div>
 
-      {/* Abschlussblock */}
+      {/* Abschlussblock + Namaste Bild (2-Spalten) */}
       <section className="bg-iris-sand text-iris-charcoal mb-[-2px]">
-        <div className="max-w-6xl mx-auto px-6 py-16 space-y-6 text-[1.05rem] leading-[1.85] text-justify">
-          {[
-            'Dein Yoga-Weg ist genau wie du – ganz individuell und einzigartig. Und gleichzeitig doch auch ähnlich.',
-            'Individuell deshalb, weil jeder von uns seine eigenen Voraussetzungen, Vorlieben und Herausforderungen mitbringt. Und doch sind unsere Wege im Yoga auch verbunden – denn am Ende suchen wir alle auf unsere Weise Ruhe, Entspannung und ein Stück inneren Frieden.',
-            'Dafür verbinde ich verschiedene Yogastile miteinander, biete Varianten der Asanas für unterschiedliche Bedürfnisse an und lade dich durch Worte und Inspiration dazu ein, Körper und Gedanken achtsam wahrzunehmen.',
-          ].map((text, idx) => (
-            <motion.p
-              key={idx}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
-            >
-              {text}
-            </motion.p>
-          ))}
+        <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+          {/* Bild links */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="overflow-hidden rounded-3xl shadow-xl aspect-[3/4] w-full"
+          >
+            <img
+              src="/uebermich-namaste.jpg"
+              alt="Iris in Namaste"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+
+          {/* Text rechts */}
+          <div className="space-y-6 text-[1.05rem] leading-[1.85] text-justify">
+            {[
+              'Dein Yoga-Weg ist genau wie du – ganz individuell und einzigartig. Und gleichzeitig doch auch ähnlich.',
+              'Individuell deshalb, weil jeder von uns seine eigenen Voraussetzungen, Vorlieben und Herausforderungen mitbringt. Und doch sind unsere Wege im Yoga auch verbunden – denn am Ende suchen wir alle auf unsere Weise Ruhe, Entspannung und ein Stück inneren Frieden.',
+              'Dafür verbinde ich verschiedene Yogastile miteinander, biete Varianten der Asanas für unterschiedliche Bedürfnisse an und lade dich durch Worte und Inspiration dazu ein, Körper und Gedanken achtsam wahrzunehmen.',
+            ].map((text, idx) => (
+              <motion.p
+                key={idx}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+              >
+                {text}
+              </motion.p>
+            ))}
+          </div>
+
         </div>
       </section>
 
@@ -187,26 +207,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Namaste Bild */}
-      <section className="relative overflow-hidden mb-[-2px]">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/uebermich-namaste.jpg')" }}
-        />
-        <div className="absolute inset-0 bg-black/20" />
+      {/* Wave: Sand → Footer (Golden) */}
+      <div className="bg-iris-sand mb-[-2px]">
+        <WaveDivider fill="#C4A675" />
+      </div>
 
-        {/* Welle oben: von Sand kommend */}
-        <div className="absolute top-0 left-0 right-0 z-10">
-          <WaveDivider fill="#FFBD59" flip />
-        </div>
-
-        {/* Welle unten: zu Golden (Footer) */}
-        <div className="absolute bottom-0 left-0 right-0 z-10">
-          <WaveDivider fill="#C4A675" />
-        </div>
-
-        <div className="h-[60vh] md:h-[70vh]" />
-      </section>
     </>
   );
 }
