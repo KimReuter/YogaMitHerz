@@ -145,9 +145,9 @@ export default function AboutPage() {
           <WaveDivider fill="#FFBD59" flip />
         </div>
 
-        {/* Welle unten: fließt aus dem Bild zu Sand */}
+        {/* Welle unten: direkt zu Footer (Golden) */}
         <div className="absolute bottom-0 left-0 right-0 z-10">
-          <WaveDivider fill="#FFBD59" />
+          <WaveDivider fill="#C4A675" />
         </div>
 
         {/* Inhalt */}
@@ -206,11 +206,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Wave: Sand → Footer (Golden) */}
-      <div className="bg-iris-sand mb-[-2px]">
-        <WaveDivider fill="#C4A675" />
-      </div>
 
     </>
   );
