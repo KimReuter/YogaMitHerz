@@ -217,13 +217,18 @@ export default function YogaPage() {
         {/* Overlay für Lesbarkeit */}
         <div className="absolute inset-0 bg-black/45" />
 
+        {/* Wave oben → von Golden-Sektion kommend */}
+        <div className="absolute top-0 left-0 right-0 z-10">
+          <WaveDivider fill="#FFBD59" flip />
+        </div>
+
         {/* Wave nach unten → Footer (Golden) */}
         <div className="absolute bottom-0 left-0 right-0 z-10">
           <WaveDivider fill="#C4A675" />
         </div>
 
         <FadeIn>
-          <div className="relative z-10 max-w-xl mx-auto text-center space-y-6 pb-16">
+          <div className="relative z-10 max-w-xl mx-auto text-center space-y-6 pt-16 pb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-iris-golden">
               Lust, es auszuprobieren?
             </h2>
