@@ -45,14 +45,9 @@ export default function YogaPage() {
 
       {/* Hero */}
       <section className="relative h-[60vh] overflow-hidden mb-[-4px]">
-        <video
-          className="absolute inset-0 w-full h-full object-cover"
-          src="/videos/yoga-hero.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="none"
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/meineKurse.jpg')" }}
         />
         <div className="relative z-10 flex items-center justify-center h-full bg-black/40">
           <motion.h1
