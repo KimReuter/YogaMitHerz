@@ -55,7 +55,7 @@ export default function YogaPage() {
       <section className="relative h-[60vh] overflow-hidden mb-[-4px]">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/meineKurse.jpg')" }}
+          style={{ backgroundImage: "url('/meineKurseIV.jpg')" }}
         />
         <div className="relative z-10 flex items-center justify-center h-full bg-black/40">
           <motion.h1
