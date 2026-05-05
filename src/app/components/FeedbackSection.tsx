@@ -70,7 +70,7 @@ export default function FeedbackSection() {
             transition={{ duration: 0.9 }}
             className="relative z-10 space-y-5 pt-4"
           >
-            <p className="text-lg md:text-xl italic text-iris-charcoal leading-relaxed">
+            <p className="text-lg md:text-xl italic text-iris-charcoal leading-relaxed text-justify">
               {current.text}
             </p>
             <p className="text-iris-terracotta font-semibold tracking-widest uppercase text-sm">
