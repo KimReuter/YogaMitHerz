@@ -69,9 +69,9 @@ export default function HomePage() {
           <FadeIn direction="right" delay={0.15}>
             <div className="text-center md:text-left">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-iris-terracotta">
-                Namasté – Das Licht in meinem Herzen grüßt das Licht in deinem Herzen
+                Namasté –<br />Das Licht in meinem Herzen grüßt das Licht in deinem Herzen
               </h2>
-              <p className="text-lg md:text-xl mb-4">
+              <p className="text-lg md:text-xl mb-4 text-justify">
                 Ich bin Iris und lade dich ein, gemeinsam mit mir auf der Matte deinen ganz eigenen Weg zu dir zu entdecken. Einen Weg, der dich mit deinem Körper, deinem Inneren und deinem Atem verbindet – und dir Raum für Ruhe, Frieden und Entspannung schenkt.
               </p>
               <div className="relative mt-6 md:pl-12">
