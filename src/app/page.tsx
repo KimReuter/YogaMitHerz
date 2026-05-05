@@ -167,7 +167,7 @@ export default function HomePage() {
               Vielleicht hast du Lust,<br /> Yoga mit mir auszuprobieren?
             </h2>
             <p className="text-lg">
-              Du bist herzlich willkommen – genau so, wie du bist.
+              Du bist herzlich willkommen –<br className="md:hidden" /> genau so, wie du bist.
             </p>
             <Button href="/yoga" className="px-10">Entdecke Yoga mit mir</Button>
           </div>
