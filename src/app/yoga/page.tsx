@@ -138,7 +138,7 @@ export default function YogaPage() {
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
 
               {/* Text-Spalte */}
-              <div className={`flex flex-col justify-center ${course.imageRight ? 'md:order-1' : 'md:order-2'}`}>
+              <div className={`flex flex-col justify-center order-1 ${course.imageRight ? 'md:order-1' : 'md:order-2'}`}>
 
                 {/* Zeit & Dauer */}
                 <FadeIn>
@@ -182,13 +182,13 @@ export default function YogaPage() {
                 </FadeIn>
               </div>
 
-              {/* Bild-Spalte (nur Desktop) */}
+              {/* Bild-Spalte */}
               <FadeIn
                 direction={course.imageRight ? 'right' : 'left'}
                 delay={0.15}
-                className={`hidden md:block ${course.imageRight ? 'md:order-2' : 'md:order-1'}`}
+                className={`order-2 ${course.imageRight ? 'md:order-2' : 'md:order-1'}`}
               >
-                <div className="h-full min-h-[400px] overflow-hidden rounded-3xl shadow-xl">
+                <div className="h-64 md:h-full md:min-h-[400px] overflow-hidden rounded-3xl shadow-xl">
                   <img
                     src={course.image}
                     alt={course.title}
