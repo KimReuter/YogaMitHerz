@@ -93,13 +93,13 @@ export default function AboutPage() {
       <section className="bg-iris-sand text-iris-charcoal mb-[-2px]">
         <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-          {/* Bild links */}
+          {/* Bild links (Desktop) / unten (Mobile) */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="overflow-hidden rounded-3xl shadow-xl aspect-[3/4] w-full"
+            className="overflow-hidden rounded-3xl shadow-xl aspect-[3/4] w-full order-2 md:order-1"
           >
             <img
               src="/uebermich-namaste.jpg"
@@ -108,8 +108,8 @@ export default function AboutPage() {
             />
           </motion.div>
 
-          {/* Text rechts */}
-          <div className="space-y-6 text-[1.05rem] leading-[1.85] text-justify">
+          {/* Text rechts (Desktop) / oben (Mobile) */}
+          <div className="space-y-6 text-[1.05rem] leading-[1.85] text-justify order-1 md:order-2">
             {[
               'Dein Yoga-Weg ist genau wie du – ganz individuell und einzigartig. Und gleichzeitig doch auch ähnlich.',
               'Individuell deshalb, weil jeder von uns seine eigenen Voraussetzungen, Vorlieben und Herausforderungen mitbringt. Und doch sind unsere Wege im Yoga auch verbunden – denn am Ende suchen wir alle auf unsere Weise Ruhe, Entspannung und ein Stück inneren Frieden.',
