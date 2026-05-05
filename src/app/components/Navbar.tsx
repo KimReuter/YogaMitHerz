@@ -85,7 +85,7 @@ export default function Navbar() {
             <button
               className={clsx(
                 'md:hidden p-2 rounded-md transition-colors',
-                scrolled || open ? 'text-iris-terracotta' : 'text-white drop-shadow'
+                'text-iris-terracotta'
               )}
               onClick={() => setOpen((o) => !o)}
               aria-label={open ? 'Menü schließen' : 'Menü öffnen'}
