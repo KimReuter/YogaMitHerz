@@ -32,16 +32,18 @@ export default function HomePage() {
             transition={{ duration: 1, ease: 'easeOut' }}
             className="text-5xl md:text-7xl font-bold tracking-tight text-white drop-shadow-lg"
           >
-            Einlassen.<br />Loslassen.<br />Ankommen.
+            Einlassen. Loslassen. Ankommen.
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl text-white/80 drop-shadow"
+            className="text-lg md:text-xl text-white/80 drop-shadow max-w-xl"
           >
-            Yoga von Herzen – ein Raum ganz für dich.
+            Entdecke Yoga von Herzen – ein Raum für dich,<br />
+            ganz gleich mit welcher Erfahrung du kommst.<br />
+            Komm bei dir an, atme durch und nimm dir Zeit nur für dich.
           </motion.p>
 
           <motion.a
