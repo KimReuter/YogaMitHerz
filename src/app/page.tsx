@@ -41,7 +41,7 @@ export default function HomePage() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg md:text-xl text-white/80 drop-shadow max-w-xl"
           >
-            Ein Raum für dich – zum Atmen, Ankommen und Loslassen.
+            Yoga von Herzen – für dich, ganz gleich mit welcher Erfahrung du kommst.
           </motion.p>
 
           <motion.a
