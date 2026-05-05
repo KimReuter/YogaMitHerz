@@ -189,11 +189,10 @@ export default function HomePage() {
       <section className="py-28 px-6 bg-iris-sand text-iris-charcoal">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
-          {/* Bild im asymmetrischen Blob-Rahmen */}
+          {/* Bild im Hochoval */}
           <FadeIn direction="left">
             <motion.div
-              className="overflow-hidden w-1/2 md:w-3/4 mx-auto aspect-[3/4] shadow-xl"
-              style={{ borderRadius: '40% 60% 63% 37% / 55% 45% 40% 60%' }}
+              className="overflow-hidden w-1/2 md:w-3/4 mx-auto aspect-[2/3] rounded-full shadow-xl"
               whileHover={{ scale: 1.02, boxShadow: '0 28px 64px rgba(0,0,0,0.13)' }}
               transition={{ duration: 0.4, ease: 'easeOut' }}
             >
