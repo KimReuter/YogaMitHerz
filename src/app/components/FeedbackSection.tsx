@@ -49,7 +49,7 @@ export default function FeedbackSection() {
   return (
     <div className="max-w-2xl mx-auto text-center space-y-8">
       <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta">
-        Ein paar Worte von Menschen,<br className="hidden md:block" /> die bereits mit mir auf der Matte waren
+        Ein paar Worte von Menschen,<br /> die bereits mit mir auf der Matte waren
       </h2>
 
       <div className="relative px-4">
