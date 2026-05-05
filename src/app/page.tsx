@@ -13,7 +13,7 @@ export default function HomePage() {
     <main className="bg-iris-golden text-iris-charcoal">
       {/* Hero mit Bild */}
       <section
-        className="relative h-screen overflow-hidden bg-center bg-cover flex flex-col justify-center items-center text-center mb-[-4px]"
+        className="relative h-[calc(100vh+5rem)] overflow-hidden bg-center bg-cover flex flex-col justify-center items-center text-center pb-20 mb-[-4px]"
         style={{ backgroundImage: "url('/Iris_Hero.jpg')" }}
       >
         {/* Dunkler Overlay */}
