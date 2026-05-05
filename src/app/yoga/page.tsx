@@ -173,7 +173,7 @@ export default function YogaPage() {
 
                 {/* Motto */}
                 <FadeIn delay={0.3}>
-                  <blockquote className="mt-10 flex items-start gap-4 bg-iris-terracotta/10 rounded-2xl px-6 py-5">
+                  <blockquote className="mt-10 flex items-center gap-4 bg-iris-terracotta/10 rounded-2xl px-6 py-5">
                     <span className="text-2xl flex-shrink-0">💛</span>
                     <p className="italic text-iris-terracotta font-medium leading-relaxed">
                       {course.motto}
