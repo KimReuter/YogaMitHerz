@@ -16,51 +16,44 @@ export default function HomePage() {
         className="relative h-screen overflow-hidden bg-center bg-cover flex flex-col justify-center items-center text-center mb-[-4px]"
         style={{ backgroundImage: "url('/Iris_Hero.jpg')" }}
       >
-        {/* Dunkler Overlay für Lesbarkeit des Headers */}
-        <div className="absolute inset-0 bg-black/40" />
+        {/* Dunkler Overlay */}
+        <div className="absolute inset-0 bg-black/30" />
 
         {/* Wave: Hero → Golden */}
         <div className="absolute bottom-0 left-0 right-0 z-10">
           <WaveDivider fill="#C4A675" />
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="relative z-10 bg-iris-golden/50 backdrop-blur-sm max-w-2xl w-[92vw] md:w-full flex flex-col items-center text-center gap-6 shadow-xl overflow-hidden px-12 py-16 md:px-[3.5rem] md:py-[4.5rem]"
-          style={{ borderRadius: '52% 48% 48% 52% / 50% 46% 54% 50%' }}
-        >
+        {/* Hero Text – minimalistisch */}
+        <div className="relative z-10 flex flex-col items-center text-center gap-7 px-6">
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-bold tracking-tight text-iris-terracotta"
+            transition={{ duration: 1, ease: 'easeOut' }}
+            className="text-5xl md:text-7xl font-bold tracking-tight text-white drop-shadow-lg"
           >
-            Einlassen. Loslassen. Ankommen.
+            Einlassen.<br />Loslassen.<br />Ankommen.
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-xl"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-lg md:text-xl text-white/80 drop-shadow"
           >
-            Entdecke Yoga von Herzen – ein Raum für dich,<br />
-            ganz gleich mit welcher Erfahrung du kommst.<br />
-            Komm bei dir an, atme durch und nimm dir Zeit nur für dich.
+            Yoga von Herzen – ein Raum ganz für dich.
           </motion.p>
 
           <motion.a
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
             href="/yoga"
-            className="self-center inline-flex items-center justify-center px-6 py-2 md:px-10 md:py-3 bg-iris-terracotta hover:bg-iris-terracotta/80 text-white hover:text-white rounded-full text-base md:text-lg font-medium transition shadow-md"
+            className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-sm border border-white/40 text-white text-base md:text-lg font-medium transition shadow-md"
           >
             Zu meinen Kursen
           </motion.a>
-        </motion.div>
+        </div>
       </section>
 
       {/* Begrüßung & Philosophie (2-Spalten-Layout) */}
