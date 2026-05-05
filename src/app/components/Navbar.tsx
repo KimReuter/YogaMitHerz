@@ -50,7 +50,7 @@ export default function Navbar() {
           </svg>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="relative max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
           {/* Links: Brand */}
           <div className={clsx(

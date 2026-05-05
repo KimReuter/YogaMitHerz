@@ -39,7 +39,7 @@ export default function HomePage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl text-white/80 drop-shadow max-w-xl"
+            className="text-base md:text-xl text-white/80 drop-shadow whitespace-nowrap"
           >
             Yoga von Herzen – für dich, ganz gleich mit welcher Erfahrung du kommst.
           </motion.p>
