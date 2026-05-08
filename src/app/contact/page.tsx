@@ -53,7 +53,7 @@ export default function ContactPage() {
       {/* Hero */}
       <section
         className="relative h-[55vh] bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: "url('/contact-hero.jpg')" }}
+        style={{ backgroundImage: "url('/startseite-oben-V.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/35" />
         <motion.div

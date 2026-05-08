@@ -99,16 +99,15 @@ export default function ReikiPage() {
         </div>
       </section>
 
-      {/* Wave: Sand → Golden */}
-      <div className="bg-iris-sand mb-[-2px]">
-        <WaveDivider fill="#C4A675" />
-      </div>
-
       {/* Wie eine Behandlung abläuft */}
-      <section className="py-24 px-6 bg-iris-golden text-center mb-[-2px]">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative py-24 px-6 text-center mb-[-2px]">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/startseite-oben-III.jpg')" }} />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute top-0 left-0 right-0 z-10"><WaveDivider fill="#FFBD59" flip /></div>
+        <div className="absolute bottom-0 left-0 right-0 z-10"><WaveDivider fill="#FFBD59" /></div>
+        <div className="relative z-10 max-w-6xl mx-auto pt-10">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl font-bold text-iris-terracotta mb-14">
+            <h2 className="text-4xl md:text-5xl font-bold text-iris-golden mb-14">
               Wie eine Reiki-Behandlung abläuft
             </h2>
           </FadeIn>
@@ -131,11 +130,6 @@ export default function ReikiPage() {
           </div>
         </div>
       </section>
-
-      {/* Wave: Golden → Sand */}
-      <div className="bg-iris-golden mb-[-2px]">
-        <WaveDivider fill="#FFBD59" />
-      </div>
 
       {/* CTA */}
       <section className="py-24 px-6 bg-iris-sand mb-[-2px]">
