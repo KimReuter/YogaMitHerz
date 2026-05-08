@@ -209,6 +209,50 @@ export default function YogaPage() {
         </div>
       ))}
 
+      {/* Wave: Golden → Sand */}
+      <div className="bg-iris-golden mb-[-2px]">
+        <WaveDivider fill="#FFBD59" />
+      </div>
+
+      {/* Preise */}
+      <section className="py-24 px-6 bg-iris-sand mb-[-2px]">
+        <div className="max-w-3xl mx-auto text-center">
+          <FadeIn>
+            <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta mb-4">
+              Preise
+            </h2>
+            <p className="text-lg opacity-70 mb-12">
+              Komm einfach vorbei – ganz ohne Anmeldung.
+            </p>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <FadeIn delay={0.1}>
+              <div className="bg-iris-golden/50 rounded-3xl px-8 py-10 flex flex-col items-center gap-3 shadow-sm">
+                <span className="text-4xl">🧘</span>
+                <h3 className="text-xl font-semibold text-iris-terracotta">Einzelstunde</h3>
+                <p className="text-4xl font-bold text-iris-terracotta">14 €</p>
+                <p className="text-sm opacity-60">pro Einheit</p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.2}>
+              <div className="bg-iris-golden/50 rounded-3xl px-8 py-10 flex flex-col items-center gap-3 shadow-sm">
+                <span className="text-4xl">🎟️</span>
+                <h3 className="text-xl font-semibold text-iris-terracotta">10er-Karte</h3>
+                <p className="text-4xl font-bold text-iris-terracotta">120 €</p>
+                <p className="text-sm opacity-60">gültig 12 Wochen</p>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Wave: Sand → CTA */}
+      <div className="bg-iris-sand mb-[-2px]">
+        <WaveDivider fill="#C4A675" />
+      </div>
+
       {/* CTA */}
       <section className="relative overflow-hidden py-24 px-6 mb-[-2px]">
         {/* Hintergrundbild */}
