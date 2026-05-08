@@ -132,8 +132,13 @@ export default function ReikiPage() {
         </div>
       </section>
 
+      {/* Wave: Golden → Sand */}
+      <div className="bg-iris-golden mb-[-2px]">
+        <WaveDivider fill="#FFBD59" />
+      </div>
+
       {/* CTA */}
-      <section className="py-24 px-6 bg-iris-golden mb-[-2px]">
+      <section className="py-24 px-6 bg-iris-sand mb-[-2px]">
         <FadeIn delay={0.1}>
           <div className="max-w-xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta">
@@ -158,8 +163,8 @@ export default function ReikiPage() {
         </FadeIn>
       </section>
 
-      {/* Wave: Golden → Footer */}
-      <div className="bg-iris-golden mb-[-2px]">
+      {/* Wave: Sand → Footer */}
+      <div className="bg-iris-sand mb-[-2px]">
         <WaveDivider fill="#C4A675" />
       </div>
 
