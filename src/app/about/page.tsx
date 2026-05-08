@@ -18,7 +18,7 @@ export default function AboutPage() {
             transform: "translateZ(0)",
           }}
         />
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 flex items-center justify-center h-full">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}

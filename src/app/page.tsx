@@ -17,7 +17,7 @@ export default function HomePage() {
         style={{ backgroundImage: "url('/Iris_Hero.jpg')" }}
       >
         {/* Dunkler Overlay */}
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/50" />
 
         {/* Wave: Hero → Golden */}
         <div className="absolute bottom-0 left-0 right-0 z-10">
