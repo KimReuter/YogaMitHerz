@@ -216,42 +216,47 @@ export default function YogaPage() {
 
       {/* Preise */}
       <section className="py-24 px-6 bg-iris-sand mb-[-2px]">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-lg mx-auto text-center">
           <FadeIn>
             <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta mb-4">
               Preise
             </h2>
             <p className="text-lg opacity-70 mb-12">
-              Komm einfach vorbei – ganz ohne Anmeldung.
+              Melde dich gerne kurz bei mir, damit ich weiß, dass du kommst. 🙏
             </p>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <FadeIn delay={0.1}>
-              <div className="bg-iris-golden/50 rounded-3xl px-8 py-10 flex flex-col items-center gap-3 shadow-sm">
+              <motion.div
+                className="bg-iris-golden/60 flex flex-col items-center gap-3 px-8 py-10 shadow-md"
+                style={{ borderRadius: '60% 40% 54% 46% / 52% 44% 56% 48%' }}
+                whileHover={{ scale: 1.03, y: -4, boxShadow: '0 20px 48px rgba(0,0,0,0.12)' }}
+                transition={{ duration: 0.35, ease: 'easeOut' }}
+              >
                 <span className="text-4xl">🧘</span>
                 <h3 className="text-xl font-semibold text-iris-terracotta">Einzelstunde</h3>
                 <p className="text-4xl font-bold text-iris-terracotta">14 €</p>
                 <p className="text-sm opacity-60">pro Einheit</p>
-              </div>
+              </motion.div>
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <div className="bg-iris-golden/50 rounded-3xl px-8 py-10 flex flex-col items-center gap-3 shadow-sm">
+              <motion.div
+                className="bg-iris-golden/60 flex flex-col items-center gap-3 px-8 py-10 shadow-md"
+                style={{ borderRadius: '44% 56% 46% 54% / 48% 56% 44% 52%' }}
+                whileHover={{ scale: 1.03, y: -4, boxShadow: '0 20px 48px rgba(0,0,0,0.12)' }}
+                transition={{ duration: 0.35, ease: 'easeOut' }}
+              >
                 <span className="text-4xl">🎟️</span>
                 <h3 className="text-xl font-semibold text-iris-terracotta">10er-Karte</h3>
                 <p className="text-4xl font-bold text-iris-terracotta">120 €</p>
                 <p className="text-sm opacity-60">gültig 12 Wochen</p>
-              </div>
+              </motion.div>
             </FadeIn>
           </div>
         </div>
       </section>
-
-      {/* Wave: Sand → CTA */}
-      <div className="bg-iris-sand mb-[-2px]">
-        <WaveDivider fill="#C4A675" />
-      </div>
 
       {/* CTA */}
       <section className="relative overflow-hidden py-24 px-6 mb-[-2px]">
