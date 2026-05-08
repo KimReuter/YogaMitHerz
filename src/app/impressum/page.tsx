@@ -24,14 +24,6 @@ export default function ImpressumPage() {
           </div>
   
           <div>
-            <h2 className="text-lg font-semibold mb-2">Umsatzsteuer-ID</h2>
-            <p>
-              Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: <br />
-              223/285/05898
-            </p>
-          </div>
-  
-          <div>
             <h2 className="text-lg font-semibold mb-2">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
             <p>
               Iris Wallenaar <br />
