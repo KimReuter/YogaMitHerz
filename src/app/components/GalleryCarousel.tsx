@@ -5,6 +5,20 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const images = Array.from({ length: 20 }, (_, i) => `/gallery/galerie_placeholder${i + 1}.jpg`);
 const AUTOPLAY_DELAY = 4000;
+const SCROLL_DURATION = 700;
+
+function smoothScrollTo(el: HTMLElement, targetLeft: number) {
+  const startLeft = el.scrollLeft;
+  const delta = targetLeft - startLeft;
+  const startTime = performance.now();
+  const easeInOut = (t: number) => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+  const step = (now: number) => {
+    const progress = Math.min((now - startTime) / SCROLL_DURATION, 1);
+    el.scrollLeft = startLeft + delta * easeInOut(progress);
+    if (progress < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
 
 export default function GalleryCarousel() {
   const mobileRef = useRef<HTMLDivElement>(null);
@@ -31,12 +45,13 @@ export default function GalleryCarousel() {
   };
 
   const scrollDesktop = (direction: 'left' | 'right') => {
-    desktopRef.current?.scrollBy({ left: direction === 'left' ? -316 : 316, behavior: 'smooth' });
+    if (!desktopRef.current) return;
+    smoothScrollTo(desktopRef.current, desktopRef.current.scrollLeft + (direction === 'left' ? -316 : 316));
   };
 
   const scrollMobileTo = (index: number) => {
     if (!mobileRef.current) return;
-    mobileRef.current.scrollTo({ left: index * mobileRef.current.clientWidth, behavior: 'smooth' });
+    smoothScrollTo(mobileRef.current, index * mobileRef.current.clientWidth);
   };
 
   const autoAdvance = useCallback(() => {
@@ -46,9 +61,9 @@ export default function GalleryCarousel() {
     } else if (desktopRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = desktopRef.current;
       if (scrollLeft + clientWidth >= scrollWidth - 1) {
-        desktopRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+        smoothScrollTo(desktopRef.current, 0);
       } else {
-        desktopRef.current.scrollBy({ left: 316, behavior: 'smooth' });
+        smoothScrollTo(desktopRef.current, scrollLeft + 316);
       }
     }
   }, []);
@@ -108,7 +123,7 @@ export default function GalleryCarousel() {
                 src={src}
                 alt={`Yoga Bild ${i + 1}`}
                 className="w-full h-64 object-cover rounded-2xl shadow-lg"
-                style={i === 16 ? { objectPosition: 'top' } : undefined}
+                style={i === 16 ? { objectPosition: 'top' } : i === 0 || i === 4 ? { objectPosition: 'center' } : undefined}
               />
             </div>
           ))}
@@ -152,7 +167,7 @@ export default function GalleryCarousel() {
               src={src}
               alt={`Yoga Bild ${i + 1}`}
               className="w-[300px] h-[200px] object-cover rounded-xl shadow-lg flex-shrink-0"
-              style={i === 16 ? { objectPosition: 'top' } : undefined}
+              style={i === 16 ? { objectPosition: 'top' } : i === 0 || i === 4 ? { objectPosition: 'center' } : undefined}
             />
           ))}
         </div>
