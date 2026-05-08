@@ -1,9 +1,10 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const images = Array.from({ length: 20 }, (_, i) => `/gallery/galerie_placeholder${i + 1}.jpg`);
+const AUTOPLAY_DELAY = 4000;
 
 export default function GalleryCarousel() {
   const mobileRef = useRef<HTMLDivElement>(null);
@@ -11,11 +12,15 @@ export default function GalleryCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const activeIndexRef = useRef(0);
 
   const updateMobileScroll = () => {
     if (!mobileRef.current) return;
     const { scrollLeft, clientWidth } = mobileRef.current;
-    setActiveIndex(Math.round(scrollLeft / clientWidth));
+    const index = Math.round(scrollLeft / clientWidth);
+    setActiveIndex(index);
+    activeIndexRef.current = index;
   };
 
   const updateDesktopScroll = () => {
@@ -34,9 +39,50 @@ export default function GalleryCarousel() {
     mobileRef.current.scrollTo({ left: index * mobileRef.current.clientWidth, behavior: 'smooth' });
   };
 
+  const autoAdvance = useCallback(() => {
+    if (mobileRef.current && window.innerWidth < 768) {
+      const next = (activeIndexRef.current + 1) % images.length;
+      scrollMobileTo(next);
+    } else if (desktopRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = desktopRef.current;
+      if (scrollLeft + clientWidth >= scrollWidth - 1) {
+        desktopRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        desktopRef.current.scrollBy({ left: 316, behavior: 'smooth' });
+      }
+    }
+  }, []);
+
+  const resetTimer = useCallback(() => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    timerRef.current = setInterval(autoAdvance, AUTOPLAY_DELAY);
+  }, [autoAdvance]);
+
   useEffect(() => {
     updateDesktopScroll();
-  }, []);
+    timerRef.current = setInterval(autoAdvance, AUTOPLAY_DELAY);
+    return () => { if (timerRef.current) clearInterval(timerRef.current); };
+  }, [autoAdvance]);
+
+  const handleScrollDesktop = () => {
+    updateDesktopScroll();
+    resetTimer();
+  };
+
+  const handleScrollMobile = () => {
+    updateMobileScroll();
+    resetTimer();
+  };
+
+  const handleDesktopButton = (direction: 'left' | 'right') => {
+    scrollDesktop(direction);
+    resetTimer();
+  };
+
+  const handleDotClick = (index: number) => {
+    scrollMobileTo(index);
+    resetTimer();
+  };
 
   return (
     <section className="py-20 bg-iris-golden overflow-hidden">
@@ -48,7 +94,7 @@ export default function GalleryCarousel() {
       <div className="md:hidden">
         <div
           ref={mobileRef}
-          onScroll={updateMobileScroll}
+          onScroll={handleScrollMobile}
           className="flex overflow-x-auto scrollbar-hide"
           style={{ scrollSnapType: 'x mandatory' }}
         >
@@ -73,7 +119,7 @@ export default function GalleryCarousel() {
           {images.map((_, i) => (
             <button
               key={i}
-              onClick={() => scrollMobileTo(i)}
+              onClick={() => handleDotClick(i)}
               aria-label={`Bild ${i + 1}`}
               className={`h-2 rounded-full transition-all duration-300 ${
                 i === activeIndex ? 'w-6 bg-iris-terracotta' : 'w-2 bg-iris-terracotta/30'
@@ -86,7 +132,7 @@ export default function GalleryCarousel() {
       {/* Desktop: Pfeil-Navigation + horizontales Scrollen */}
       <div className="hidden md:flex items-center justify-center gap-4 max-w-6xl mx-auto px-6">
         <button
-          onClick={() => scrollDesktop('left')}
+          onClick={() => handleDesktopButton('left')}
           className="flex-shrink-0 bg-iris-terracotta hover:bg-iris-terracotta/80 text-white p-2 rounded-full transition disabled:opacity-30 disabled:cursor-not-allowed shadow-md"
           disabled={!canScrollLeft}
           aria-label="Zurück"
@@ -96,7 +142,7 @@ export default function GalleryCarousel() {
 
         <div
           ref={desktopRef}
-          onScroll={updateDesktopScroll}
+          onScroll={handleScrollDesktop}
           className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth"
           style={{ width: '932px' }}
         >
@@ -112,7 +158,7 @@ export default function GalleryCarousel() {
         </div>
 
         <button
-          onClick={() => scrollDesktop('right')}
+          onClick={() => handleDesktopButton('right')}
           className="flex-shrink-0 bg-iris-terracotta hover:bg-iris-terracotta/80 text-white p-2 rounded-full transition disabled:opacity-30 disabled:cursor-not-allowed shadow-md"
           disabled={!canScrollRight}
           aria-label="Weiter"
