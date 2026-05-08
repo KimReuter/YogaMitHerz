@@ -55,7 +55,7 @@ export default function GalleryCarousel() {
   };
 
   const autoAdvance = useCallback(() => {
-    if (mobileRef.current && window.innerWidth < 768) {
+    if (mobileRef.current && window.innerWidth < 1024) {
       const next = (activeIndexRef.current + 1) % images.length;
       scrollMobileTo(next);
     } else if (desktopRef.current) {
@@ -106,7 +106,7 @@ export default function GalleryCarousel() {
       </h2>
 
       {/* Mobile: Vollbreites Swipe-Karussell */}
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <div
           ref={mobileRef}
           onScroll={handleScrollMobile}
@@ -145,7 +145,7 @@ export default function GalleryCarousel() {
       </div>
 
       {/* Desktop: Pfeil-Navigation + horizontales Scrollen */}
-      <div className="hidden md:flex items-center justify-center gap-4 max-w-6xl mx-auto px-6">
+      <div className="hidden lg:flex items-center justify-center gap-4 max-w-6xl mx-auto px-6">
         <button
           onClick={() => handleDesktopButton('left')}
           className="flex-shrink-0 bg-iris-terracotta hover:bg-iris-terracotta/80 text-white p-2 rounded-full transition disabled:opacity-30 disabled:cursor-not-allowed shadow-md"
