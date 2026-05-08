@@ -132,45 +132,6 @@ export default function ReikiPage() {
         </div>
       </section>
 
-      {/* Wave: Golden → Sand */}
-      <div className="bg-iris-golden mb-[-2px]">
-        <WaveDivider fill="#FFBD59" />
-      </div>
-
-      {/* Mein Weg zum Reiki */}
-      <section className="py-24 px-6 bg-iris-sand mb-[-2px]">
-        <div className="max-w-3xl mx-auto">
-          <FadeIn>
-            <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta mb-10">
-              Mein Weg zum Reiki
-            </h2>
-          </FadeIn>
-          <div className="space-y-5 text-[1.05rem] leading-[1.85] text-justify">
-            {[
-              { delay: 0, text: 'Schon immer hat es mir Freude bereitet, anderen Menschen etwas Gutes zu tun und zu ihrem Wohlbefinden beizutragen. Mein beruflicher Weg führte mich jedoch zunächst in die Wirtschaft, sodass ich lange keine Ausbildung in diesem Bereich hatte.' },
-              { delay: 0.08, text: 'Als Yoga in mein Leben kam, begann ich vieles neu zu betrachten und mich innerlich neu auszurichten. In dieser Zeit entstand auch immer wieder der Gedanke, einen Weg zu finden, auf dem ich Menschen auf eine andere, achtsamere Weise begleiten kann.' },
-              { delay: 0.16, text: 'Dann begegnete mir Reiki.' },
-              { delay: 0.24, text: 'Ich war sofort berührt von der Einfachheit und gleichzeitig von der tiefen Wirkung dieser sanften Energiearbeit – von der Möglichkeit, durch achtsame Berührung Ruhe zu schenken und den Körper dabei zu unterstützen, seine eigenen Kräfte zu aktivieren.' },
-              { delay: 0.32, text: 'Gemeinsam mit einer Freundin machte ich 2021 meinen ersten Reiki-Grad, 2023 folgte der zweite.' },
-              { delay: 0.40, text: 'Seitdem ist es für mich jedes Mal etwas Besonderes, Reiki geben zu dürfen. Es erfüllt mich mit großer Freude und einem tiefen inneren Frieden, diese Verbindung zur Energie und zu dem Menschen zu spüren, der die Behandlung empfängt.' },
-              { delay: 0.48, text: 'Einigen Menschen durfte ich bereits bei gesundheitlichen Herausforderungen unterstützend zur Seite stehen, anderen einfach einen Moment der Ruhe und Entspannung schenken.' },
-              { delay: 0.56, text: 'Wenn du Reiki kennenlernen möchtest oder dir eine Zeit der Entspannung und des Auftankens schenken willst, melde dich gern bei mir. Ich freue mich darauf, dich kennenzulernen.' },
-            ].map(({ delay, text }, idx) => (
-              <FadeIn key={idx} delay={delay}>
-                <p className={text === 'Dann begegnete mir Reiki.' ? 'italic text-iris-terracotta font-medium text-lg' : ''}>
-                  {text}
-                </p>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Wave: Sand → CTA */}
-      <div className="bg-iris-sand mb-[-2px]">
-        <WaveDivider fill="#C4A675" />
-      </div>
-
       {/* CTA */}
       <section className="py-24 px-6 bg-iris-golden mb-[-2px]">
         <FadeIn delay={0.1}>
