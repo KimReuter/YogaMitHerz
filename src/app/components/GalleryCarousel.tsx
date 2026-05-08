@@ -123,7 +123,7 @@ export default function GalleryCarousel() {
                 src={src}
                 alt={`Yoga Bild ${i + 1}`}
                 className="w-full h-64 object-cover rounded-2xl shadow-lg"
-                style={i === 16 ? { objectPosition: 'top' } : i === 0 || i === 4 ? { objectPosition: 'center' } : undefined}
+                style={i === 16 ? { objectPosition: 'top' } : i === 0 ? { objectPosition: '50% 65%' } : i === 4 ? { objectPosition: 'center' } : undefined}
               />
             </div>
           ))}
@@ -167,7 +167,7 @@ export default function GalleryCarousel() {
               src={src}
               alt={`Yoga Bild ${i + 1}`}
               className="w-[300px] h-[200px] object-cover rounded-xl shadow-lg flex-shrink-0"
-              style={i === 16 ? { objectPosition: 'top' } : i === 0 || i === 4 ? { objectPosition: 'center' } : undefined}
+              style={i === 16 ? { objectPosition: 'top' } : i === 0 ? { objectPosition: '50% 65%' } : i === 4 ? { objectPosition: 'center' } : undefined}
             />
           ))}
         </div>
