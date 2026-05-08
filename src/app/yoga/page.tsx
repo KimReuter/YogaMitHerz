@@ -268,9 +268,9 @@ export default function YogaPage() {
         {/* Overlay für Lesbarkeit */}
         <div className="absolute inset-0 bg-black/45" />
 
-        {/* Wave oben → von goldener Kurs-Sektion kommend */}
+        {/* Wave oben → von Sand-Sektion kommend */}
         <div className="absolute top-0 left-0 right-0 z-10">
-          <WaveDivider fill="#C4A675" flip />
+          <WaveDivider fill="#FFBD59" flip />
         </div>
 
         {/* Wave nach unten → Footer (Golden) */}
