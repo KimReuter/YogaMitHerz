@@ -30,7 +30,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: 'easeOut' }}
-            className="text-5xl md:text-7xl font-bold tracking-tight text-white drop-shadow-lg"
+            className="text-5xl md:text-7xl font-bold tracking-tight text-iris-golden drop-shadow-lg"
           >
             <span className="block md:inline">Einlassen.</span>{' '}
             <span className="block md:inline">Loslassen.</span>{' '}
@@ -41,7 +41,7 @@ export default function HomePage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-base md:text-xl text-white/80 drop-shadow"
+            className="text-base md:text-xl text-iris-golden/80 drop-shadow"
           >
             Yoga von Herzen –<br className="md:hidden" /> für dich, ganz gleich<br className="md:hidden" /> mit welcher Erfahrung du kommst.
           </motion.p>
@@ -51,7 +51,7 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
             href="/yoga"
-            className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-sm border border-white/40 text-white text-base md:text-lg font-medium transition shadow-md"
+            className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-iris-golden/15 hover:bg-iris-golden/25 backdrop-blur-sm border border-iris-golden/40 text-iris-golden text-base md:text-lg font-medium transition shadow-md"
           >
             Zu meinen Kursen
           </motion.a>
