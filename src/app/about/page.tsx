@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero mit Parallax */}
-      <section className="relative h-[60vh] overflow-hidden mb-[-4px]">
+      <section className="relative h-[60vh] overflow-hidden mb-[-8px]">
         <div
           className="absolute inset-0 bg-center bg-cover"
           style={{
@@ -36,7 +36,7 @@ export default function AboutPage() {
       </section>
 
       {/* Abschnitt: Mein Weg zum Yoga */}
-      <section className="bg-iris-golden text-iris-charcoal mb-[-2px]">
+      <section className="bg-iris-golden text-iris-charcoal mb-[-4px]">
         <div className="px-6 py-16 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
           {/* Text */}
@@ -85,12 +85,12 @@ export default function AboutPage() {
       </section>
 
       {/* Wellen-Übergang golden → sand */}
-      <div className="bg-iris-golden mb-[-2px]">
+      <div className="bg-iris-golden mb-[-4px]">
         <WaveDivider fill="#FFBD59" />
       </div>
 
       {/* Abschlussblock + Namaste Bild (2-Spalten) */}
-      <section className="bg-iris-sand text-iris-charcoal mb-[-2px]">
+      <section className="bg-iris-sand text-iris-charcoal mb-[-4px]">
         <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
           {/* Bild links (Desktop) / unten (Mobile) */}
@@ -131,7 +131,7 @@ export default function AboutPage() {
       </section>
 
       {/* Philosophie mit Hintergrundbild */}
-      <section className="relative overflow-hidden mb-[-2px]">
+      <section className="relative overflow-hidden mb-[-4px]">
         {/* Hintergrundbild */}
         <div
           className="absolute inset-0 bg-cover bg-center"
