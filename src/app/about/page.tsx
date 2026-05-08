@@ -13,7 +13,7 @@ export default function AboutPage() {
         <div
           className="absolute inset-0 bg-center bg-cover"
           style={{
-            backgroundImage: "url('/Iris_Hero.jpg')",
+            backgroundImage: "url('/ueberMichOben2.jpg')",
             backgroundPosition: "center 35%",
             transform: "translateZ(0)",
           }}
