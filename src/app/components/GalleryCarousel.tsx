@@ -3,15 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const images = [
-  '/gallery/galerie_placeholder1.jpg',
-  '/gallery/galerie_placeholder2.jpg',
-  '/gallery/galerie_placeholder3.jpg',
-  '/gallery/galerie_placeholder4.jpg',
-  '/gallery/galerie_placeholder5.jpg',
-  '/gallery/galerie_placeholder6.jpg',
-  '/gallery/galerie_placeholder7.jpg',
-];
+const images = Array.from({ length: 20 }, (_, i) => `/gallery/galerie_placeholder${i + 1}.jpg`);
 
 export default function GalleryCarousel() {
   const mobileRef = useRef<HTMLDivElement>(null);
