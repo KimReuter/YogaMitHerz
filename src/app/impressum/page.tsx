@@ -19,7 +19,7 @@ export default function ImpressumPage() {
             <h2 className="text-lg font-semibold mb-2">Kontakt</h2>
             <p>
               Telefon: +49&nbsp;174&nbsp;9735048 <br />
-              E-Mail: info@yogamitherz.de
+              E-Mail: yogamitherz@gmx.de
             </p>
           </div>
   

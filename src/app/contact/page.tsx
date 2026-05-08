@@ -19,7 +19,7 @@ const contactMethods = [
     emoji: '✉️',
     label: 'E-Mail',
     desc: 'Für alles, was ein bisschen mehr Worte braucht.',
-    href: 'mailto:hello@yogamitherz.de',
+    href: 'mailto:yogamitherz@gmx.de',
     cta: 'E-Mail schreiben',
     target: undefined,
   },

@@ -12,7 +12,7 @@ export default function PrivacyPage() {
               Zum Burgteich 68<br />
               08527 Plauen<br />
               Deutschland<br />
-              E-Mail: info@yogamitherz.de
+              E-Mail: yogamitherz@gmx.de
             </p>
           </div>
   
