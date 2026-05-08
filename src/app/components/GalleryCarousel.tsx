@@ -122,7 +122,7 @@ export default function GalleryCarousel() {
               <img
                 src={src}
                 alt={`Yoga Bild ${i + 1}`}
-                className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                className="w-full h-64 md:h-96 object-cover rounded-2xl shadow-lg"
                 style={i === 16 ? { objectPosition: 'top' } : i === 0 ? { objectPosition: '50% 65%' } : i === 2 ? { objectPosition: '50% 65%' } : i === 4 ? { objectPosition: '50% 35%' } : undefined}
               />
             </div>
@@ -159,14 +159,14 @@ export default function GalleryCarousel() {
           ref={desktopRef}
           onScroll={handleScrollDesktop}
           className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth"
-          style={{ width: '800px' }}
+          style={{ width: '932px' }}
         >
           {images.map((src, i) => (
             <img
               key={i}
               src={src}
               alt={`Yoga Bild ${i + 1}`}
-              className="w-[250px] h-[340px] object-cover rounded-xl shadow-lg flex-shrink-0"
+              className="w-[300px] h-[200px] object-cover rounded-xl shadow-lg flex-shrink-0"
               style={i === 16 ? { objectPosition: 'top' } : i === 0 ? { objectPosition: '50% 65%' } : i === 2 ? { objectPosition: '50% 65%' } : i === 4 ? { objectPosition: '50% 35%' } : undefined}
             />
           ))}
