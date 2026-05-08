@@ -55,7 +55,7 @@ export default function ContactPage() {
         className="relative h-[55vh] bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: "url('/startseite-oben-V.jpg')" }}
       >
-        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-black/55" />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
