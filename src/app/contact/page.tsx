@@ -127,12 +127,12 @@ export default function ContactPage() {
       </section>
 
       {/* Wave: Sand → Golden */}
-      <div className="bg-iris-sand">
+      {/* <div className="bg-iris-sand">
         <WaveDivider fill="#C4A675" />
-      </div>
+      </div> */}
 
       {/* Formular */}
-      <section className="py-20 px-6 bg-iris-golden">
+      {/* <section className="py-20 px-6 bg-iris-golden">
         <div className="max-w-2xl mx-auto">
           <FadeIn>
             <h2 className="text-3xl font-semibold text-iris-terracotta text-center mb-2">
@@ -212,7 +212,7 @@ export default function ContactPage() {
             </div>
           </FadeIn>
         </div>
-      </section>
+      </section> */}
 
     </main>
   );
