@@ -126,6 +126,11 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Wave: Sand → Footer */}
+      <div className="bg-iris-sand mb-[-2px]">
+        <WaveDivider fill="#C4A675" />
+      </div>
+
       {/* Formular – temporär ausgeblendet */}
       {false && <section className="py-20 px-6 bg-iris-golden">
         <div className="max-w-2xl mx-auto">
