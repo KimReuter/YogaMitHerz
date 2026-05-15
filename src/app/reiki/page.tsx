@@ -37,7 +37,7 @@ export default function ReikiPage() {
       <section className="relative h-[60vh] overflow-hidden mb-[-4px]">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/reiki-hero.jpg')" }}
+          style={{ backgroundImage: "url('/reiki-session.jpg')" }}
         />
         <div className="relative z-10 flex items-center justify-center h-full bg-black/40">
           <motion.h1
@@ -133,28 +133,35 @@ export default function ReikiPage() {
 
       {/* CTA */}
       <section className="py-24 px-6 bg-iris-sand mb-[-2px]">
-        <FadeIn delay={0.1}>
-          <div className="max-w-xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta">
-              Magst du Reiki ausprobieren?
-            </h2>
-            <p className="text-lg leading-relaxed">
-              Schreib mir einfach – ich freue mich, von dir zu hören.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <div className="flex-1">
-                <Button className="w-full" href="https://wa.me/491749735048" target="_blank" rel="noopener noreferrer">
-                  Schreib mir auf WhatsApp
-                </Button>
-              </div>
-              <div className="flex-1">
-                <Button className="w-full" variant="outline" href="/contact">
-                  Zum Kontaktformular
-                </Button>
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <FadeIn direction="left">
+            <div className="overflow-hidden shadow-xl aspect-[2/3] w-3/4 md:w-full mx-auto" style={{ borderRadius: '60% 40% 54% 46% / 52% 44% 56% 48%' }}>
+              <img src="/reiki-placeholder.jpg" alt="Reiki Behandlung" className="w-full h-full object-cover" />
+            </div>
+          </FadeIn>
+          <FadeIn direction="right" delay={0.15}>
+            <div className="text-center md:text-left space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-iris-terracotta">
+                Magst du Reiki ausprobieren?
+              </h2>
+              <p className="text-lg leading-relaxed">
+                Schreib mir einfach – ich freue mich, von dir zu hören.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex-1">
+                  <Button className="w-full" href="https://wa.me/491749735048" target="_blank" rel="noopener noreferrer">
+                    Schreib mir auf WhatsApp
+                  </Button>
+                </div>
+                <div className="flex-1">
+                  <Button className="w-full" variant="outline" href="/contact">
+                    Zum Kontaktformular
+                  </Button>
+                </div>
               </div>
             </div>
-          </div>
-        </FadeIn>
+          </FadeIn>
+        </div>
       </section>
 
       {/* Wave: Sand → Footer */}
