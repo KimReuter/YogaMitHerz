@@ -148,9 +148,9 @@ export default function ReikiPage() {
                 </Button>
               </div>
               <div className="flex-1">
-                <Button className="w-full" variant="outline" href="/contact">
+                {/* <Button className="w-full" variant="outline" href="/contact">
                   Zum Kontaktformular
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>

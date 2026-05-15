@@ -291,9 +291,9 @@ export default function YogaPage() {
               <div className="flex-1"><Button className="w-full" href="https://wa.me/491749735048" target="_blank" rel="noopener noreferrer">
                 Schreib mir auf WhatsApp
               </Button></div>
-              <div className="flex-1"><Button className="w-full" variant="outline" href="/contact">
+              {/* <div className="flex-1"><Button className="w-full" variant="outline" href="/contact">
                 Zum Kontaktformular
-              </Button></div>
+              </Button></div> */}
             </div>
           </div>
         </FadeIn>
