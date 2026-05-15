@@ -73,13 +73,13 @@ export default function Navbar() {
           {/* Rechts: CTA + Mobile Hamburger */}
           <div className="flex items-center gap-3 z-10">
             {/* CTA Button – immer in Terracotta, unabhängig vom Scroll-Status */}
-            {/* <Link
+            <Link
               href="/contact"
               onClick={close}
               className="hidden md:inline-flex items-center justify-center px-5 py-2 rounded-full text-sm font-medium border-2 border-iris-terracotta text-iris-terracotta hover:bg-iris-terracotta hover:text-white transition-all duration-300"
             >
-              Kurs buchen
-            </Link> */}
+              Kontakt aufnehmen
+            </Link>
 
             {/* Mobile: Hamburger-Button */}
             <button

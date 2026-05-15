@@ -112,12 +112,12 @@ export default function EnergyPage() {
       <section className="bg-iris-sand py-16 text-center px-6">
         <h2 className="text-3xl font-bold mb-4">Spürst du den Ruf?</h2>
         <p className="text-lg mb-6">Vereinbare jetzt deine persönliche Energie-Sitzung.</p>
-        {/* <a
+        <a
           href="/contact"
           className="inline-block bg-iris-terracotta hover:bg-iris-terracotta/80 text-white px-6 py-3 rounded-full text-lg font-medium transition"
         >
-          Termin vereinbaren
-        </a> */}
+          Kontakt aufnehmen
+        </a>
       </section>
     </main>
   );
