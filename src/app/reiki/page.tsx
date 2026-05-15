@@ -135,7 +135,7 @@ export default function ReikiPage() {
       <section className="py-24 px-6 bg-iris-sand mb-[-2px]">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <FadeIn direction="left">
-            <div className="overflow-hidden shadow-xl aspect-[2/3] w-3/4 md:w-full mx-auto" style={{ borderRadius: '40% 60% 70% 30% / 40% 50% 60% 50%' }}>
+            <div className="overflow-hidden shadow-xl aspect-[2/3] w-2/3 md:w-3/4 mx-auto" style={{ borderRadius: '60% 40% 20% 80% / 70% 30% 80% 20%' }}>
               <img src="/reiki-placeholder.jpg" alt="Reiki Behandlung" className="w-full h-full object-cover" />
             </div>
           </FadeIn>
