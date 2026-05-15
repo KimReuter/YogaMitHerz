@@ -116,7 +116,7 @@ export default function ReikiPage() {
             {treatmentSteps.map(({ emoji, title, text, shape, delay }, idx) => (
               <FadeIn key={idx} delay={delay}>
                 <motion.div
-                  className="bg-iris-sand/35 overflow-hidden flex flex-col items-center justify-center cursor-default text-center px-10 py-14"
+                  className="bg-iris-sand/75 overflow-hidden flex flex-col items-center justify-center cursor-default text-center px-10 py-14"
                   style={{ borderRadius: shape }}
                   whileHover={{ scale: 1.03, y: -6, boxShadow: '0 28px 64px rgba(0,0,0,0.11)' }}
                   transition={{ duration: 0.4, ease: 'easeOut' }}
